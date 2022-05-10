@@ -3,7 +3,7 @@ theme: "just-the-docs"
 
 title: Rewls
 description: Blog for study log
-baseurl: "/blog"
+baseurl: ""
 url: "https://rewls.github.io"
 
 # Enable or disable the site search
