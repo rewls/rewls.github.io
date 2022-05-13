@@ -557,3 +557,108 @@ $$
 - 대부분의 컴퓨터는 2's complement 방법을 이용하여 음수를 표현한다.
 
 - 프로그래밍할 때 자료형의 표현범위를 고려하여 오버플로우가 생기지 않도록 자료형을 지정해야 한다.
+
+---
+
+## Problem
+
+### 1.7
+
+##### Summary
+
+- Add in binary using 2's complement to represent negative numbers.
+
+- Use a word length of 6 bits (including sign)
+
+- Indicate if an overflow occurs
+
+##### a
+
+- $21 + 11 = 32$이므로 overflow
+
+	- 2's complement로 음수를 표현할 때 6-bit 공간에서 수의 표현 범위는 -32~31
+
+##### b
+
+- $(-14) + (-32) = -46$이므로 overflow
+
+	- 2's complement로 음수를 표현할 때 6-bit 공간에서 수의 표현 범위는 -32~31
+
+##### c
+
+- $(-25) + 18 = -7$
+
+- $25 = 011001_2;\,-25 = 100111_2$
+
+- $18 = 010010_2$
+
+$$
+\begin{matrix}
+\quad100111 \\
+\underline{+ \,010010} \\
+\quad111001
+\end{matrix}
+$$
+
+- $000111_2 =7; \,111001_2 = -7$
+
+##### d
+
+- $(-12)+13=1$
+
+- $12 = 001100_2; \,-12 = 110100_2$
+
+- $13 = 001101_2$
+
+$$
+\begin{matrix}
+\quad 110100\\
+\underline{+ \,001101} \\
+\quad 000001
+\end{matrix}
+$$
+
+##### e
+
+- $(-11)+(-21)=-32$
+
+- $11 = 001011_2; \,-11 = 110101_2$
+
+- $21 = 010101_2; \,-21 = 101011_2$
+
+$$
+\begin{matrix}
+\quad 110101\\
+\underline{+ \,101011} \\
+\quad 100000
+\end{matrix}
+$$
+
+- $100000 = -32$
+
+### 1.46
+
+##### Summary
+
+- $B = b_{n-1}b_{n-2}\cdots b_1b_0$, $B$는 n-bit 2's complement integer
+
+- $B = -b_{n-1}2^{n-1} + b_{n-2}2^{n-2} + b_{n-3}2^{n-3} + \cdots + b_12 + b_0$
+
+- Hint: $b_{n-1} = 0$, $b_{n-1} =1$ 나눠서 2's complement 정의 생각
+
+##### Answer
+
+- $b_{n-1} = 0$
+
+	- $0b_{n-2}\cdots b_1b_0 = b_{n_2}2^{n-2} + b_{n-3}2^{n-3} + \cdots + b_12 + b_0$
+
+- $b_{n-1} = 1$
+
+	$$
+	\begin{align*}
+	1b_{n-2}\cdots b_1b_0 &= -2^{n-1} + b_{n_2}2^{n-2} + b_{n-3}2^{n-3} + \cdots + b_12 + b_0 \\
+	                      &= -(2^{n-2} + 2^{n-3} + \cdots + 2 + 1 - 1) + b_{n_2}2^{n-2} + b_{n-3}2^{n-3} + \cdots + b_12 + b_0 \\
+						  &= 2^{n-2}(b_{n-2}-1) + 2^{n-3}(b_{n-3}-1) + \cdots + 2(b_1-1) + 1(b_0-1) + 1
+	\end{align*}
+	$$
+
