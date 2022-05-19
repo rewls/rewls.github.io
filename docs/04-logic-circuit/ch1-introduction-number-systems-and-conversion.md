@@ -564,8 +564,6 @@ $$
 
 ### 1.7
 
-##### Summary
-
 - Add in binary using 2's complement to represent negative numbers.
 
 - Use a word length of 6 bits (including sign)
@@ -637,8 +635,6 @@ $$
 - $100000 = -32$
 
 ### 1.46
-
-##### Summary
 
 - $B = b_{n-1}b_{n-2}\cdots b_1b_0$, $B$는 n-bit 2's complement integer
 
