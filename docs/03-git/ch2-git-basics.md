@@ -295,7 +295,7 @@ git log
 | `--online`        | `--pretty=oneline --abbrev-commit`을 사용한 것과 같다.                                                                                            |
 
 ```
-git config --global alias.l log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 ```
 
 ##### `git log --pretty=format` 유용한 옵션
