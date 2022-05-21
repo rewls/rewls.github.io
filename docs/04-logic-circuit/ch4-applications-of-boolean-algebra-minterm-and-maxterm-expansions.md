@@ -494,7 +494,7 @@ $$
 \end{matrix}
 $$
 
-|$A$|$B$|$Cin$|$Cout$|$Sum$|
+|$A$|$B$|$C_{in}$|$C_{out}$|$Sum$|
 |-|-|-|-|-|
 |0|0|0|0|0|
 |0|0|1|0|1|
@@ -507,8 +507,8 @@ $$
 
 $$
 \begin{align*}
-Sum &= A^{\prime}B^{\prime}Cin + A^{\prime}BCin^{\prime} + AB^{\prime}Cin^{\prime} + ABCin \\
-    &= A \oplus B \oplus Cin
+Sum &= A^{\prime}B^{\prime}C_{in} + A^{\prime}BC_{in}^{\prime} + AB^{\prime}C_{in}^{\prime} + ABC_{in} \\
+    &= A \oplus B \oplus C_{in}
 \end{align*}
 $$
 
@@ -518,8 +518,8 @@ $$
 
 $$
 \begin{align*}
-Cout &= A^{\prime}BCin + AB^{\prime}Cin + ABCin^{\prime} + ABCin \\
-     &= AB + BCin + CinA
+C_{out} &= A^{\prime}BC_{in} + AB^{\prime}C_{in} + ABC_{in}^{\prime} + ABC_{in} \\
+     &= AB + BC_{in} + C_{in}A
 \end{align*}
 $$
 
@@ -535,7 +535,46 @@ $$
 
 - 단점: gate delay가 있기 때문에 carry를 받는데 시간이 걸린다.
 
-- Carry Lookahead Adder를 사용하여 이를 보완한다.
+- carry lookahead adder를 사용하여 이를 보완한다.
+
+##### Carry lookahead adder
+
+<center markdown="block">
+![1bit-full-adder](./img/4-1bit-full-adder-box.png)
+</center>
+
+- 1-bit full adder에서 $C_{out} = AB + BC_{in} + C_{in}A$
+
+<center markdown="block">
+![ripple-carry-adder](./img/4-ripple-carry-adder.png)
+</center>
+
+$$
+\begin{align*}
+C_{i+1} &= A_iB_i + B_iC_i + C_iA_i\\
+        &= A_iB_i + C_i(A_i+B_i)$
+\end{align*}
+$$
+
+- $A_iB_i = G_i$, $A_i+B_i=P_i$
+
+$$
+C_{i+1} = G_i + C_iP_i
+$$
+
+$$
+\begin{align*}
+C_{i+2} &= G_{i+1} + C_{i+1}P_{i+1} \\
+        &= G_{i+1} + P_{i+1}(G_i+C_iP_i) \\
+		&= G_{i+1} + P_{i+1}G_i + P_{i+1}P_iC_i
+\end{align*}
+$$
+
+- $C_{i+1}$ 없이 $C_{i+2}$를 계산할 수 있다.
+
+<center markdown="block">
+![4bit-carry-lookahead-adder](./img/4-4bit-carry-lookahead-adder.png)
+</center>
 
 ## HW3
 
