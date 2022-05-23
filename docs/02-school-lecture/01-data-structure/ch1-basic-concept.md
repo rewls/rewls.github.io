@@ -6,7 +6,7 @@ grand_parent: School Lecture
 nav_order: 1
 mathjax: true
 mermaid: true
-permalink: /docs/data-tructure/ch1
+permalink: /docs/data-structure/ch1
 ---
 
 # Ch1 Basic Concept

@@ -4,7 +4,7 @@ title: Data Structure
 nav_order: 6
 parent: School Lecture
 has_children: true
-permalink: /docs/data-tructure
+permalink: /docs/data-structure
 ---
 
 # Data Structure
