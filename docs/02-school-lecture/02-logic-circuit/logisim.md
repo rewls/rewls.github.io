@@ -3,6 +3,7 @@ layout: default
 title: Logisim
 parent: Logic Circuit
 nav_order: 99
+permalink: /docs/logic-circuit/logisim
 ---
 
 # Logisim

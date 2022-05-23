@@ -2,9 +2,11 @@
 layout: default
 title: Ch3 신경망
 parent: Deap Learning from Scratch
+grand_parent: Study
 nav_order: 3
 mathjax: true
 mermaid: true
+permalink: /docs/deap/ch3
 ---
 
 # Ch3 신경망

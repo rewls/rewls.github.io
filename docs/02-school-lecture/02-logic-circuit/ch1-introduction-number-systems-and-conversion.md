@@ -2,8 +2,10 @@
 layout: default
 title: Ch1 Introduction Number Systems and Conversion
 parent: Logic Circuit
+grand_parent: School Lecture
 nav_order: 1
 mathjax: true
+permalink: /docs/logic-circuit/ch1
 ---
 
 # Ch1 Introduction Number Systems and Conversion

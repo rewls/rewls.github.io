@@ -2,8 +2,10 @@
 layout: default
 title: Reason for Using Docker
 parent: Linux
+grand_parent: Study
 nav_order: 5
 mathjax: true
+permalink: /docs/linux/reason-docker
 ---
 
 # 도커를 사용하는 이유

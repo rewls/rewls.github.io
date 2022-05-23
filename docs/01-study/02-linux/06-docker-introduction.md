@@ -2,8 +2,10 @@
 layout: default
 title: Docker Introduction
 parent: Linux
+grand_parent: Study
 nav_order: 6
 mathjax: true
+permalink: /docs/linux/docker-instroduction
 ---
 
 # Docker Introduction

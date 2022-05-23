@@ -2,6 +2,7 @@
 layout: default
 title: Ch2 Git Basics
 parent: Git
+grand_parent: Study
 nav_order: 2
 mermaid: true
 permalink: /docs/git/ch2-git-basic

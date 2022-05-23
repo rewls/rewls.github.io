@@ -2,8 +2,10 @@
 layout: default
 title: Ch5 Karnaugh Maps
 parent: Logic Circuit
+grand_parent: School Lecture
 nav_order: 5
 mathjax: true
+permalink: /docs/logic-circuit/ch5
 ---
 
 <style>
@@ -148,6 +150,8 @@ ab^{\prime}c &+& abc &=& ac \\
 $$
 
 - 1bit 차이 나야 Uniting이 가능하다.
+
+---
 
 ## 5.2 Two- and Three- Variable Karnaugh Maps
 
@@ -476,6 +480,8 @@ $$
 		</tbody>
 	</table>
 
+---
+
 ## 5.3 Four-Variable Karnaugh Maps
 
 <table>
@@ -723,6 +729,8 @@ $$
 	  &= (y+z^{\prime})(w+x^{\prime}+y^{\prime})(w^{\prime}+x^{\prime}+z)
 	\end{align*}
 	$$
+
+---
 
 ## 5.4 Determination of Minimum Expressions Using Essential Prime Implicants
 
@@ -1154,6 +1162,8 @@ $$
 
 - $F = a^{\prime} + a^{\prime}b^{\prime}d^{\prime} + bcd + acd$
 
+---
+
 ## 5.5 Five-Variable Karnaugh Maps
 
 <table>
@@ -1386,6 +1396,8 @@ $$
 </table>
 
 - $F = a^{\prime}b^{\prime}d^{\prime} + abe^{\prime} + ab^{\prime}c + acd + a^{\prime}bce$
+
+---
 
 ## 5.6 Other Uses of Karnaugh Maps
 

@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Check Specifications in Linux
+title: Check Specifications
 parent: Linux
+grand_parent: Study
 nav_order: 4
+permalink: /docs/linux/check-spec
 ---
 
-# Check Specifications in Linux
+# Check Specifications
 {: .no_toc }
 
 <details open markdown="block">

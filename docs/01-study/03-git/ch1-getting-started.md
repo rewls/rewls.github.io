@@ -2,6 +2,7 @@
 layout: default
 title: Ch1 Getting Started
 parent: Git
+grand_parent: Study
 nav_order: 1
 mermaid: true
 permalink: /docs/git/ch1-getting-start

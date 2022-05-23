@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Logic Circuit
-nav_order: 5
+nav_order: 6
+parent: School Lecture
 has_children: true
 permalink: /docs/logic-circuit
 ---

@@ -2,7 +2,9 @@
 layout: default
 title: Linux Command
 parent: Linux
+grand_parent: Study
 nav_order: 3
+permalink: /docs/linux/linux-command
 ---
 
 # Linux Command

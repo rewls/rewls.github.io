@@ -2,7 +2,9 @@
 layout: default
 title: Ch1 Hello Python
 parent: Deap Learning from Scratch
+grand_parent: Study
 nav_order: 1
+permalink: /docs/deap/ch1
 ---
 
 # Ch1 Hello Python

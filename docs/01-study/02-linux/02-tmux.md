@@ -2,7 +2,9 @@
 layout: default
 title: Tmux
 parent: Linux
+grand_parent: Study
 nav_order: 2
+permalink: /docs/linux/tmux
 ---
 
 # Tmux

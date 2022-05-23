@@ -2,6 +2,7 @@
 layout: default
 title: Deap Learning from Scratch
 nav_order: 2
+parent: Study
 has_children: true
 permalink: /docs/deap-learning-from-scratch
 ---

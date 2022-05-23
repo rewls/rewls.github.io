@@ -2,7 +2,9 @@
 layout: default
 title: POSIX-CLI1
 parent: Linux
+grand_parent: Study
 nav_order: 1
+permalink: /docs/linux/posix-cli
 ---
 
 # POSIX CLI1

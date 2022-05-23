@@ -2,8 +2,10 @@
 layout: default
 title: Ch2 Boolean Algebra
 parent: Logic Circuit
+grand_parent: School Lecture
 nav_order: 2
 mathjax: true
+permalink: /docs/logic-circuit/ch2
 ---
 
 # Ch2 Boolean Algebra

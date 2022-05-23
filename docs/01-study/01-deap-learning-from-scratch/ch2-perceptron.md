@@ -2,9 +2,11 @@
 layout: default
 title: Ch2 퍼셉트론
 parent: Deap Learning from Scratch
+grand_parent: Study
 nav_order: 2
 mathjax: true
 mermaid: true
+permalink: /docs/deap/ch2
 ---
 
 # Ch2 퍼셉트론
