@@ -2,7 +2,7 @@
 layout: default
 title: Ch4 Applications of Boolean Algebra Minterm and Maxterm Expansions
 parent: Logic Circuit
-nav_order: 3
+nav_order: 4
 mathjax: true
 ---
 

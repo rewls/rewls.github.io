@@ -39,7 +39,6 @@
       <a name="facing" val="west"/>
     </tool>
     <tool lib="0" name="Pin">
-      <a name="facing" val="south"/>
       <a name="output" val="true"/>
     </tool>
     <sep/>
@@ -58,87 +57,72 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(300,210)" name="Pin">
+    <comp lib="0" loc="(350,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="Cout"/>
       <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(330,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="A3"/>
-    </comp>
-    <comp lib="0" loc="(350,170)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="S3"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(370,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="B3"/>
     </comp>
     <comp lib="0" loc="(440,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
-      <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(460,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="S2"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(480,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
-      <a name="label" val="B2"/>
-    </comp>
-    <comp lib="0" loc="(550,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(570,170)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="S1"/>
-      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(590,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
-      <a name="label" val="B1"/>
     </comp>
-    <comp lib="0" loc="(660,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="A0"/>
-    </comp>
-    <comp lib="0" loc="(680,170)" name="Pin">
+    <comp lib="0" loc="(610,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="S0"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(700,250)" name="Pin">
+    <comp lib="0" loc="(630,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
-      <a name="label" val="B0"/>
     </comp>
-    <comp lib="0" loc="(730,210)" name="Pin">
+    <comp lib="0" loc="(710,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Cin"/>
     </comp>
-    <comp loc="(300,210)" name="oneBitFullAdder"/>
+    <comp lib="8" loc="(384,203)" name="Text">
+      <a name="text" val="C(i+2)"/>
+    </comp>
+    <comp lib="8" loc="(437,313)" name="Text">
+      <a name="text" val="A(i+1)"/>
+    </comp>
+    <comp lib="8" loc="(459,125)" name="Text">
+      <a name="text" val="S(i+1)"/>
+    </comp>
+    <comp lib="8" loc="(489,314)" name="Text">
+      <a name="text" val="B(i+1)"/>
+    </comp>
+    <comp lib="8" loc="(535,203)" name="Text">
+      <a name="text" val="C(i+1)"/>
+    </comp>
+    <comp lib="8" loc="(590,312)" name="Text">
+      <a name="text" val="Ai"/>
+    </comp>
+    <comp lib="8" loc="(609,124)" name="Text">
+      <a name="text" val="Si"/>
+    </comp>
+    <comp lib="8" loc="(630,312)" name="Text">
+      <a name="text" val="Bi"/>
+    </comp>
+    <comp lib="8" loc="(669,205)" name="Text">
+      <a name="text" val="Ci"/>
+    </comp>
     <comp loc="(410,210)" name="oneBitFullAdder"/>
-    <comp loc="(520,210)" name="oneBitFullAdder"/>
-    <comp loc="(630,210)" name="oneBitFullAdder"/>
-    <wire from="(400,210)" to="(410,210)"/>
-    <wire from="(510,210)" to="(520,210)"/>
-    <wire from="(620,210)" to="(630,210)"/>
+    <comp loc="(560,210)" name="oneBitFullAdder"/>
+    <wire from="(350,210)" to="(410,210)"/>
+    <wire from="(510,210)" to="(560,210)"/>
+    <wire from="(660,210)" to="(710,210)"/>
   </circuit>
   <circuit name="N1">
     <a name="appearance" val="logisim_evolution"/>
@@ -479,5 +463,92 @@
     <wire from="(250,230)" to="(270,230)"/>
     <wire from="(320,210)" to="(340,210)"/>
     <wire from="(320,360)" to="(340,360)"/>
+  </circuit>
+  <circuit name="fourBitFullAdder">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="fourBitFullAdder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(300,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Cout"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(330,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="A3"/>
+    </comp>
+    <comp lib="0" loc="(350,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="S3"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(370,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="B3"/>
+    </comp>
+    <comp lib="0" loc="(440,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="A2"/>
+    </comp>
+    <comp lib="0" loc="(460,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="S2"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="B2"/>
+    </comp>
+    <comp lib="0" loc="(550,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(570,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="S1"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(590,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(660,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="A0"/>
+    </comp>
+    <comp lib="0" loc="(680,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="S0"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(700,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="B0"/>
+    </comp>
+    <comp lib="0" loc="(730,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Cin"/>
+    </comp>
+    <comp loc="(300,210)" name="oneBitFullAdder"/>
+    <comp loc="(410,210)" name="oneBitFullAdder"/>
+    <comp loc="(520,210)" name="oneBitFullAdder"/>
+    <comp loc="(630,210)" name="oneBitFullAdder"/>
+    <wire from="(400,210)" to="(410,210)"/>
+    <wire from="(510,210)" to="(520,210)"/>
+    <wire from="(620,210)" to="(630,210)"/>
   </circuit>
 </project>
