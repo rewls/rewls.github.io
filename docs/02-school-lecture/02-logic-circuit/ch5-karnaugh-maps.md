@@ -81,7 +81,7 @@ th {
 
 ---
 
-## Color
+## Karnaugh Maps Color
 {: .no_toc }
 
 <table>
@@ -1234,31 +1234,31 @@ $$
 	<tbody>
 		<tr>
 			<th>00</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
-			<td class='slash map3_3'>1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #ddffdd 49%, grey, #ddffdd 51%)">1<div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 		<tr>
 			<th>01</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #ddffee 49%, grey, #ddffdd 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, #ddddff 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #ddddff 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>11</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #ddddff 49%, grey, #eeffff 51%)">1<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>10</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 	</tbody>
 </table>
@@ -1278,31 +1278,31 @@ $$
 	<tbody>
 		<tr>
 			<th>00</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, grey, white 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 		<tr>
 			<th>01</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">1<div>1</div></td>
-			<td class='slash'><div>1</div></td>
+			<td class='slash'>&nbsp;<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>11</th>
 			<td class='slash'><div></div></td>
-			<td class='slash'>1<div></div></td>
+			<td class='slash'>1<div>&nbsp;</div></td>
 			<td class='slash'>1<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>10</th>
 			<td class='slash'><div></div></td>
-			<td class='slash'>1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash'>1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 	</tbody>
 </table>
@@ -1322,31 +1322,31 @@ $$
 	<tbody>
 		<tr>
 			<th>00</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #ddffdd 49%, grey, grey, #eeffee 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 		<tr>
 			<th>01</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #ddffdd 49%, grey, #eeffee 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>11</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, #eeffee 51%)">1<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>10</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 	</tbody>
 </table>
@@ -1366,31 +1366,31 @@ $$
 	<tbody>
 		<tr>
 			<th>00</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, grey, #eeffee 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 		<tr>
 			<th>01</th>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, #eeffee 51%)">1<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, white 51%)"><div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>11</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeeeff 49%, grey, #eeffee 51%)">1<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
 		<tr>
 			<th>10</th>
 			<td class='slash'><div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div></div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div></div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #ddffdd 51%)">1<div>&nbsp;</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, white 49%, grey, #eeffee 51%)">1<div>&nbsp;</div></td>
 		</tr>
 	</tbody>
 </table>
