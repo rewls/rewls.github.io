@@ -235,11 +235,13 @@ $(c+a^{\prime}d+bd)(c^{\prime}+ad^{\prime}+bd^{\prime})$
 >
 > 동일한 함수라도 무슨 회로가 더 좋은지는 해봐야 안다.
 
+---
+
 ## 7.2 NAND and NOR Gates
 
 - NAND: AND 결과에 NOT
 
-- NOR: OR 경과에 NOT
+- NOR: OR 결과에 NOT
 
 <center markdown="block">
 ![nand](./img/7-2-nand.png)
@@ -273,7 +275,7 @@ NOR
 <center markdown="block">
 ![and](./img/7-2-and.png)
 
-AND
+AND 내부 구현
 </center>
 
 - AND는 내부적으로 NAND와 NOT으로 구현된다.
@@ -319,15 +321,15 @@ AND
 	<center markdown="block">
 	![not-nand](./img/7-2-not-nand.png)
 
-	NOT
+	NOT realized using NAND
 
 	![and-nand](./img/7-2-and-nand.png)
 
-	AND
+	AND realized using NAND
 
 	![or-nand](./img/7-2-or-nand.png)
 
-	OR
+	OR realized using NAND
 	</center>
 
 ##### NOR
@@ -337,16 +339,18 @@ AND
 	<center markdown="block">
 	![not-nor](./img/7-2-not-nand.png)
 
-	NOT
+	NOT realized using NOR
 
 	![and-nor](./img/7-2-and-nand.png)
 
-	AND
+	AND realized using NOR
 
 	![or-nor](./img/7-2-or-nand.png)
 
-	OR
+	OR realized using NOR
 	</center>
+
+---
 
 ## 7.3 Design of Two-Level NAND- and NOR-Gate Circuits
 
@@ -414,6 +418,8 @@ OR-NAND
 NOR-OR
 </center>
 
+---
+
 ## 7.4 Design of Multi-Level NAND- and NOR-Gate Circuits
 
 ### condition to design multi-level NAND-gate circuit
@@ -435,6 +441,8 @@ NOR-OR
 ### Example
 
 - $F=a^{\prime}[b^{\prime}c(d+e^{\prime})+f^{\prime}g^{\prime}]+hi^{\prime}j+k$
+
+---
 
 ## 7.6 Design of Two-Level, Multiple-Output Circuits
 
