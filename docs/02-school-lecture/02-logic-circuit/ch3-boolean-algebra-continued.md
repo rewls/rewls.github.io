@@ -50,7 +50,7 @@ permalink: /docs/logic-circuit/ch3
 
 - 1의 개수가 짝수일 때 0, 홀수 일 때 1
 
-	- logisim에서 xor 게이트는 input이 3개 이상일 때 1의 개수가 1개일 경우에만 1이 나온다. 따라서 input이 3개 이상일 때는 2 input xor을 연결하여 구현한다.
+	- logisim에서 xor gate는 Multiple-Input Behavior를 When an odd number are on으로 바꿔 사용한다.
 
 - parity bit에 사용된다.
 
@@ -109,7 +109,7 @@ $$
 
 - 1의 개수가 짝수이면 1, 홀수이면 0
 
-	- logisim에서 xnor 게이트는 input이 3개 이상일 때 1의 개수가 1개일 경우에만 0이 나온다. 따라서 input이 3개 이상일 때는 2 input xnor을 연결하여 구현한다.
+	- logisim에서 xnor gate는 Multiple-Input Behavior를 When an odd number are on으로 바꿔 사용한다.
 
 <center markdown="block">
 
