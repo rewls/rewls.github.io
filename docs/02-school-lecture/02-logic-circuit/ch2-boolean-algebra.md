@@ -68,7 +68,7 @@ $$
 inversion, negative gate
 </center>
 
-### And
+### AND
 
 <center markdown="block">
 ![and-switch](./img/2-and-switch.png)
@@ -100,10 +100,10 @@ $$
 <center markdown="block">
 ![and-gate](./img/2-and-gate.png)
 
-and gate
+AND gate
 </center>
 
-### Or
+### OR
 
 <center markdown="block">
 ![or-switch](./img/2-or-switch.png)
@@ -125,7 +125,7 @@ and gate
 <center markdown="block">
 ![or-gate](./img/2-or-gate.png)
 
-or gate
+OR gate
 </center>
 
 ---
