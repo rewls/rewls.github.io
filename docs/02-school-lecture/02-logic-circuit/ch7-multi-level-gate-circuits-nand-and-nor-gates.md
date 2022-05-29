@@ -422,7 +422,7 @@ NOR-OR
 
 ## 7.4 Design of Multi-Level NAND- and NOR-Gate Circuits
 
-### condition to design multi-level NAND-gate circuit
+### Condition to design multi-level NAND-gate circuit
 
 1. The output gate must be OR
 
@@ -430,7 +430,13 @@ NOR-OR
 
 3. OR-gate outputs cannot be used as OR-gate inputs
 
-### condition to design multi-level NOR-gate circuit
+### Step to design multi-level NAND-gate circuit
+
+- level 1이 OR gate면 input에 NOT을 취한다.
+
+- OR, AND gate를 NAND gate로 바꾼다.
+
+### Condition to design multi-level NOR-gate circuit
 
 1. The output gate must be AND
 
@@ -438,9 +444,25 @@ NOR-OR
 
 3. OR-gate outputs cannot be used as OR-gate inputs
 
+### Step to design multi-level NAND-gate circuit
+
+- level 1이 OR gate면 input에 NOT을 취한다.
+
+- OR, AND gate를 NAND gate로 바꾼다.
+
 ### Example
 
 - $F=a^{\prime}[b^{\prime}c(d+e^{\prime})+f^{\prime}g^{\prime}]+hi^{\prime}j+k$
+
+<center markdown="block">
+![multi-level-and-or](./img/7-4-multi-level-and-or.png)
+
+Multi-level AND, OR
+
+![multi-level-nand](./img/7-4-multi-level-nand.png)
+
+Multi-level NAND
+</center>
 
 ---
 
@@ -827,3 +849,5 @@ NOR-OR
 - 각자 간소화했을 때 AND: 7, OR: 3
 
 - 공통된 부분 공유하도록 했을 때 AND: 5, OR: 3
+
+
