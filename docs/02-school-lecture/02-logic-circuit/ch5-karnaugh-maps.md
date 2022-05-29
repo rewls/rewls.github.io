@@ -412,7 +412,6 @@ $$
 
 ##### Example 3
 
-> [Color](#color) 예외
 
 - Sum of product
 
@@ -760,7 +759,6 @@ $$
 
 ##### Example 1. Prime implicant
 
-> [Color](#color) 예외
 
 <table>
 	<thead>
