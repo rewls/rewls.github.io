@@ -337,15 +337,15 @@ AND 내부 구현
 - The NOR gate is functionally complete.
 
 	<center markdown="block">
-	![not-nor](./img/7-2-not-nand.png)
+	![not-nor](./img/7-2-not-nor.png)
 
 	NOT realized using NOR
 
-	![and-nor](./img/7-2-and-nand.png)
+	![and-nor](./img/7-2-and-nor.png)
 
 	AND realized using NOR
 
-	![or-nor](./img/7-2-or-nand.png)
+	![or-nor](./img/7-2-or-nor.png)
 
 	OR realized using NOR
 	</center>
