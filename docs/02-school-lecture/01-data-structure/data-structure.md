@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Structure
-nav_order: 6
+nav_order: 1
 parent: School Lecture
 has_children: true
 permalink: /docs/data-structure
