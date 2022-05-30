@@ -77,7 +77,7 @@ Z &= (AB+C)(D+E+FG)+H \\
 $$
 
 <center markdown="block">
-![circuit1-1](./img/7-1-circuit1-1.png)
+![circuit1-1](/assets/logic-circuit/7-1-circuit1-1.png)
 
 $(AB+C)(D+E+FG)+H$
 </center>
@@ -85,7 +85,7 @@ $(AB+C)(D+E+FG)+H$
 - 4-level gate circuit, 4 gate delay
 
 <center markdown="block">
-![circuit1-2](./img/7-1-circuit1-2.png)
+![circuit1-2](/assets/logic-circuit/7-1-circuit1-2.png)
 
 $A(D+E) + C(D+E) + ABFG + CFG + H$
 </center>
@@ -148,7 +148,7 @@ F &= a^{\prime}c^{\prime}d + bc^{\prime}d + bcd^{\prime} + acd^{\prime} \\
 $$
 
 <center markdown="block">
-![circuit2-1](./img/7-1-circuit2-1.png)
+![circuit2-1](/assets/logic-circuit/7-1-circuit2-1.png)
 
 $a^{\prime}c^{\prime}d + bc^{\prime}d + bcd^{\prime} + acd^{\prime}$
 </center>
@@ -156,7 +156,7 @@ $a^{\prime}c^{\prime}d + bc^{\prime}d + bcd^{\prime} + acd^{\prime}$
 - 2 levels, 5 gates, 16 gate inputs
 
 <center markdown="block">
-![circuit2-2](./img/7-1-circuit2-2.png)
+![circuit2-2](/assets/logic-circuit/7-1-circuit2-2.png)
 
 $c^{\prime}d(a^{\prime}+b) + cd^{\prime}(b+a)$
 </center>
@@ -216,7 +216,7 @@ F &= (c+d)(a^{\prime}+b+c)(c^{\prime}+d^{\prime})(a+b+c^{\prime}) \\
 $$
 
 <center markdown="block">
-![circuit2-3](./img/7-1-circuit2-3.png)
+![circuit2-3](/assets/logic-circuit/7-1-circuit2-3.png)
 
 $(c+d)(a^{\prime}+b+c)(c^{\prime}+d^{\prime})(a+b+c^{\prime})$
 </center>
@@ -224,7 +224,7 @@ $(c+d)(a^{\prime}+b+c)(c^{\prime}+d^{\prime})(a+b+c^{\prime})$
 - 2 levels, 5 gates, 14 gate inputs
 
 <center markdown="block">
-![circuit2-5](./img/7-1-circuit2-5.png)
+![circuit2-5](/assets/logic-circuit/7-1-circuit2-5.png)
 
 $(c+a^{\prime}d+bd)(c^{\prime}+ad^{\prime}+bd^{\prime})$
 </center>
@@ -244,11 +244,11 @@ $(c+a^{\prime}d+bd)(c^{\prime}+ad^{\prime}+bd^{\prime})$
 - NOR: OR 결과에 NOT
 
 <center markdown="block">
-![nand](./img/7-2-nand.png)
+![nand](/assets/logic-circuit/7-2-nand.png)
 
 NAND
 
-![nor](./img/7-2-nor.png)
+![nor](/assets/logic-circuit/7-2-nor.png)
 
 NOR
 </center>
@@ -273,7 +273,7 @@ NOR
 - NOT: transistor 2개
 
 <center markdown="block">
-![and](./img/7-2-and.png)
+![and](/assets/logic-circuit/7-2-and.png)
 
 AND 내부 구현
 </center>
@@ -293,7 +293,7 @@ AND 내부 구현
 	- $X+Y=(X^{\prime}Y^{\prime})^{\prime}$
 
 	<center markdown="block">
-	![or-andnot](./img/7-2-or-andnot.png)
+	![or-andnot](/assets/logic-circuit/7-2-or-andnot.png)
 
 	OR realized using AND and NOT
 	</center>
@@ -303,7 +303,7 @@ AND 내부 구현
 	- $XY=(X^{\prime}+Y^{\prime})^{\prime}$
 
 	<center markdown="block">
-	![and-ornot](./img/7-2-and-ornot.png)
+	![and-ornot](/assets/logic-circuit/7-2-and-ornot.png)
 
 	AND realized using OR and NOT
 	</center>
@@ -319,15 +319,15 @@ AND 내부 구현
 	- NOT
 
 	<center markdown="block">
-	![not-nand](./img/7-2-not-nand.png)
+	![not-nand](/assets/logic-circuit/7-2-not-nand.png)
 
 	NOT realized using NAND
 
-	![and-nand](./img/7-2-and-nand.png)
+	![and-nand](/assets/logic-circuit/7-2-and-nand.png)
 
 	AND realized using NAND
 
-	![or-nand](./img/7-2-or-nand.png)
+	![or-nand](/assets/logic-circuit/7-2-or-nand.png)
 
 	OR realized using NAND
 	</center>
@@ -337,15 +337,15 @@ AND 내부 구현
 - The NOR gate is functionally complete.
 
 	<center markdown="block">
-	![not-nor](./img/7-2-not-nor.png)
+	![not-nor](/assets/logic-circuit/7-2-not-nor.png)
 
 	NOT realized using NOR
 
-	![and-nor](./img/7-2-and-nor.png)
+	![and-nor](/assets/logic-circuit/7-2-and-nor.png)
 
 	AND realized using NOR
 
-	![or-nor](./img/7-2-or-nor.png)
+	![or-nor](/assets/logic-circuit/7-2-or-nor.png)
 
 	OR realized using NOR
 	</center>
@@ -357,11 +357,11 @@ AND 내부 구현
 - AND, OR, NOT으로 표현한 뒤 functionally complete한 gate 하나로 변환한다.
 
 <center markdown="block">
-![sop-nand-nand](./img/7-3-sop-nand-nand.png)
+![sop-nand-nand](/assets/logic-circuit/7-3-sop-nand-nand.png)
 
 SOP $\rightarrow$ NAND-NAND
 
-![pos-nor-nor](./img/7-3-pos-nor-nor.png)
+![pos-nor-nor](/assets/logic-circuit/7-3-pos-nor-nor.png)
 
 SOP $\rightarrow$ NOR-NOR
 </center>
@@ -369,19 +369,19 @@ SOP $\rightarrow$ NOR-NOR
 - 주어진 boolean expression을 여러 가지 형식으로 표현할 수 있다.
 
 <center markdown="block">
-![nand-ornot](./img/7-3-nand-ornot.png)
+![nand-ornot](/assets/logic-circuit/7-3-nand-ornot.png)
 
 $(XY)^{\prime}=X^{\prime}+Y^{\prime}$
 
-![nor-andnot](./img/7-3-nor-andnot.png)
+![nor-andnot](/assets/logic-circuit/7-3-nor-andnot.png)
 
 $(X+Y)^{\prime}=X^{\prime}Y^{\prime}$
 
-![notnand-or](./img/7-3-notnand-or.png)
+![notnand-or](/assets/logic-circuit/7-3-notnand-or.png)
 
 $(X^{\prime}Y^{\prime})^{\prime}=X+Y$
 
-![notnor-and](./img/7-3-notnor-and.png)
+![notnor-and](/assets/logic-circuit/7-3-notnor-and.png)
 
 $(X^{\prime}+Y^{\prime})^{\prime}=XY$
 </center>
@@ -398,22 +398,22 @@ F &= A+BC^{\prime}+B^{\prime}CD = [(A+BC^{\prime}+B^{\prime}CD)^{\prime}]^{\prim
 $$
 
 <center markdown="block">
-![and-or](./img/7-3-and-or.png)
+![and-or](/assets/logic-circuit/7-3-and-or.png)
 
 AND-OR
 
-![and-not-not-or](./img/7-3-and-not-not-or.png)
-![nand-nand](./img/7-3-nand-nand.png)
+![and-not-not-or](/assets/logic-circuit/7-3-and-not-not-or.png)
+![nand-nand](/assets/logic-circuit/7-3-nand-nand.png)
 
 NAND-NAND
 
-![not-or-nand](./img/7-3-not-or-nand.png)
-![or-nand](./img/7-3-or-nand.png)
+![not-or-nand](/assets/logic-circuit/7-3-not-or-nand.png)
+![or-nand](/assets/logic-circuit/7-3-or-nand.png)
 
 OR-NAND
 
-![or-not-not-nand](./img/7-3-or-not-not-nand.png)
-![nor-or](./img/7-3-nor-or.png)
+![or-not-not-nand](/assets/logic-circuit/7-3-or-not-not-nand.png)
+![nor-or](/assets/logic-circuit/7-3-nor-or.png)
 
 NOR-OR
 </center>
@@ -455,11 +455,11 @@ NOR-OR
 - $F=a^{\prime}[b^{\prime}c(d+e^{\prime})+f^{\prime}g^{\prime}]+hi^{\prime}j+k$
 
 <center markdown="block">
-![multi-level-and-or](./img/7-4-multi-level-and-or.png)
+![multi-level-and-or](/assets/logic-circuit/7-4-multi-level-and-or.png)
 
 Multi-level AND, OR
 
-![multi-level-nand](./img/7-4-multi-level-nand.png)
+![multi-level-nand](/assets/logic-circuit/7-4-multi-level-nand.png)
 
 Multi-level NAND
 </center>

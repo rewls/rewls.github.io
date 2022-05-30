@@ -45,6 +45,8 @@ permalink: /docs/logic-circuit/ch4
 
 - $F=A\cdot B$
 
+---
+
 ## 4.2 Combinational Logic Design Using a Truth Table
 
 ### 두가지 논리 회로
@@ -144,6 +146,8 @@ f &= (f^{\prime})^{\prime} \\
   &= (A+B+C)(A+B^{\prime}+C)(A+B^{\prime}+C)
 \end{align*}
 $$
+
+---
 
 ## 4.3 Minterm and Maxterm Expansions
 
@@ -259,6 +263,8 @@ $$
 
 		- $f(a,b,c,d) = \Pi M(4, 6,8,9,11,12,13,15)$
 
+---
+
 ## 4.4 General Minterm and Maxterm Expansions
 
 ### Generalization
@@ -310,10 +316,12 @@ $$
 
 	- $f_1+f_2 = \sum m(0,2,3,5,9,11,13,14)$
 
+---
+
 ## 4.5 Incompletely Specified Functions
 
 <center markdown="block">
-![functions](./img/4-functions.png)
+![functions](/assets/logic-circuit/4-functions.png)
 </center>
 
 - $A=f_1(w,x,y,z)$, $B=f_2(w,x,y,z)$, $C=f_3(w,x,y,z)$
@@ -360,6 +368,8 @@ F &= A^{\prime}B^{\prime}C^{\prime} + A^{\prime}BC + ABC \\
 \end{align*}
 $$
 
+---
+
 ## 4.6 Examples of Truth Table Construction
 
 ### Example 1. 1-bit half adder
@@ -394,7 +404,7 @@ $$
 \end{matrix}
 $$
 
-![1bit-adder-box](./img/4-1bit-adder-box.png)
+![1bit-adder-box](/assets/logic-circuit/4-1bit-adder-box.png)
 </center>
 
 |$a$|$b$|$x$|$y$|
@@ -409,7 +419,7 @@ $$
 - $y = a^{\prime}b + ab^{\prime} = a \oplus b$
 
 <center markdown="block">
-![1bit-adder](./img/4-1bit-adder.png)
+![1bit-adder](/assets/logic-circuit/4-1bit-adder.png)
 </center>
 
 ### Example 2. 2-bit adder
@@ -430,7 +440,7 @@ $$
 \end{matrix}
 $$
 
-![2bit-adder-box](./img/4-2bit-adder-box.png)
+![2bit-adder-box](/assets/logic-circuit/4-2bit-adder-box.png)
 </center>
 
 |$A$|$B$|$C$|$D$|$X$|$Y$|$Z$|
@@ -456,6 +466,8 @@ $$
 
 - $Y = \cdots$, $Z = \cdots$
 
+---
+
 ## 4.7 Design of Binary Adders and Subtracters
 
 ### 4-bit Adder
@@ -469,7 +481,7 @@ $$
 $$
 
 <center markdown="block">
-![4bit-adder-box](./img/4-4bit-adder-box.png)
+![4bit-adder-box](/assets/logic-circuit/4-4bit-adder-box.png)
 </center>
 
 |$A_3$|$A_2$|$A_1$|$A_0$|$B_3$|$B_2$|$B_1$|$B_0$|$S_4$|$S_3$|$S_2$|$S_1$|$S_0$|
@@ -484,7 +496,7 @@ $$
 ##### 1-bit full adder
 
 <center markdown="block">
-![1bit-full-adder-box](./img/4-1bit-full-adder-box.png)
+![1bit-full-adder-box](/assets/logic-circuit/4-1bit-full-adder-box.png)
 </center>
 
 $$
@@ -515,7 +527,7 @@ Sum &= A^{\prime}B^{\prime}C_{in} + A^{\prime}BC_{in}^{\prime} + AB^{\prime}C_{i
 $$
 
 <center markdown="block">
-![1bit-full-adder](./img/4-1bit-full-adder.png)
+![1bit-full-adder](/assets/logic-circuit/4-1bit-full-adder.png)
 </center>
 
 $$
@@ -530,7 +542,7 @@ $$
 - 덧셈의 원리를 이용하여 1-bit full adder를 연결시켜 4-bit adder를 만든다.
 
 <center markdown="block">
-![4bit-full-adder](./img/4-4bit-full-adder.png)
+![4bit-full-adder](/assets/logic-circuit/4-4bit-full-adder.png)
 </center>
 
 - FA를 연결하여 구현하는 것을 Ripple Carry Adder라고 한다.
@@ -542,13 +554,13 @@ $$
 ##### Carry lookahead adder
 
 <center markdown="block">
-![1bit-full-adder](./img/4-1bit-full-adder-box.png)
+![1bit-full-adder](/assets/logic-circuit/4-1bit-full-adder-box.png)
 </center>
 
 - 1-bit full adder에서 $C_{out} = AB + BC_{in} + C_{in}A$
 
 <center markdown="block">
-![ripple-carry-adder](./img/4-ripple-carry-adder.png)
+![ripple-carry-adder](/assets/logic-circuit/4-ripple-carry-adder.png)
 </center>
 
 $$
@@ -575,8 +587,10 @@ $$
 - $C_{i+1}$ 없이 $C_{i+2}$를 계산할 수 있다.
 
 <center markdown="block">
-![4bit-carry-lookahead-adder](./img/4-4bit-carry-lookahead-adder.png)
+![4bit-carry-lookahead-adder](/assets/logic-circuit/4-4bit-carry-lookahead-adder.png)
 </center>
+
+---
 
 ## HW3
 
@@ -736,15 +750,15 @@ $$
 ##### 1-bit Full Adder
 
 <center markdown="block">
-![1bit-full-adder-box](./img/4-1bit-full-adder-box.png)
+![1bit-full-adder-box](/assets/logic-circuit/4-1bit-full-adder-box.png)
 
-![1bit-full-adder](./img/4-1bit-full-adder.png)
+![1bit-full-adder](/assets/logic-circuit/4-1bit-full-adder.png)
 </center>
 
 ##### 4-bit Full Adder
 
 <center markdown="block">
-![4bit-full-adder](./img/4-4bit-full-adder.png)
+![4bit-full-adder](/assets/logic-circuit/4-4bit-full-adder.png)
 </center>
 
 ##### a
@@ -754,7 +768,7 @@ $$
 - $3 = 0011_2$, $4 = 0100_2$, $7=0111_2$
 
 <center markdown="block">
-![4bit-full-adder-a](./img/4-4bit-full-adder-a.png)
+![4bit-full-adder-a](/assets/logic-circuit/4-4bit-full-adder-a.png)
 </center>
 
 ##### b
@@ -764,7 +778,7 @@ $$
 - $5=0101_2$, $6=0110_2$, $11=1011_2$
 
 <center markdown="block">
-![4bit-full-adder-b](./img/4-4bit-full-adder-b.png)
+![4bit-full-adder-b](/assets/logic-circuit/4-4bit-full-adder-b.png)
 </center>
 
 ##### c
@@ -774,7 +788,7 @@ $$
 - $5=0101_2$, $6=0110_2;\,-6=1010_2$, $1=0001_2;\,-1=1111_2$
 
 <center markdown="block">
-![4bit-full-adder-c](./img/4-4bit-full-adder-c.png)
+![4bit-full-adder-c](/assets/logic-circuit/4-4bit-full-adder-c.png)
 </center>
 
 ##### d
@@ -784,7 +798,7 @@ $$
 - $5=0101_2;\,-5=1011_2$, $6=0110_2$, $1=0001_2$
 
 <center markdown="block">
-![4bit-full-adder-d](./img/4-4bit-full-adder-d.png)
+![4bit-full-adder-d](/assets/logic-circuit/4-4bit-full-adder-d.png)
 </center>
 
 ##### e
@@ -794,7 +808,7 @@ $$
 - $3=0011_2;\,-3=1101_2$, $4=0100_2;\,-4=1100_2$, $7=0111_2;\,-7=1001_2$
 
 <center markdown="block">
-![4bit-full-adder-e](./img/4-4bit-full-adder-e.png)
+![4bit-full-adder-e](/assets/logic-circuit/4-4bit-full-adder-e.png)
 </center>
 
 ##### f
@@ -804,6 +818,6 @@ $$
 - $5=0101_2;\,-5=1011_2$, $6=0110_2;\,-6=1010_2$, $11=01011_2;\,-11=10101_2$
 
 <center markdown="block">
-![4bit-full-adder-f](./img/4-4bit-full-adder-f.png)
+![4bit-full-adder-f](/assets/logic-circuit/4-4bit-full-adder-f.png)
 </center>
 

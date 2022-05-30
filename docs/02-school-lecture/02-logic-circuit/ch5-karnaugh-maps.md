@@ -1453,6 +1453,6 @@ F &= a^{\prime}b^{\prime}c^{\prime} + a^{\prime}b^{\prime}d + acd \\
 $$
 
 <center markdown="block">
-![1](./img/5-6-1.png)
-![2](./img/5-6-2.png)
+![1](/assets/logic-circuit/5-6-1.png)
+![2](/assets/logic-circuit/5-6-2.png)
 </center>
