@@ -105,7 +105,9 @@ Main page
 
 - 구글이 특정 웹 페이지를 indexing하지 못하도록 하는 방법
 
-	> [How to prevent google from indexing certin web pages](https://www.ilfusion.com/how-to-prevent-google-from-indexing-certain-web-pages)
+	<div markdown="block" class="scroll">
+	- [How to prevent google from indexing certain web pages](https://www.ilfusion.com/how-to-prevent-google-from-indexing-certain-web-pages)
+	</div>
 
 	1. `noindex` 메타 태그
 
