@@ -31,7 +31,7 @@ permalink: /docs/wargame/week1-2
 
 ## Scavenger Hunt(폐품 수집)
 
-- Tags: Category: Web Exploitation
+- Tags: `Category: Web Exploitation`
 
 ### Description
 

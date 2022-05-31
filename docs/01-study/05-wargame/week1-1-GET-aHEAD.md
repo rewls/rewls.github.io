@@ -31,11 +31,11 @@ permalink: /docs/wargame/week1-1
 
 ## GET aHEAD
 
-- Tags: Category: Web Exploitation
+- Tags: `Category: Web Exploitation`
 
 ### Description
 
-- Find the flag being held on this server to get ahead of the competition http://mercury.picoctf.net:34561/
+- Find the flag being held on this server to get ahead of the competition [http://mercury.picoctf.net:34561/](http://mercury.picoctf.net:34561/)
 
 ### Hint
 
@@ -48,9 +48,9 @@ permalink: /docs/wargame/week1-1
 ### 관찰
 
 <center markdown="block">
-![main-page](/assets/wargame/main-page.png)
+![main-page](/assets/wargame/1-1-main-page.png)
 
-http://mercury.picoctf.net:34561/
+Main page
 </center>
 
 ##### 사이트 접속, Choose Red 클릭
@@ -58,7 +58,7 @@ http://mercury.picoctf.net:34561/
 - Reponse page
 
 	<center markdown="block">
-	![choose-red-response-page](/assets/wargame/main-page.png)
+	![choose-red-response-page](/assets/wargame/1-1-main-page.png)
 
 	Reponse page
 	</center>
@@ -84,7 +84,7 @@ http://mercury.picoctf.net:34561/
 - Response page
 
 	<center markdown="block">
-	![choose-blue-response-page](/assets/wargame/choose-blue-response-page.png)
+	![choose-blue-response-page](/assets/wargame/1-1-choose-blue-response-page.png)
 
 	Response page
 	</center>
