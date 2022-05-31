@@ -71,55 +71,59 @@ Main page
 	Response page
 	</center>
 
-### 아이디어1
+### Step 1
+
+##### 아이디어
 
 - What tab의 내용에 있는 HTML, CSS, JS 파일을 본다.
 
-### 실행1
+##### 실행
 
-##### HTML
+- HTML
 
-```html
-<!--Here's the first part of the flag: ...-->
-```
+	```html
+	<!--Here's the first part of the flag: ...-->
+	```
 
-##### CSS
+- CSS
 
-```css
-/* CSS makes the page look nice, and yes, it also has part of the flag. Here's part 2: ... */
-```
+	```css
+	/* CSS makes the page look nice, and yes, it also has part of the flag. Here's part 2: ... */
+	```
 
-##### JS
+- JS
 
-```javascript
-/* How can I keep Google from indexing my website? */
-```
+	```javascript
+	/* How can I keep Google from indexing my website? */
+	```
 
-### 아이디어2
+### Step 2
+
+##### 아이디어
 
 - 플래그를 얻는 것이 목적이므로 아래 방법 중 정보가 들어 있을 수 있는 `robots.txt`를 살펴본다.
 
-##### 구글이 특정 웹 페이지를 indexing하지 못하도록 하는 방법
+- 구글이 특정 웹 페이지를 indexing하지 못하도록 하는 방법
 
-> [How to prevent google from indexing certin web pages](https://www.ilfusion.com/how-to-prevent-google-from-indexing-certain-web-pages)
+	> [How to prevent google from indexing certin web pages](https://www.ilfusion.com/how-to-prevent-google-from-indexing-certain-web-pages)
 
-1. `noindex` 메타 태그
+	1. `noindex` 메타 태그
 
-	- `<head>`에 아래 메타 태그 삽입
+		- `<head>`에 아래 메타 태그 삽입
 
-		```html
-		<meta name="robots" content="noindex">
-		```
+			```html
+			<meta name="robots" content="noindex">
+			```
 
-2. `X-Robots-Tag` HTTP response header
+	2. `X-Robots-Tag` HTTP response header
 
-	- `X-Robots-Tag: noindex`
+		- `X-Robots-Tag: noindex`
 
-3. `robots.txt`
+	3. `robots.txt`
 
-	- [Create a robots.txt file](https://developers.google.com/search/docs/advanced/robots/create-robots-txt?hl=en&visit_id=637895822363783848-1731081026&rd=1)
+		- [Create a robots.txt file](https://developers.google.com/search/docs/advanced/robots/create-robots-txt?hl=en&visit_id=637895822363783848-1731081026&rd=1)
 
-### 실행2
+##### 실행
 
 - `robots.txt`는 루트에 위치하므로 [http://mercury.picoctf.net:39698/robots.txt](http://mercury.picoctf.net:39698/robots.txt)에 접속한다.
 
@@ -130,7 +134,9 @@ Main page
 	# I think this is an apache server... can you Access the next flag?
 	```
 
-### 아이디어3
+### Step 3
+
+##### 아이디어
 
 - 아파치 서버만의 어떤 파일이 있을 것 같다.
 
@@ -138,7 +144,7 @@ Main page
 
 - 목차에 `.htaccess` 파일이 보인다.
 
-### 실행3
+##### 실행
 
 - [http://mercury.picoctf.net:39698/.htaccess](http://mercury.picoctf.net:39698/.htaccess) 접속
 
@@ -147,13 +153,15 @@ Main page
 	# I love making websites on my Mac, I can Store a lot of information there.
 	```
 
-### 아이디어4
+### Step 4
+
+##### 아이디어
 
 - Store의 앞 알파벳이 대문자인 것을 보면 Mac에는 저장 관련해서 어떤 파일이 있는 것 같다.
 
 - google에 `mac store file`을 검색해보니 `DS_Store` 파일이 있다.
 
-### 실행4
+##### 실행
 
 - [http://mercury.picoctf.net:39698/.DS_Store](http://mercury.picoctf.net:39698/.DS_Store) 접속
 
