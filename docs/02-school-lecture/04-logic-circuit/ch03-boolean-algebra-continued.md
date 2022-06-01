@@ -57,7 +57,7 @@ permalink: /docs/logic-circuit/ch3
 - parity bit에 사용된다.
 
 <center markdown="block">
-  ![xor-gate](/assets/logic-circuit/3-xor-gate.png)
+  ![xor-gate](/assets/logic-circuit/img/3-xor-gate.png)
 
   xor gate
 </center>
@@ -115,11 +115,11 @@ $$
 
 <center markdown="block">
 
-  ![equivalence-gate](/assets/logic-circuit/3-equivalence-gate.png)
+  ![equivalence-gate](/assets/logic-circuit/img/3-equivalence-gate.png)
 
   equivalence gate
 
-  ![xnor-gate](/assets/logic-circuit/3-xnor-gate.png)
+  ![xnor-gate](/assets/logic-circuit/img/3-xnor-gate.png)
 
   xnor gate
 </center>

@@ -1453,6 +1453,108 @@ F &= a^{\prime}b^{\prime}c^{\prime} + a^{\prime}b^{\prime}d + acd \\
 $$
 
 <center markdown="block">
-![1](/assets/logic-circuit/5-6-1.png)
-![2](/assets/logic-circuit/5-6-2.png)
+![1](/assets/logic-circuit/img/5-6-1.png)
+![2](/assets/logic-circuit/img/5-6-2.png)
 </center>
+
+---
+
+### Quiz
+
+- $f(a,b,c,d) = \sum m(0,2,6,9,13,14) + \sum d(3,8,10)$
+
+##### 1
+
+- sum-of-products 간소화
+
+<table>
+	<thead>
+		<tr>
+			<th class='backslash'><div>$ab$</div>$cd$</th>
+			<th>00</th>
+			<th>01</th>
+			<th>11</th>
+			<th>10</th>
+		 </tr>
+	</thead>
+	<tbody>
+		 <tr>
+			<th>00</th>
+			<td class="map2">1</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+		 <tr>
+			<th>01</th>
+			<td></td>
+			<td></td>
+			<td class="map2">1</td>
+			<td class="map2">1</td>
+		</tr>
+		 <tr>
+			<th>11</th>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		 <tr>
+			<th>10</th>
+			<td class="map2_3">1</td>
+			<td class="map3">1</td>
+			<td class="map3">1</td>
+			<td class="map3">x</td>
+		</tr>
+	</tbody>
+</table>
+
+- $f = cd^{\prime}+a^{\prime}b^{\prime}d^{\prime}+ac^{\prime}d$
+
+##### 2
+
+- product-of-sums 간소화
+
+<table>
+	<thead>
+		<tr>
+			<th class='backslash'><div>$ab$</div>$cd$</th>
+			<th>00</th>
+			<th>01</th>
+			<th>11</th>
+			<th>10</th>
+		 </tr>
+	</thead>
+	<tbody>
+		 <tr>
+			<th>00</th>
+			<td></td>
+			<td class="map2">0</td>
+			<td class="map2">0</td>
+			<td>x</td>
+		</tr>
+		 <tr>
+			<th>01</th>
+			<td class="map2">0</td>
+			<td class="map2">0</td>
+			<td></td>
+			<td></td>
+		</tr>
+		 <tr>
+			<th>11</th>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		 <tr>
+			<th>10</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+	</tbody>
+</table>
+
+- $f = (b+c+d)(a+c+d^{\prime})$

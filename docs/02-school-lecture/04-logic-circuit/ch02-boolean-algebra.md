@@ -63,7 +63,7 @@ $$
 
 
 <center markdown="block">
-![not-gate](/assets/logic-circuit/2-not-gate.png)
+![not-gate](/assets/logic-circuit/img/2-not-gate.png)
 
 inversion, negative gate
 </center>
@@ -71,7 +71,7 @@ inversion, negative gate
 ### AND
 
 <center markdown="block">
-![and-switch](/assets/logic-circuit/2-and-switch.png)
+![and-switch](/assets/logic-circuit/img/2-and-switch.png)
 </center>
 
 $$
@@ -98,7 +98,7 @@ $$
 |1|1|1|
 
 <center markdown="block">
-![and-gate](/assets/logic-circuit/2-and-gate.png)
+![and-gate](/assets/logic-circuit/img/2-and-gate.png)
 
 AND gate
 </center>
@@ -106,7 +106,7 @@ AND gate
 ### OR
 
 <center markdown="block">
-![or-switch](/assets/logic-circuit/2-or-switch.png)
+![or-switch](/assets/logic-circuit/img/2-or-switch.png)
 </center>
 
 - 이항 연산자
@@ -123,7 +123,7 @@ AND gate
 |1|1|1|
 
 <center markdown="block">
-![or-gate](/assets/logic-circuit/2-or-gate.png)
+![or-gate](/assets/logic-circuit/img/2-or-gate.png)
 
 OR gate
 </center>
@@ -139,7 +139,7 @@ OR gate
 - ex) $AB^{\prime} + C$, $[A(C+D)]^{\prime} + BE$
 
 <center markdown="block">
-![boolean-expression](/assets/logic-circuit/2-boolean-expression.png)
+![boolean-expression](/assets/logic-circuit/img/2-boolean-expression.png)
 
 $AB^{\prime} + C$, $[A(C+D)]^{\prime} + BE$
 </center>
@@ -155,7 +155,7 @@ $AB^{\prime} + C$, $[A(C+D)]^{\prime} + BE$
 	- literal의 개수는 input의 라인 수
 
 		<center markdown="block">
-		![literal](/assets/logic-circuit/2-literal.png)
+		![literal](/assets/logic-circuit/img/2-literal.png)
 
 		$ab^{\prime}c + a^{\prime}b + a^{\prime}bc^{\prime} + b^{\prime}c$
 		</center>
@@ -248,11 +248,11 @@ x: -2, y: 3
 - $(X+Y)+Z = X+(Y+Z) = X + Y + Z$
 
 <center markdown="block">
-![2-input-and](/assets/logic-circuit/2-2-input-and.png)
+![2-input-and](/assets/logic-circuit/img/2-2-input-and.png)
 
 $(XY)Z$
 
-![3-input-and](/assets/logic-circuit/2-3-input-and.png)
+![3-input-and](/assets/logic-circuit/img/2-3-input-and.png)
 
 $XYZ$
 
@@ -358,11 +358,11 @@ $XYZ$
 	- $(A^{\prime}B + C + 0)^D = (A^{\prime}+B) \cdot C \cdot 1$
 
 		<center markdown="block">
-		![before-dual](/assets/logic-circuit/2-before-dual.png)
+		![before-dual](/assets/logic-circuit/img/2-before-dual.png)
 
 		$A^{\prime}B + C + 0$
 
-		![after-dual](/assets/logic-circuit/2-after-dual.png)
+		![after-dual](/assets/logic-circuit/img/2-after-dual.png)
 
 		$(A^{\prime}+B) \cdot C \cdot 1$
 		</center>
@@ -462,11 +462,11 @@ $XYZ$
 - $AB^{\prime} + C^{\prime}D = (AB^{\prime} + C^{\prime})(AB^{\prime} + D) = (A + C^{\prime})(B^{\prime} + C^{\prime})(A + D)(B^{\prime} + D)$
 
 	<center markdown="block">
-	![sum-of-product](/assets/logic-circuit/2-sum-of-product.png)
+	![sum-of-product](/assets/logic-circuit/img/2-sum-of-product.png)
 
 	sum of product
 
-	![product-of-sum](/assets/logic-circuit/2-product-of-sum.png)
+	![product-of-sum](/assets/logic-circuit/img/2-product-of-sum.png)
 
 	product of sum
 	</center>
@@ -502,7 +502,7 @@ $XYZ$
 - $(A+B+C+D)(A+B+C+E)(A+B+C+F) = A + B + C + DEF$
 
 <center markdown="block">
-![2-7-a](/assets/logic-circuit/2-p-2-7-a.png)
+![2-7-a](/assets/logic-circuit/img/2-p-2-7-a.png)
 
 $A + B + C + DEF$
 </center>
@@ -512,7 +512,7 @@ $A + B + C + DEF$
 - $WXYZ + VXYZ + UXYZ = XYZ(U+V+W)$
 
 <center markdown="block">
-![2-7-b](/assets/logic-circuit/2-p-2-7-b.png)
+![2-7-b](/assets/logic-circuit/img/2-p-2-7-b.png)
 
 $XYZ(U+V+W)$
 </center>
@@ -522,7 +522,7 @@ $XYZ(U+V+W)$
 - Simplify
 
 <center markdown="block">
-![2-9](/assets/logic-circuit/2-p-2-9.png)
+![2-9](/assets/logic-circuit/img/2-p-2-9.png)
 </center>
 
 ##### a
@@ -537,7 +537,7 @@ F &= (((A+B)^{\prime}+A)^{\prime} + (A+B)^{\prime}) ((A+B)^{\prime}+A)^{\prime} 
 $$
 
 <center markdown="block">
-![2-9-a](/assets/logic-circuit/2-p-2-9-a.png)
+![2-9-a](/assets/logic-circuit/img/2-p-2-9-a.png)
 
 $A^{\prime}+B$
 </center>
@@ -554,7 +554,7 @@ G &= (((R+S+T)^{\prime}P((R+S)^{\prime}T))^{\prime}T)^{\prime} \\
 $$
 
 <center markdown="block">
-![2-9-b](/assets/logic-circuit/2-p-2-9-b.png)
+![2-9-b](/assets/logic-circuit/img/2-p-2-9-b.png)
 
 $T^{\prime}$
 </center>
@@ -611,5 +611,5 @@ F &= (V+W+X)(V+X+Y)(V+Z) \\
 $$
 
 <center markdown="block">
-  ![2-27](/assets/logic-circuit/2-p-2-27.png)
+  ![2-27](/assets/logic-circuit/img/2-p-2-27.png)
 </center>
