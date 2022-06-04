@@ -8,46 +8,6 @@ mathjax: true
 permalink: /docs/logic-circuit/ch7
 ---
 
-<style>
-.backslash {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
-}
-.slash, .backslash {
-  text-align: left;
-  padding: 0px 40px 0px 40px;
-}
-.slash div, .backslash div {
-  text-align: right;
-}
-.map1 {
-  background: #EEEEEE;
-}
-.map2 {
-  background: #EEEEFF;
-}
-.map3 {
-  background: #EEFFEE;
-}
-.map4 {
-  background: #FFEEEE;
-}
-.map2_2 {
-  background: #DDDDFF;
-}
-.map2_3 {
-  background: #EEFFFF;
-}
-.map3_3 {
-  background: #DDFFDD;
-}
-.map2_4 {
-  background: #FFEEFF;
-}
-td {
-  text-align: center;
-}
-</style>
-
 # Ch7 Multi-Level Gate Circuits NAND and NOR Gates
 {: .no_toc }
 
