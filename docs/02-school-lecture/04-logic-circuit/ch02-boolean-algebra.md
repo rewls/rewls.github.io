@@ -37,6 +37,10 @@ permalink: /docs/logic-circuit/ch2
 
 - switch를 도입해서 이해
 
+<center markdown="block">
+![switch](/assets/logic-circuit/img/2-switch.png)
+</center>
+
 $$
 \begin{cases}
 x = 0 & \text{if open} \\
