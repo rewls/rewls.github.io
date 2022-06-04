@@ -8,64 +8,6 @@ mathjax: true
 permalink: /docs/logic-circuit/ch5
 ---
 
-<style>
-.slash {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100%" x2="100%" y2="0" stroke="gray" /></svg>');
-}
-.backslash {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
-}
-.slash, .backslash {
-  text-align: left;
-  padding: 0px 40px 0px 40px;
-}
-.slash div, .backslash div {
-  text-align: right;
-}
-.slash-left {
-background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><polygon points="0 100 100 0 0 0"/></svg>');
-}
-.map1 {
-  background: #EEEEEE;
-}
-.map2 {
-  background: #EEEEFF;
-}
-.map3 {
-  background: #EEFFEE;
-}
-.map4 {
-  background: #FFEEEE;
-}
-.map1_1 {
-  background: #DDDDDD;
-}
-.map2_2 {
-  background: #DDDDFF;
-}
-.map3_3 {
-  background: #DDFFDD;
-}
-.map4_4 {
-  background: #FFDDDD;
-}
-.map2_3 {
-  background: #EEFFFF;
-}
-.map3_4 {
-  background: #FFFFEE;
-}
-.map2_4 {
-  background: #FFEEFF;
-}
-td {
-  text-align: center;
-}
-th {
-  text-align: center;
-}
-</style>
-
 # Ch5 Karnaugh Maps
 {: .no_toc }
 
@@ -78,42 +20,6 @@ th {
 - TOC
 {:toc}
 </details>
-
----
-
-## Karnaugh Maps Color
-{: .no_toc }
-
-<table>
-	<tr>
-		<th class="map1">1</th>
-		<th class="map2">2</th>
-		<th class="map3">4</th>
-		<th class="map4">8</th>
-	</tr>
-	<tr>
-		<th class="map2">2</th>
-		<td class="map2_2">2, 2</td>
-		<td class="map2_3">2, 4</td>
-		<td class="map2_4">2, 8</td>
-	</tr>
-	<tr>
-		<th class="map3">4</th>
-		<td></td>
-		<td class="map3_3">4, 4</td>
-		<td class="map3_4">4, 8</td>
-	</tr>
-	<tr>
-		<th class="map4">8</th>
-		<td></td>
-		<td></td>
-		<td class="map4_4">8, 8</td>
-	</tr>
-	<tr>
-		<th class="map3_3">4, 4</th>
-		<td style="background:#ddffee">4,4,2</td>
-	</tr>
-</table>
 
 ---
 
@@ -1240,7 +1146,7 @@ $$
 		<tr>
 			<th>01</th>
 			<td class='slash' style="background-image: linear-gradient(to top left, #eeffee 49%, grey, white 51%)">&nbsp;<div>1</div></td>
-			<td class='slash' style="background-image: linear-gradient(to top left, #ddffee 49%, grey, #ddffdd 51%)">1<div>1</div></td>
+			<td class='slash' style="background-image: linear-gradient(to top left, #ccffee 49%, grey, #ddffdd 51%)">1<div>1</div></td>
 			<td class='slash' style="background-image: linear-gradient(to top left, #ddddff 49%, grey, white 51%)">&nbsp;<div>1</div></td>
 			<td class='slash'><div></div></td>
 		</tr>
