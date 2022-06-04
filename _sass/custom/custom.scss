@@ -4,3 +4,86 @@
 	display: block;
 	max-width: 100%;
 }
+
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+}
+
+.slash {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100%" x2="100%" y2="0" stroke="gray" /></svg>');
+}
+.backslash {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
+}
+.slash, .backslash {
+  text-align: left;
+  padding: 0px 40px 0px 40px;
+}
+.slash div, .backslash div {
+  text-align: right;
+}
+
+.map1 {
+  background: #EEEEEE;
+}
+.map2 {
+  background: #EEEEFF;
+}
+.map3 {
+  background: #EEFFEE;
+}
+.map4 {
+  background: #FFEEEE;
+}
+
+.map1_1 {
+  background: #DDDDDD;
+}
+.map2_2 {
+  background: #DDDDFF;
+}
+.map2_3 {
+  background: #EEFFFF;
+}
+.map2_4 {
+  background: #FFEEFF;
+}
+.map3_3 {
+  background: #DDFFDD;
+}
+.map3_4 {
+  background: #FFFFEE;
+}
+.map4_4 {
+  background: #FFDDDD;
+}
+
+.map2_2_2 {
+  background: #CCCCFF;
+}
+.map2_4_4 {
+  background:#ddffee
+}
+.map3_3_3 {
+  background: #CCFFCC;
+}
+.map3_3_4 {
+  background: #EEFFCC;
+}
+.map3_4_4 {
+  background: #FFEECC;
+}
+.map4_4_4 {
+  background: #FFCCCC;
+}
+
+.map3_3_3_3 {
+  background: #BBFFBB;
+}
+
+.left-none {
+  border-left: none;
+}
