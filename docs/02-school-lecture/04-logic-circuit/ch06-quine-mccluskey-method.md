@@ -8,73 +8,6 @@ mathjax: true
 permalink: /docs/logic-circuit/ch6
 ---
 
-<style>
-.slash {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="100%" x2="100%" y2="0" stroke="gray" /></svg>');
-}
-.backslash {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
-}
-.slash, .backslash {
-  text-align: left;
-  padding: 0px 40px 0px 40px;
-}
-.slash div, .backslash div {
-  text-align: right;
-}
-.slash-left {
-background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><polygon points="0 100 100 0 0 0"/></svg>');
-}
-.map1 {
-  background: #EEEEEE;
-}
-.map2 {
-  background: #EEEEFF;
-}
-.map3 {
-  background: #EEFFEE;
-}
-.map4 {
-  background: #FFEEEE;
-}
-.map1_1 {
-  background: #DDDDDD;
-}
-.map2_2 {
-  background: #DDDDFF;
-}
-.map3_3 {
-  background: #DDFFDD;
-}
-.map4_4 {
-  background: #FFDDDD;
-}
-.map2_2_2 {
-  background: #CCCCFF;
-}
-.map3_3_3 {
-  background: #CCFFCC;
-}
-.map3_3_3_3 {
-  background: #BBFFBB;
-}
-.map2_3 {
-  background: #EEFFFF;
-}
-.map3_4 {
-  background: #FFFFEE;
-}
-.map2_4 {
-  background: #FFEEFF;
-}
-td {
-  text-align: center;
-}
-th {
-  text-align: center;
-}
-</style>
-
 # Ch6 Quine-McCluskey Method
 {: .no_toc }
 
@@ -464,6 +397,8 @@ th {
 
 - Column 2: 2개 묶음 implicant 6개
 
+---
+
 ## 6.2 The Prime Implicant Chart
 
 ### Step
@@ -635,6 +570,8 @@ th {
 		</tr>
 	</tbody>
 </table>
+
+---
 
 ## 6.3 Petrick's Method
 
@@ -1165,6 +1102,8 @@ $$
 </table>
 
 - $P_2P_3P_6$
+
+---
 
 ## 6.4 Simplification of Incompletely Specified Functions
 
