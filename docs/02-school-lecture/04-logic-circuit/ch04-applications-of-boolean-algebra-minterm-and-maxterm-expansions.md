@@ -693,7 +693,7 @@ $$
 
 ##### c
 
-- $H(A,B,C,D) is 1 iff at least three chairs are full
+- $H(A,B,C,D)$ is 1 iff at least three chairs are full
 
 | |$A$|$B$|$C$|$D$|$H$|
 |-|-|-|-|-|-|
