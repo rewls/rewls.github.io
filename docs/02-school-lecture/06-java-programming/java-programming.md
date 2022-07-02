@@ -9,5 +9,5 @@ permalink: /docs/java-programming
 
 # Java Programming
 
-How to Program 11th
+Java How to Program 11th
 {: .fs-6 .fw-300 }

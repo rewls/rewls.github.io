@@ -36,7 +36,7 @@ permalink: /docs/wargame/week2-2
 	```shell
 	java -jar <파일경로>
 	```
-4. http://\<ip주소\>:\<포트번호k>/WebGoat 접속
+4. http://\<ip주소\>:\<포트번호>/WebGoat 접속
 
 ## Without Password
 
