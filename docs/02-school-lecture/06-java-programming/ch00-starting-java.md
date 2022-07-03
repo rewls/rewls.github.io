@@ -3,7 +3,7 @@ layout: default
 title: Ch0 Starting Java
 parent: Java Programming
 grand_parent: School Lecture
-nav_order: 0
+nav_order: 1
 mathjax: true
 mermaid: true
 permalink: /docs/java/ch0

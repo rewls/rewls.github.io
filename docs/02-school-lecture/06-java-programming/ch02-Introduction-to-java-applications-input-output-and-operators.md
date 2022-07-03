@@ -3,7 +3,7 @@ layout: default
 title: Ch2 Introduction to Java Applications - Input/Output and Operators
 parent: Java Programming
 grand_parent: School Lecture
-nav_order: 1
+nav_order: 3
 mathjax: true
 mermaid: true
 permalink: /docs/java/ch2
@@ -40,6 +40,8 @@ permalink: /docs/java/ch2
 - Write decision-making statements
 
 - Use relational and equality operators
+
+---
 
 ## 2.2 Your First Program in Java: Printing a Line of Text
 
@@ -104,6 +106,8 @@ Welcome to Java Programming!
 > Common Programming Error 2.2
 >
 > A compilations error occurs if a `public` class's file name is not exactly the same name as the class (in terms of both spelling and capitalization) followed by the `java` extension
+
+---
 
 ## 2.3 Modifying your First Java Program
 
@@ -170,6 +174,8 @@ Programming!
         </tr>
     </tbody>
 </table>
+
+---
 
 ## 2.4 Displaying text with `printf`
 
@@ -343,6 +349,8 @@ Sum is 117
         </tr>
     </tbody>
 </table>
+
+---
 
 ## 2.8 Decision Making: Equality and Relational Operators
 

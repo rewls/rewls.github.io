@@ -3,7 +3,7 @@ layout: default
 title: Ch1 Introduction to Computers, the Internet and Java
 parent: Java Programming
 grand_parent: School Lecture
-nav_order: 1
+nav_order: 2
 mathjax: true
 mermaid: true
 permalink: /docs/java/ch1
@@ -30,6 +30,8 @@ permalink: /docs/java/ch1
 - A typical java program development environment
 
 - Test-driving a jvava application
+
+---
 
 ## 1.1 Intrdunction
 
@@ -76,6 +78,8 @@ permalink: /docs/java/ch1
 - geared toward developing applications for resource-constrained embedded devices
 
 > Java How to Program, 10th and 11th editions are based on Java SE 8 and Java SE 9
+
+---
 
 ## 1.5 Introduction to Object Technology
 
@@ -126,6 +130,8 @@ permalink: /docs/java/ch1
 	- 상위 클래스 -(특수화)-> 하위 클래스
 
 	- 하위 클래스 -(일반화)-> 상위 클래스
+
+---
 
 ## 1.8 Java
 
