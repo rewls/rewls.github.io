@@ -39,13 +39,15 @@ permalink: /docs/java/ch6
 
 - What method overloading is and how to create overloaded methods
 
+---
+
 ## 6.3 `static` Methods, `static` Fields and Class `Math`
 
 ### `static` method (class method)
 
-- applies to the class in which it's declared as a whole
+- Applies to the class in which it's declared as a whole
 
-- performs a task that does not depend on any object
+- Performs a task that does not depend on any object
 
 - Declaring a method as static
 
@@ -83,64 +85,64 @@ permalink: /docs/java/ch6
     </thead>
     <tbody>
         <tr>
-            <td>`abs(x)`</td>
-            <td>absolute value of `x`</td>
-            <td>`abs(-23.7)` is 23.7</td>
+            <td><span markdown=1>`abs(x)`</span></td>
+            <td><span markdown=1>absolute value of `x`</span></td>
+            <td><span markdown=1>`abs(-23.7)` is 23.7</span></td>
         </tr>
         <tr>
-            <td>`ceil(x)`</td>
-            <td>rounds `x` to the smallest integer not less than `x`</td>
-            <td>`ceil(-9.2)` is -9.0</td>
+            <td><span markdown=1>`ceil(x)`</span></td>
+            <td><span markdown=1>rounds `x` to the smallest integer not less than `x`</span></td>
+            <td><span markdown=1>`ceil(-9.2)` is -9.0</span></td>
         </tr>
         <tr>
-            <td>`cos(x)`</td>
-            <td>trigonometric cosine of `x` (`x` in radians)</td>
-            <td>`cos(0.0)` is 1.0</td>
+            <td><span markdown=1>`cos(x)`</span></td>
+            <td><span markdown=1>trigonometric cosine of `x` (`x` in radians)</span></td>
+            <td><span markdown=1>`cos(0.0)` is 1.0</span></td>
         </tr>
         <tr>
-            <td>`exp(x)`</td>
-            <td>exponential method $e^x$</td>
-            <td>`exp(1.0)` is 2.71828</td>
+            <td><span markdown=1>`exp(x)`</span></td>
+            <td><span markdown=1>exponential method $e^x$</span></td>
+            <td><span markdown=1>`exp(1.0)` is 2.71828</span></td>
         </tr>
         <tr>
-            <td>`floor(x)`</td>
-            <td>rounds `x` to the largest integer not greater than `x`</td>
-            <td>`floor(-9.8)` is -10.0</td>
+            <td><span markdown=1>`floor(x)`</span></td>
+            <td><span markdown=1>rounds `x` to the largest integer not greater than `x`</span></td>
+            <td><span markdown=1>`floor(-9.8)` is -10.0</span></td>
         </tr>
         <tr>
-            <td>`log(x)`</td>
-            <td>natural logarithm of `x`(base $e$)</td>
-            <td>`log(Math.E)` is 1.0</td>
+            <td><span markdown=1>`log(x)`</span></td>
+            <td><span markdown=1>natural logarithm of `x`(base $e$)</span></td>
+            <td><span markdown=1>`log(Math.E)` is 1.0</span></td>
         </tr>
         <tr>
-            <td>`max(x, y)`</td>
-            <td>larger value of `x` and `y`</td>
-            <td>`max(2.3, 12.7)` is 12.7</td>
+            <td><span markdown=1>`max(x, y)`</span></td>
+            <td><span markdown=1>larger value of `x` and `y`</span></td>
+            <td><span markdown=1>`max(2.3, 12.7)` is 12.7</span></td>
         </tr>
         <tr>
-            <td>`min(x, y)`</td>
-            <td>smaller value of `x` and `y`</td>
-            <td>`min(2.3, 12.7)` is 2.3</td>
+            <td><span markdown=1>`min(x, y)`</span></td>
+            <td><span markdown=1>smaller value of `x` and `y`</span></td>
+            <td><span markdown=1>`min(2.3, 12.7)` is 2.3</span></td>
         </tr>
         <tr>
-            <td>`pow(x, y)`</td>
-            <td>`x` raised to the power `y` (i.e. $x^y$)</td>
-            <td>`pow(2.0, 7.0)` is 128.0</td>
+            <td><span markdown=1>`pow(x, y)`</span></td>
+            <td><span markdown=1>`x` raised to the power `y` (i.e. $x^y$)</span></td>
+            <td><span markdown=1>`pow(2.0, 7.0)` is 128.0</span></td>
         </tr>
         <tr>
-            <td>`sin(x)`</td>
-            <td>trigonometric sine of `x` (`x` in radians)</td>
-            <td>`sin(0.0)` is 0.0</td>
+            <td><span markdown=1>`sin(x)`</span></td>
+            <td><span markdown=1>trigonometric sine of `x` (`x` in radians)</span></td>
+            <td><span markdown=1>`sin(0.0)` is 0.0</span></td>
         </tr>
         <tr>
-            <td>`sqrt(x)`</td>
-            <td>square root of `x`</td>
-            <td>`sqrt(900.0)` is 30.0</td>
+            <td><span markdown=1>`sqrt(x)`</span></td>
+            <td><span markdown=1>square root of `x`</span></td>
+            <td><span markdown=1>`sqrt(900.0)` is 30.0</span></td>
         </tr>
         <tr>
-            <td>`tan(x)`</td>
-            <td>trigonometric tangent of `x` (`x` in radians)</td>
-            <td>`tan(0.0)` is 0.0</td>
+            <td><span markdown=1>`tan(x)`</span></td>
+            <td><span markdown=1>trigonometric tangent of `x` (`x` in radians)</span></td>
+            <td><span markdown=1>`tan(0.0)` is 0.0</span></td>
         </tr>
     </tbody>
 </table>
@@ -151,7 +153,7 @@ permalink: /docs/java/ch6
 
 ### Fields of a class
 
-- static variables + instance variables
+- `static` variables + instance variables
 
 ##### Static variables (class variables)
 
@@ -159,13 +161,15 @@ permalink: /docs/java/ch6
 
 ##### Instance variables
 
-- each object(instance) of the class has a separate instance of the variable in memory
+- Each object(instance) of the class has a separate instance of the variable in memory
 
 ### Why is method `main` declared `static`?
 
 - The JVM attempts to invoke the `main` method of the class you specify - at this point no objects of the class have been created
 
 - Declaring `main` as `static` allows the JVM to invoke `main` without creating an instance of the class.
+
+---
 
 ## 6.4 Declaring Methods with Multiple Parameters
 
@@ -227,21 +231,25 @@ Maximum is: 9.35
 
 ### Assembling `String`s with `String` Concatenation
 
-- String concatenation
+##### `String` concatenation
 
-    - operator `+` or `+=`
+- Operator `+` or `+=`
 
-    - `String` object + `String` object $\rightarrow$ a new `String` object
+- `String` object + `String` object $\rightarrow$ a new `String` object
+
+##### Concatenation with non-`String`
 
 - Every primitive value and object has a `String` representation
 
-    - `String` object + primitive value $\rightarrow$ `String` object + `String` object
+- `String` object + primitive value $\rightarrow$ `String` object + `String` object
 
-    - `String` object + `boolean` $\rightarrow$ `String` object + "true/false"
+- `String` object + `boolean` $\rightarrow$ `String` object + "true/false"
+
+- `String` object + object $\rightarrow$ `String` object + `String` object
 
 - All objects have a `toString` method that returns a `String` representation of the object
 
-    - `String` object + object $\rightarrow$ `String` object + `String` object
+---
 
 ## 6.5 Notes on Declaring and Using Methods
 
@@ -265,8 +273,8 @@ public class MaximumFinder {
 
 public class MaximumFinderTest {
     public static void main(String[] args) {
-        MaximumFinder MaximumFinder = new MaximumFinder();
-        MaximumFinder.determinMaximum();  // (2)
+        MaximumFinder maximumFinder = new MaximumFinder();
+        maximumFinder.determinMaximum();  // (2)
         MaximumFinder.staticFunction();  // (3)
     }
 }
@@ -274,17 +282,17 @@ public class MaximumFinderTest {
 
 ### A non-`static` method (instance method)
 
-- can call any method of the same class directly
+- Can call **any** method of the same class directly
 
-- can manipulate any of the class's fields directly
+- Can manipulate **any** of the class's fields directly
 
 ### A `static` method
 
-- can call only other `static` methods of the same class directly
+- Can call **only** other `static` methods of the same class directly
 
-- can manipulate only `static` fields in he same class directly
+- Can manipulate **only** `static` fields in he same class directly
 
-- must use a reference to an object of the class to access the class's non-`static` members
+- Must use a reference to an object of the class to access the class's non-`static` members
 
 ```java
 public class MaximumFinder {
@@ -325,13 +333,15 @@ public class MaximumFinder {
 }
 ```
 
-### Three wyas to return control to the statement that calls a method:
+### Three ways to return control to the statement that calls a method:
 
 - When the program flow reaches the method-ending right brace
 
 - `return;`
 
 - `return expression;`
+
+---
 
 ## 6.6 Method-Call Stack and Activation Records
 
@@ -347,15 +357,17 @@ public class MaximumFinder {
 
     - local variables
 
+---
+
 ## 6.7 Argument Promotion and Casting
 
-### Promotion
+### **Promotion**
 
 - conversions without losing data between primitive types
 
     - `3+4.0  // 3->3.0`
 
-    - `Math.sqrt(4)  // 4->4.0 argument promotion`
+    - `Math.sqrt(4)  // 4->4.0` **argument promotion**
 
 - Each value is promoted to the highest type in the expression
 
@@ -407,7 +419,7 @@ public class MaximumFinder {
     </tbody>
 </table>
 
-### Casting
+### **Casting**
 
 - In cases where information may be lost due to conversion
 
@@ -428,6 +440,8 @@ public class MaximumFinder {
         ```java
         int number1 = (int)input.nextDouble();  // ok
         ```
+
+---
 
 ## 6.9 Secure Random-Number Generation
 
@@ -573,7 +587,7 @@ public class RollDie {
         }
 
         System.out.println("Face\tFrequency");  // output headers
-        System.out.printf("1\t%d%n22\t%d%n3\t%d%n4\t%d%n5\t%d%n6\t%d%n",
+        System.out.printf("1\t%d%n2\t%d%n3\t%d%n4\t%d%n5\t%d%n6\t%d%n",
             frequency1, frequency2, frequency3, frequency4, frequency5, frequency6);
     }
 }
@@ -582,7 +596,7 @@ public class RollDie {
 ```
 Face    Frequency
 1       10000549
-22      10005015
+2       10005015
 3       9997940
 4       10000631
 5       10000617
@@ -600,6 +614,8 @@ Face    Frequency
 - `differenceBetweenValues` represents the constant difference between consectutive number in the sequence
 
 - `scalingFactor` specifies how many numbers are in the range
+
+---
 
 ## 6.10 A Game of Chance; Introducing `enum` Types
 
@@ -638,13 +654,15 @@ public class Craps {
     public static void main(tring[] args) {
         // Q1
         int myPoint = 0;  // point if no win or loss on first roll
+		// Q2
         Status gameStatus;  // can contain CONTINUE, WON or LOST
 
         int sumOfDice = rollDice();  // first roll of the dice
 
         // determine game status and point based on first roll
-        switch (sumOfDice) {
-            case SEVEN:  // win with 7 on first roll
+        switch (sumOfDice) {  // int
+			// Q3
+            case SEVEN:  // int constant. win with 7 on first roll
             case YO_LEVEN:  // win with 11 on first roll
                 gameStatus = Status.WON;
                 break;
@@ -695,6 +713,20 @@ public class Craps {
 }
 ```
 
+```
+Player rolled 4 + 6 = 10
+Point is 10
+Player rolled 5 + 6 = 11
+Player rolled 5 + 6 = 11
+Player rolled 4 + 6 = 10
+Player wins
+```
+
+```
+Player rolled 1 + 6 = 7
+Player wins
+```
+
 ### Q1. If `myPoint` is not initialized?
 
 - A1) If you do not initialize `myPoint`, the compiler issues an error, because `myPoint` is not assiged a value in every case of of the `switch` statement, and thus the program could try to use `myPoint` beore it is assigned a value
@@ -705,9 +737,13 @@ public class Craps {
 
 ### `enum` type `Status`
 
-- a special kine of class with the keyword `enum` and a type name
+`private enum Status {CONTINUE, WON, LOST};`
 
-- Variables of an denum` type can be assigned only the constants declared in the enumeration
+- A special kind of class with the keyword `enum` and a type name
+
+- Variables of an `enum` type can be assigned only the constants declared in the enumeration
+
+	- `Status gameStatus = Status.WON;`
 
 ### Q3. Why should not `SEVEN` be `enum` constant
 
@@ -715,7 +751,7 @@ public class Craps {
 
 ```java
 public class Craps {
-    private enum Statuc {CONTINUE, WON, LOST};
+    private enum Status {CONTINUE, WON, LOST};
     private enum Numbers {ZERO, ONE, TWO};
 
     public void play() {
@@ -767,7 +803,7 @@ public class Craps {
 
 - The scope of a local-variable declaration in the initialization section of a `for` statement's header is the body of the `for` statement and the other expressions in the header;
 
-- A method or field's scope is the entire body of the class
+- <b><i>A method or field's scope</i></b> is the entire body of the class
 
 - Any block may contain variable declaration
 
@@ -831,19 +867,35 @@ field x befor exiting method useField is 100
 local x in the 5
 ```
 
+---
+
 ## 6.12 Method Overloading
 
-### Method overloading
+### <b><i>Method overloading</i></b>
 
 - Methods of the same name declared in the same class
 
-- Must have differt sets of parameters
+- Must have different sets of parameters
 
-### Used to create several methods with the same name
+- The compiler distinguishes overloaded methods by their signatures
 
-- that perform the same or similar tasks
+##### Signatures
 
-- but on different types or different number of arguments
+- the method's names
+
+- the number, types and order of their parameters
+
+> NOTE
+>
+> Method calls cannot be distinguished by return type
+
+### Usage
+
+- Used to create several methods with the same name
+
+- That perform the same or similar tasks
+
+- But on different types or different number of arguments
 
 ```java
 // Fig. 6.10: MethodOverload.java
@@ -877,15 +929,3 @@ Square of integer 7 is 49
 Called square with double argument: 7.500000
 Square of double 7.5 is 56.250000
 ```
-
-- The compiler distinguishes overloaded methods by their signatures
-
-### Signatures
-
-- the method's names
-
-- the number, types and order of their parameters
-
-> NOTE
->
-> Method calls cannot be distinguished by return type
