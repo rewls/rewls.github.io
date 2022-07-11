@@ -47,15 +47,15 @@ permalink: /docs/java/ch3
 
 ## 3.2 Instance Variables, `set` Methods and `get` Methods
 
-### 3.2.1 Account Class with an Instance Variable, a  `set` Method and a `get` method
+### 3.2.1 `Account` Class with an Instance Variable, a  `set` Method and a `get` method
 
 ```java
 // Fig. 3.1: Account.java
-// Account class that contains a name instance variable and methods to set and get its value
+// Account class that contains an name instance variable
+// and methods to set and get its value.
 
 public class Account {
     private String name;  // instance variable
-    // default value for an instance variable of type String - null
 
     // method to set the name in the object
     public void setName(String name) {
@@ -69,80 +69,74 @@ public class Account {
 }
 ```
 
-##### Class `Account`
+##### `public` class
 
-- Each class declaration with keyword `public`
+- Must be stored in a file with the same name as the class
 
-    - must be stored in a file with the same name as the class
+##### Access modifier `public`
 
-- Access modifier `public`
+- The class is available to the public
 
-    - the class is available to the public
+##### no `main`
 
-- is not an application because it does not contain `main`
+- Application can't execute; will receive an error messge
 
-- can't execute `Account`; will receive an error messge
+	```
+	Exeption in thread "main"
+	java.lang.NosuchMethodError: main
+	```
 
-##### Instance Variable `name`
+##### Instance variable
 
 - Each object(instance) of the class has its own copy of the class's instance variables
 
-- Variables or methods declared with access modifier `private`
+##### Access modifier `private`
 
-    - accessible only to methods of the class in which they're declared
+- Accessible only to methods of the class in which they're declared
 
 > Good Programming Practice 3.1
 >
-> We prefer to list a class's instance variables first in the class's body. You can list the class's instance variables anywhere in the class outside ints method declarations
+> We prefer to list a class's instance variables first in the class's body. You can list the class's instance variables anywhere in the class outside its method declarations
 
-##### `setName` Method of Class `Account`
+##### `public` method
 
-- access modifier `public`
-
-    - The method is available to the public
-
-    - It can be called from methods of other classes
+- It can be called from methods of other classes
 
 ##### Method names
 
-- by convention, begin with a lowercase first letter and
+- By convention, begin with a lowercase first letter
 
-- subsequent words int the name begin with a capital letter.
+- Subsequent words in the name begin with a capital letter.
 
-##### Parameters Are Local Variables
+##### Local variables
 
-- local variables
+- Parameters are local variables
 
-    - Variables declared in the body of a particular method
+- Variables declared in the body of a particular method
 
-    - are not automatically initialized
+- Are not automatically initialized
 
-    - When a method terminates, the values of its local variables are lepost
+- When a method terminates, the values of its local variables are lost
 
-##### `setName` Method body
+##### Keyword `this`
 
-- Keyword `this`
+- Is used to refer to the shadowed instance explicitly
 
-    - is used to refer to the shadowed instance variable explicitly
+##### no parameter
 
-##### `getName` Method of Class `Account`
+- The method does not require additional information to perform its task
 
-- Empty parentheses after the method name
+### 3.2.2 `AccountTest` Class That Creates and Uses an Object of Class `Account`
 
-    - the method does not require additional information to perform its task
-
-### 3.2.2 AccountTest Class That Creates and Uses an Object of Class Account
-
-##### Driver Class `AccountTest`
+##### Driver class `AccountTest`
 
 - A class that creates an object of another class, then calls the object's methods, is a driver class
 
-- a separate class containing method `main` to test each new class
+- A separate class containing method `main` to test each new class
 
 ```java
 // Fig. 3.2: AccountTest.java
-// Creating and manipulating an Account object
-
+// Creating and manipulating an Account object.
 import java.util.Scanner;
 
 public class AccountTest {
@@ -163,7 +157,8 @@ public class AccountTest {
         System.out.println();  // outputs a blank line
 
         // display the name stored in object myAccount
-        System.out.printf("Name in object myAccount is:%n%s%n", myAccount.getName());
+        System.out.printf("Name in object myAccount is:%n%s%n",
+            myAccount.getName());
     }
 }
 ```
@@ -178,25 +173,25 @@ Name in object myAccount is:
 Jane Green
 ```
 
-##### `Scanner` object for receiging input from the user
+##### `Scanner` object for receiving input from the user
 
 - `Scanner` method `nextLine`
 
-    - reads characters until a newline character is encountered, then returns the characters as `String`
+    - Reads characters until a newline character is encountered, then returns the characters as `String`
 
-    - the newline chracter is discarded
+    - The newline chracter is discarded
 
 - `Scanner` method `next`
 
-    - reads characters until any white-space character is encountered, then returns the characters a `String`
+    - Reads characters until any white-space character is encountered, then returns the characters a `String`
 
-    - the white-space character is discarded
+    - The white-space character is discarded
 
 ##### Instantiating an object - keyword `new` and Constructors
 
-- A class instance creation expression begins with keyword `new` and creats a new object
+- A class instance creation expression begins with keyword `new` and creates a new object
 
-- a constructor is similar to a method but is called implicitly by the new operator to initialize an object's instance variables at the time the object is created
+- A constructor is similar to a method but is called implicitly by the `new` operator to initialize an object's instance variables at the time the object is created
 
 ##### Calling method
 
@@ -206,11 +201,11 @@ Jane Green
 
 ##### Default initial value of instance variable
 
-- Local variables ar not automatically initialized
+- Local variables are not automatically initialized
 
 - Every instance variable has a default initial value
 
-    - a value provided by Java when you do not specify the instance variable's initial value
+    - A value provided by Java when you do not specify the instance variable's initial value
 
 - The default value for an instance variable of type `String` is null
 
@@ -222,10 +217,21 @@ Jane Green
 
 ### 3.2.4 Account UML class diagram
 
-<center markdown="block">
-![class-diagram-account](/assets/java-programming/images/3-class-diagram-account-fig_03-01.png)
+<!--
+@startuml 3-class-diagram-fig_3-1
+skinparam classAttributeIconSize 0
+class Account {
+	- String name
+	+ setName(String name)
+	+ String getName()
+}
+@enduml
+-->
 
-Class diagram for class `Account` of Fig. 3.1.
+<center markdown=block>
+![diagram](/assets/java-programming/images/3-class-diagram-fig_3-1.svg)
+
+UML class diagram for class `Account` of Fig. 3.1.
 </center>
 
 - Top compartment: class's name
@@ -238,9 +244,9 @@ Class diagram for class `Account` of Fig. 3.1.
 
 - +: corresponds to the `public`
 
-### 3.2.5 Additional Notes on Class AccountTest
+### 3.2.5 Additional Notes on Class `AccountTest`
 
-##### static Method `main`
+##### `static` method `main`
 
 - A key part of enabling the JVM to locate and call method `main` to begin the app's execution is the `static` keyword, which indicates that `main` is a `static` method that can be called without first creating an object of the class in which the method is declared
 
@@ -248,13 +254,13 @@ Class diagram for class `Account` of Fig. 3.1.
 
 - Most classes you'll use must be imported explicitly
 
-- Classes taht ar implicitly imported
+- Classes that are implicitly imported
 
     - The classes in package `java.lang`
 
-        - ex) `System` and `String`
+        - Ex) `System` and `String`
 
-    - Class that are compiled in the same directory are consideredto be in the samd package - known as the default package
+    - Class that are compiled in the same directory are considered to be in the samd package - known as the default package
 
 - An `import` declaration is not required if you always refer to a class via its fully qualified class name
 
@@ -268,46 +274,48 @@ Class diagram for class `Account` of Fig. 3.1.
 
 ---
 
-## 3.3 Account Class: Initializing Objects with Constructors
+## 3.3 `Account` Class: Initializing Objects with Constructors
 
 ```java
 // Fig. 3.5: Account.java
-// Account class with a constructor that initializes the name
+// Account class with a constructor that initializes the name.
 
 public class Account {
     private String name;  // instance variable
 
-    // constructor initializes name sith parameter name. no return type
-    public Account(String name) {  // constructor name is class name
+    // constructor initializes name with parameter name
+    // no return type
+    public Account(String name) { // constructor name is class name
         this.name = name;
     }
 
     // method to set the name
     public void setName(String name) {
-        this.name = name;  // store the name
+        this.name = name;
     }
 
     // method to retrieve the name
     public String getName() {
-        return name;  // return value of name to caller
+        return name;
     }
 }
 ```
 
 ```java
 // Fig. 3.6: AccountTest.java
-// Using the Account constructor to initialize th name instance variable at the time each Account object is created
+// Using the Account constructor to initialize the name instance
+// variable at the time each Account object is created.
 
 public class AccountTest {
-	public static void main(String[] args) {
-		// create two Account objects
-		Account account1 = new Account("Jan Green");
-		Account account2 = new Account("John Blue");
+    public static void main(String[] args) {
+        // create two Account objects
+        Account account1 = new Account("Jane Green");
+        Account account2 = new Account("John Blue");
 
-		// display initial value of tpname for each Account
-		System.out.printf("account1 name is: %s%n", account1.getName());
-		System.out.printf("account2 name is: %s%n", account2.getName());
-	}
+        // display initial value of name for each Account
+        System.out.printf("account1 name is: %s%n", account1.getName());
+        System.out.printf("account2 name is: %s%n", account2.getName());
+    }
 }
 ```
 
@@ -318,63 +326,77 @@ account2 name is: John Blue
 
 ### Constructors cannot return values
 
-- Constructors can specify parameters but ont return types
+- Constructors can specify parameters but not return types
 
 ### Default constructor
 
 - If a class does not define constructors, the compiler provides a default constructor with no parameters, and the class's instance variables are initialized to their default values
 
-### There's no default constructor in a class that declares a constructor
-
 - If you declare a constructor for a class, the compiler will not create a default constructor for that class
 
-<center markdown="block">
-![class-diagram-account-fig_03-05](/assets/java-programming/images/3-class-diagram-account-fig_03-05.png)
+<!--
+@startuml 3-class-diagram-fig_3-5
+skinparam classAttributeIconSize 0
+class Account {
+	- String name
+	<<constructor>> Account(String name)
+	+ setName(String name)
+	+ String getName()
+}
+@enduml
+-->
 
-Class diagram for class `Account` of Fig. 3.5
+<center markdown="block">
+![class-diagram-account-fig_3-5](/assets/java-programming/images/3-class-diagram-fig_3-5.svg)
+
+UML class diagram for class `Account` of Fig. 3.5
 </center>
 
 ---
 
-## 3.4 Account Class with a Balance; Floating-Point Numbers
+## 3.4 `Account` Class with a Balance; Floating-Point Numbers
 
 ```java
 // Fig. 3.8: Account.java
-// Account class with a double instance variable balance and a constructor and deposit method that perform validation
+// Account class with a double instance variable balance and a constructor
+// and deposit method that perform validation.
 
 public class Account {
-	private String name;  // instance varialbe
-	private double balance;  // instancee variable
+    private String name;  // instance variable
+    private double balance;  // instance variable
 
-	// Account constructor that receives two parameters
-	public Account(String name, double balance) {
-		this.name = name;  // assign name to instance variable name
+    // Account constructor that receives two parameters
+    public Account(String name, double balance) {
+        this.name = name;  // assign name to instance variable name
 
-		// validate that the balance is greater than 0.0; if it's not, instance variable balance keeps its default initial value of 0.0
-		if (balance > 0.0)  // if the balance is valid
-			this.balance = balance;  // assign it to instance variable
-	}
+        // validate that the balance is greater than 0.0; if it's not,
+        // instance variable balance keeps its default initial value of 0.0
+        if (balance > 0.0) { // if the balance is valid
+            this.balance = balance;  // assign it to instance variable balance
+        }
+    }
 
-	// method that deposits (adds) only a valid amount to the balance
-	public void deposit(double depositAmount) {
-		if (depositAmount > 0.0)  // if the depositAmount is valid
-			balance = balance+depositAmount;  // add it to the balance
-	}
+    // method that deposits(adds) only a valid amount to the balance
+    public void deposit(double depositAmount) {
+        if (depositAmount > 0.0) { // if the depositAmount is valid
+            balance = balance + depositAmount;  // add it to the balance
+        }
+    }
 
-	// method returns the account balance
-	public double getBalance() {
-		return balance;
-	}
+    // method returns the account balance
+    public double getBalance() {
+        return balance;
+    }
 
-	// method that sets the name
-	public void setName(String name) {
-		this.name = name;
-	}
+    // method that sets the name
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	// method that returns the name
-	public String getName() {
-		return name;
-	}
+    // method that returns the name
+    public String getName() {
+        return name;
+    }
 }
 ```
 
@@ -382,40 +404,47 @@ public class Account {
 
 ```java
 // Fig. 3.9: AccountTest.java
-// Inputting and outputting floating-ponit numbers with Account objects
-
+// Inputting and outputting floating-point numbers with Account objects.
 import java.util.Scanner;
 
 public class AccountTest {
-	public static void main(String[] args) {
-		Account account1 = new Account("Jane Green", 50.00);
-		Account account2 = new Account("John Blue", -7.53);
+    public static void main(String[] args) {
+        Account account1 = new Account("Jane Green", 50.00);
+        Account account2 = new Account("John Blue", -7.53);
 
-		// display initial balance of each object
-		System.out.printf("%s balance: $%.2f%n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balance: $%.2f%n%n", account2.getName(), account2.getBalance());
+        // display initial balance of each object
+        System.out.printf("%s balance: $%.2f%n",
+            account1.getName(), account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n%n",
+            account2.getName(), account2.getBalance());
 
-		// create a Scanner to obtain input from the command window
-		Scanner input = new Scanner(System.in);
+        // create a Scanner to obtain input from the command window
+        Scanner input = new Scanner(System.in);
 
-		System.out.print("Enter deposit amount for account1: ");  // prompt
-		double depositAmount = input.nextDouble();  // obtain user input
-		System.out.printf("%nadding %.2f to account balance%n%n", depositAmount);
-		account1.deposit(depositAmount);  // add to account1's balance
+        System.out.print("Enter deposit amount for account1: ");  // prompt
+        double depositAmount = input.nextDouble();  // obtain user input
+        System.out.printf("%nadding %.2f to account1 balance%n%n",
+            depositAmount);
+        account1.deposit(depositAmount);  // add to account1's balance
 
-		// display balances
-		System.out.printf("%s balances: $%.2f%n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balances: $%.2f%n%n", account2.getName(), account2.getBalance());
+        // display balances
+        System.out.printf("%s balance: $%.2f%n",
+            account1.getName(), account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n%n",
+            account2.getName(), account2.getBalance());
 
-		System.out.print("Enter deposit amount for account2: ");  // prompt
-		depositAmount = input.nextDouble();  // obtain user input
-		System.out.printf("%nadding %.2f to account balance%n%n", depositAmount);
-		account2.deposit(depositAmount);  // add to account2's balance
+        System.out.print("Enter deposit amount for account2: ");  // prompt
+        depositAmount = input.nextDouble();  // obtain user input
+        System.out.printf("%nadding %.2f to account2 balance%n%n",
+            depositAmount);
+        account2.deposit(depositAmount);  // add to account2 balance
 
-		// display balances
-		System.out.printf("%s balances: $%.2f%n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balances: $%.2f%n%n", account2.getName(), account2.getBalance());
-	}
+        // display balances
+        System.out.printf("%s balance: $%.2f%n",
+            account1.getName(), account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n%n",
+            account2.getName(), account2.getBalance());
+    }
 }
 ```
 
@@ -444,19 +473,19 @@ John Blue balances: $123.45
 
 - `float`
 
-	- represents single-precision floating-point numbers
+	- Represents single-precision floating-point numbers
 
-	- up to 7 sinificant digits
+	- Up to 7 sinificant digits
 
 - `double`
 
-	- represents double-precision floating-point numbers
+	- Represents double-precision floating-point numbers
 
-	- reauire twice as much memory as `float`
+	- Reauire twice as much memory as `float`
 
-	- provide 15 significant digits - approximately double the precision of `float` variables
+	- Provide 15 significant digits - approximately double the precision of `float` variables
 
-- floating-point literals are `double` values
+- Floating-point literals are `double` values
 
 <table>
 	<caption>Java primitive types</caption>
@@ -544,12 +573,27 @@ John Blue balances: $123.45
 
 ##### `Scanner` method `nextDouble`
 
-- returns a `double value entered by the user
+- Returns a `double` value entered by the user
+
+<!--
+@startuml 3-class-diagram-fig_3-8
+skinparam classAttributeIconSize 0
+class Account {
+	- String name
+	- double balance
+	<<constructor>> Account(String name, double balance)
+	+ deposit(double depositAmount)
+	+ double getBalance()
+	+ setName(String name)
+	+ String getName()
+}
+@enduml
+-->
 
 <center markdown="block">
-![class-diagram-account-fig_03-08](/assets/java-programming/images/3-class-diagram-account-fig_03-08.png)
+![class-diagram-fig_3-8](/assets/java-programming/images/3-class-diagram-fig_3-8.svg)
 
-Class diagram for class `Account` of Fig. 3.8.
+UML class diagram for class `Account` of Fig. 3.8.
 </center>
 
 ---
@@ -568,7 +612,9 @@ Class diagram for class `Account` of Fig. 3.8.
 
 	- `byte`, `char`, `short`, `int`, `long`, `float` and `double`: 0
 
-- specifying your own initial value for a primitive-type variable
+- Specifying your own initial value for a primitive-type variable
+
+	- `private int numberOfStudents = 10;`
 
 ### Reference types
 
