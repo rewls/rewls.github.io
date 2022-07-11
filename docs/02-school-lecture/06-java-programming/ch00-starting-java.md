@@ -23,7 +23,7 @@ permalink: /docs/java/ch0
 
 ---
 
-- OS: Arch linux
+> OS: Arch linux
 
 ## Java 시작하기
 
@@ -54,6 +54,28 @@ sudo pacman -sS java | grep jdk
 ```shell
 sudo pacman -S jdk-openjdk
 ```
+
+### 여러 버전 사용
+
+- 위 과정을 통해 여러 버전의 JDK, JRE 설치
+
+- 설치된 버전 확인
+
+	```shell
+	archlinux-java status
+	```
+
+- 원하는 버전으로 세팅
+
+	```shell
+	sudo archlinux-java set <jdk 버전>
+	```
+
+- 적용된 버전 확인
+
+	```shell
+	java -version
+	```
 
 ### Test
 
