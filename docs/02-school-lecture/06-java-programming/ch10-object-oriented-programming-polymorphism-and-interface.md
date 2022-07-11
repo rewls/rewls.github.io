@@ -53,6 +53,7 @@ permalink: /docs/java/ch10
 
 <div hidden>
 @startuml 10-class-diagram-1
+skinparam classAttributeIconSize 0
 Frog -u-|> Animal
 Fish -u-|> Animal
 Bird -u-|> Animal
@@ -130,7 +131,7 @@ public class AnimalTest {
 		- Subclass's overridden method is called
 
 <div hidden>
-@startuml 10-class-diagram-2
+@startuml 10-class-diagram-3
 skinparam classAttributeIconSize 0
 class Animal {
 	+ void move()
@@ -152,7 +153,7 @@ Bird -u-|> Animal
 </div>
 
 <center markdown="block">
-![class-diagram-2](/assets/java-programming/images/10-class-diagram-2.svg)
+![class-diagram-3](/assets/java-programming/images/10-class-diagram-3.svg)
 
 Class Diagram
 </center>
@@ -184,7 +185,8 @@ public class AnimalTest {
 	- Enables a program to invoke subclass methods that are not in the superclass
 
 <div hidden>
-@startuml 10-class-diagram-3
+@startuml 10-class-diagram-4
+skinparam classAttributeIconSize 0
 class Animal {
 	+ void show()
 }
@@ -197,7 +199,7 @@ Fish -u-|> Animal
 </div>
 
 <center markdown="block">
-![class-diagram-3](/assets/java-programming/images/10-class-diagram-3.svg)
+![class-diagram-4](/assets/java-programming/images/10-class-diagram-4.svg)
 
 Class diagram
 </center>
@@ -219,7 +221,8 @@ public class AnimalTest {
 - upcasting 후 downcasting해야 subclass의 method를 error 없이 call할 수 있다.
 
 <div hidden>
-@startuml 10-class-diagram-4
+@startuml 10-class-diagram-5
+skinparam classAttributeIconSize 0
 class CommissionEmployee {
 	+ String toString()
 }
@@ -232,7 +235,7 @@ BasePlusCommissionEmployee -u-|> CommissionEmployee
 </div>
 
 <center markdown="block">
-![class-diagram-4](/assets/java-programming/images/10-class-diagram-4.svg)
+![class-diagram-5](/assets/java-programming/images/10-class-diagram-5.svg)
 
 Class diagram
 </center>
@@ -327,18 +330,18 @@ base salary: 300.00
 
 ```java
 public abstract class Employee {
-	private String firstName;
-	public abstract double earnings();
+    private String firstName;
+    public abstract double earnings();
 }
 ```
 
 ```java
 public class CommissionEmployee extends Employee {  // error
-	private double grossSales;
+    private double grossSales;
 
-	public double getGrossSales() {
-		return grossSales;
-	}
+    public double getGrossSales() {
+        return grossSales;
+    }
 }
 ```
 
@@ -440,7 +443,7 @@ public abstract class Employee {
     }
 
     // abstract method must be overridden by concrete subclasses
-    public abstract double earnings(); // no implementation here
+    public abstract double earnings();  // no implementation here
 }
 ```
 
@@ -499,8 +502,8 @@ public class SalariedEmployee extends Employee {
 // HourlyEmployee class extends Employee.
 
 public class HourlyEmployee extends Employee {
-    private double wage; // wage per hour
-    private double hours; // hours worked for week
+    private double wage;  // wage per hour
+    private double hours;  // hours worked for week
 
     // constructor
     public HourlyEmployee(String firstName, String lastName,
@@ -573,8 +576,8 @@ public class HourlyEmployee extends Employee {
 // CommissionEmployee class extends Employee.
 
 public class CommissionEmployee extends Employee {
-    private double grossSales; // gross weekly sales
-    private double commissionRate; // commission percentage
+    private double grossSales;  // gross weekly sales
+    private double commissionRate;  // commission percentage
 
     // constructor
     public CommissionEmployee(String firstName, String lastName,
@@ -644,7 +647,7 @@ public class CommissionEmployee extends Employee {
 // BasePlusCommissionEmployee class extends CommissionEmployee.
 
 public class BasePlusCommissionEmployee extends CommissionEmployee {
-    private double baseSalary; // base salary per week
+    private double baseSalary;  // base salary per week
 
     // constructor
     public BasePlusCommissionEmployee(String firstName, String lastName,
@@ -733,7 +736,7 @@ public class PayrollSystemTest {
 
         // generically process each element in array employees
         for (Employee currentEmployee : employees) {
-            System.out.println(currentEmployee); // invokes toString
+            System.out.println(currentEmployee);  // invokes toString
 
             // determine whether element is a BasePlusCommissionEmployee
             // upcasting 여부 확인
@@ -828,7 +831,7 @@ Employee 3 is a BasePlusCommissionEmployee
 ### Exercise
 
 <div hidden>
-@startuml 10-class-diagram-5
+@startuml 10-class-diagram-6
 skinparam classAttributeIconSize 0
 class Animal {
 	+ void show()
@@ -850,7 +853,7 @@ GoldFish -u-|> Fish
 </div>
 
 <center markdown="block">
-![class-diagram-5](/assets/java-programming/images/10-class-diagram-5.svg)
+![class-diagram-6](/assets/java-programming/images/10-class-diagram-6.svg)
 
 Class diagram
 </center>
@@ -940,8 +943,8 @@ public class AnimalTest {
 
 ```java
 public interface Payable {
-	public static final int pay = 1000;
-	public abstract double getPaymentAmount();
+    public static final int pay = 1000;
+    public abstract double getPaymentAmount();
 }
 ```
 
@@ -949,8 +952,8 @@ public interface Payable {
 
 ```java
 public interface Payable {
-	int pay = 1000;
-	double getPaymentAmount();
+    int pay = 1000;
+    double getPaymentAmount();
 }
 ```
 
@@ -976,6 +979,7 @@ public interface Payable {
 
 <div hidden>
 @startuml 10-payable-interface-hierachy
+skinparam classAttributeIconSize 0
 interface Payable
 class Invoice implements Payable
 abstract Employee implements Payable
@@ -996,7 +1000,7 @@ class SalariedEmployee extends Employee
 // Payable interface declaration
 
 public interface Payable {
-	public abstract double getPaymentAmount();  // no implementation
+    public abstract double getPaymentAmount();  // no implementation
 }
 ```
 
@@ -1061,7 +1065,7 @@ public class Invoice implements Payable {
     // method required to carry out contract with interface Payable
     @Override
     public double getPaymentAmount() {
-        return getQuantity() * getPricePerItem(); // calculate total cost
+        return getQuantity() * getPricePerItem();  // calculate total cost
     }
 }
 ```
@@ -1072,6 +1076,7 @@ public class Invoice implements Payable {
 
 <div hidden>
 @startuml 10-software-engineering-observation-9
+skinparam classAttributeIconSize 0
 interface A
 interface B
 class ExClass implements A
@@ -1123,7 +1128,7 @@ public abstract class Employee implements Payable {
     }
 
     // abstract method must be overridden by concrete subclasses
-    public abstract double earnings(); // no implementation here
+    public abstract double earnings();  // no implementation here
 
     // implementing getPaymentAmount here enables the entire Employee
     // class hierarchy to be used in an app that processes Payables
@@ -1189,34 +1194,35 @@ public class SalariedEmployee extends Employee {
 
 	2. any method declared its supclasses(e.g., `Oject`)
 
-<div hidden>
-@startuml 10-class-diagram-6
-interface TestInterface
-class Object
-class Invoice
-abstract Employee
-class OffInvoice
-class ComInvoice
-class SalariedEmployee
+	<div hidden>
+	@startuml 10-class-diagram-7
+	skinparam classAttributeIconSize 0
+	interface TestInterface
+	class Object
+	class Invoice
+	abstract Employee
+	class OffInvoice
+	class ComInvoice
+	class SalariedEmployee
 
-Payable -u-|> TestInterface
-class Invoice implements Payable
-abstract Employee implements Payable
-Invoice -u-|> Object
-Employee -u-|> Object
-OffInvoice -u-|> Invoice
-ComInvoice -u-|> Invoice
-SalariedEmployee -u-|> Employee
+	Payable -u-|> TestInterface
+	class Invoice implements Payable
+	abstract Employee implements Payable
+	Invoice -u-|> Object
+	Employee -u-|> Object
+	OffInvoice -u-|> Invoice
+	ComInvoice -u-|> Invoice
+	SalariedEmployee -u-|> Employee
 
-Invoice -[hidden]> Employee
-@enduml
-</div>
+	Invoice -[hidden]> Employee
+	@enduml
+	</div>
 
-<center markdown="block">
-![class-diagram-6](/assets/java-programming/images/10-class-diagram-6.svg)
+	<center markdown="block">
+	![class-diagram-7](/assets/java-programming/images/10-class-diagram-7.svg)
 
-Class diagram
-</center>
+	Class diagram
+	</center>
 
 2. Using aninterface reference, we can polymorphically invoke
 
@@ -1257,7 +1263,7 @@ public class PayableInterfaceTest {
 ```
 
 <div hidden>
-@startuml 10-class-diagram-7
+@startuml 10-class-diagram-8
 skinparam classAttributeIconSize 0
 interface Payable {
 	+ {abstract} double getPaymentAmount()
@@ -1290,7 +1296,7 @@ Invoice -[hidden]> Employee
 </div>
 
 <center markdown="block">
-![class-diagram-7](/assets/java-programming/images/10-class-diagram-7.svg)
+![class-diagram-8](/assets/java-programming/images/10-class-diagram-8.svg)
 
 Class diagram
 </center>
