@@ -47,7 +47,7 @@ permalink: /docs/java/ch2
 
 ```java
 // Fig. 2.1: Welcome1.java
-// Text-printing program
+// Text-printing program.
 
 public class Welcome1 {
     // main method begins execution of Java application
@@ -69,25 +69,25 @@ Welcome to Java Programming!
 
 - By conventions, begin with a capital letter and capitalize the first letter of each word they include
 
-    - ex) `SampleClassName`
+    - Ex) `SampleClassName`
 
 - A class name is an identifier
 
-    - consists of letters, digits, underscores(_) and dollar signs($)
+    - Consists of letters, digits, underscores(_) and dollar signs($)
 
-    - does not begin with a digit
+    - Does not begin with a digit
 
-    - does not contain spaces
+    - Does not contain spaces
 
 - Java is case sensitive
 
 ### `main` method
 
-- starting point of every Java application
+- Starting point of every Java application
 
 ### Java Keywords
 
-- always spelled with all lowercase letters
+- Always spelled with all lowercase letters
 
 - [Java Language Keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
 
@@ -99,9 +99,9 @@ Welcome to Java Programming!
 
 - `System.out.println` method
 
-    - prints a string in the command window
+    - Prints a string in the command window
 
-    - positions the output cursor at the beginning of the next line
+    - Positions the output cursor at the beginning of the next line
 
 > Common Programming Error 2.2
 >
@@ -113,10 +113,10 @@ Welcome to Java Programming!
 
 ```java
 // Fig. 2.3: Welcome2.java
-// Printing a line of text with multiple statements
+// Printing a line of text with multiple statements.
 
 public class Welcome2 {
-    // main method begins excution of Java application
+    // main method begins execution of Java application
     public static void main(String[] args) {
         System.out.print("Welcome to ");
         System.out.println("Java Programming!");
@@ -130,7 +130,7 @@ Welcome to Java Programming!
 
 ```java
 // Fig. 2.4: Welcome3.java
-// Printing multiple lines of text with a single statement
+// Printing multiple lines with a single statement.
 
 public class Welcome3 {
     // main method begins execution of Java application
@@ -181,7 +181,7 @@ Programming!
 
 ```java
 // Fig. 2.6: Welcome4.java
-// Displaying muliple lines with method System.out.printf
+// Displaying multiple lines with method System.out.printf.
 
 public class Welcome4 {
     // main method begins execution of Java application
@@ -196,12 +196,19 @@ Welcome to
 Java Programming!
 ```
 
+- `%s`: format specifier
+
+- `%n`: `\n`
+
+- `"%s%n%s%n"`: format string
+
+---
+
 ## 2.5 Another Application: Adding Integers
 
 ```java
 // Fig. 2.7: Addition.java
-// Addition program that inputs two numbers then displays their sum
-
+// Addition program that displays the sum of two numbers.
 import java.util.Scanner;  // program uses class Scanner
 
 public class Addition {
@@ -214,9 +221,9 @@ public class Addition {
         int number1 = input.nextInt();  // read first number from user
 
         System.out.print("Enter second integer: ");  // prompt
-        int number2 = input.nextInt();  // read second number from uwer
+        int number2 = input.nextInt();  // read second number from user
 
-        int sum = number1+number2;  // add numbers, then store total in sum
+        int sum = number1 + number2;  // add numbers, then store total in sum
 
         System.out.printf("Sum is %d%n", sum);  // display sum
     }  // end method main
@@ -229,47 +236,63 @@ Enter second integer: 72
 Sum is 117
 ```
 
-### `import` declaration
+### `import java.util.Scanner;`
 
-- helps the compiler locate a class that is used in this program
+- `java.util`: package
 
-### Packages
+- `Scanner`: class
 
-- named groups of predefined and related classes
+##### `import` declaration
+
+- Helps the compiler locate a class that is used in this program
+
+##### Packages
+
+- Named groups of predefined and related classes
 
 > Common Programming Enter 2.5
 >
 > All `import` declaration must appear before the first class declaration in the file. Placing an `import` declaration inside or after a class declaration is a syntax error.
 
-### `new` keyword
+### `Scanner input = new Scanner(System.in);`
 
-- creates an object
+##### `new` keyword
 
-### `Scanner` object
+- Creates an object
 
-- enables a program to read data comming from the user at the keyboard or a file on disk
+##### `Scanner` object
 
-- translates these bytes into types that can be used in a program
+- Enables a program to read data comming from the user at the keyboard or a file on disk
+
+- Translates these bytes into types that can be used in a program
 
 ##### Standard input object, `System.in`
 
-- enables applications to read bytes of information typed by the user
+- Enables applications to read bytes of information typed by the user
 
 > Good Programming Practice 2.9
 >
 > By convention, variable-name identifiers use the camel-case naming convention with a lowercase first letter
 
-### `System`
+##### `System`
 
-- a class of package `java.lang`
+- A class of package `java.lang`
 
-- not imported with an `import` declaration
+- Not imported with an `import` declaration
 
 > Software Engineering Observation 2.1
 >
 > By default, package `java.lang` is imported in every Java program; thus, classes in `java.lang` are the only ones in the Java API that do not require an `import` declaration
 
+---
+
+## 2.6 Memory Concepts
+
+---
+
 ## 2.7 Arithmetic
+
+### Arithmetic Operators
 
 <table>
     <caption>Arithmetic operators</caption>
@@ -297,7 +320,7 @@ Sum is 117
             <td><span markdown=1>`/`</span></td>
         </tr>
         <tr>
-            <td>Rdmainder</td>
+            <td>Remainder</td>
             <td><span markdown=1>`%`</span></td>
         </tr>
     </tbody>
@@ -306,6 +329,8 @@ Sum is 117
 - Integer division yields an integer quotient
 
 - The remainder operator yields the remainder after division
+
+### Precedence of arithmetic operators
 
 <table>
     <caption>Precedence of arithmetic operators</caption>
@@ -356,15 +381,17 @@ Sum is 117
 
 ### `if` selection statement
 
-- allows a program to make a decision based on a condition's value
+- Allows a program to make a decision based on a condition's value
 
 ### A condition
 
-- is an expressiont that can be `true` or `false`
+- Is an expression that can be `true` or `false`
 
-- can be formed by equality operators and relational operators
+- Can be formed by equality operators and relational operators
 
 - Equality operators are lower than relational operators in the levels of precedence
+
+### Equality and relational operators
 
 <table>
     <caption>Equality and relational operators</caption>
@@ -404,10 +431,12 @@ Sum is 117
     </tbody>
 </table>
 
+### Comparison program
+
 ```java
 // Fig. 2.15: Comparison.java
-// Compare integers using if statements, relational operators and equality operators
-
+// Compare integers using if statements, relational operators
+// and equality operators.
 import java.util.Scanner;  // program uses class Scanner
 
 public class Comparison {
@@ -422,18 +451,29 @@ public class Comparison {
         System.out.print("Enter second integer: ");  // prompt
         int number2 = input.nextInt();  // read second number from user
 
-        if (number1 == number2)
+        if (number1 == number2) {
             System.out.printf("%d == %d%n", number1, number2);
-        if (number1 != number2)
+	  }
+
+        if (number1 != number2) {
             System.out.printf("%d != %d%n", number1, number2);
-        if (number1 < number2)
+	  }
+
+        if (number1 < number2) {
             System.out.printf("%d < %d%n", number1, number2);
-        if (number1 > number2)
+	  }
+
+        if (number1 > number2) {
             System.out.printf("%d > %d%n", number1, number2);
-        if (number1 <= number2)
+	  }
+
+        if (number1 <= number2) {
             System.out.printf("%d <= %d%n", number1, number2);
-        if (number1 >= number2)
+	  }
+
+        if (number1 >= number2) {
             System.out.printf("%d >= %d%n", number1, number2);
+	  }
     }  // end method main
 }  // end class Comparison
 ```
@@ -461,6 +501,8 @@ Enter second integer: 1000
 2000 > 1000
 2000 >= 1000
 ```
+
+### Precedence and associativity of operators discussed
 
 <table>
 	<caption>Precedence and associativity of operators discussed</caption>
@@ -495,7 +537,7 @@ Enter second integer: 1000
 		<tr>
 			<td><span markdown=1>`=`</span></td>
 			<td>$\leftarrow$</td>
-			<td>equality</td>
+			<td>assignment</td>
 		</tr>
 	</tbody>
 </table>
