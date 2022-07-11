@@ -29,7 +29,7 @@ permalink: /docs/java/ch1
 
 - A typical java program development environment
 
-- Test-driving a jvava application
+- Test-driving a java application
 
 ---
 
@@ -37,19 +37,19 @@ permalink: /docs/java/ch1
 
 ### Java is widely used for implementing
 
-- internet-based applications
+- Internet-based applications
 
-- software for devices that communicate over a network
+- Software for devices that communicate over a network
 
-- enterprise programming
+- Enterprise programming
 
-- mobile applications
+- Mobile applications
 
-### Java Editions: SE, EE and ME
+### Java editions: SE, EE and ME
 
 ##### Java Standard Edition (Java SE)
 
-- is needed to develop desktop and server applications
+- Is needed to develop desktop and server applications
 
 - Programming paradigms
 
@@ -69,13 +69,13 @@ permalink: /docs/java/ch1
 
 ##### Java Enterprise Edition (Java EE)
 
-- geared toward developing large-scale, distributed networking applications and web-based applications
+- Geared toward developing large-scale, distributed networking applications and web-based applications
 
 ##### Java Micro Edition (Java ME)
 
-- a subset of Java SE
+- A subset of Java SE
 
-- geared toward developing applications for resource-constrained embedded devices
+- Geared toward developing applications for resource-constrained embedded devices
 
 > Java How to Program, 10th and 11th editions are based on Java SE 8 and Java SE 9
 
@@ -99,7 +99,7 @@ permalink: /docs/java/ch1
 
 - class를 실체화(instantiation)한 것이 object
 
-### Data Abstraction
+### Data abstraction
 
 - 불필요한 정보는 숨기고 중요한 정보만을 표현하는 것
 
@@ -109,7 +109,7 @@ permalink: /docs/java/ch1
 
 	- 접근 제어를 통해서 자료형의 정보를 은닉(information hiding)함
 
-### Object-Oriented Programming
+### Object-oriented programming
 
 - 일반적으로 추상 자료형을 클래스,
 
@@ -127,9 +127,11 @@ permalink: /docs/java/ch1
 
 - class B가 class A를 상속할 때 A는 상위 클래스, B는 하위 클래스라고 한다.
 
-	- 상위 클래스 -(특수화)-> 하위 클래스
-
-	- 하위 클래스 -(일반화)-> 상위 클래스
+<div class=mermaid>
+graph LR;
+	superclass --specification--> subclass;
+	subclass --generalization--> superclass;
+</div>
 
 ---
 
@@ -143,7 +145,7 @@ permalink: /docs/java/ch1
 
 - Key goal of Java
 
-	- "write once, run anywhere."
+	- "Write once, run anywhere."
 
 ### 2010
 
@@ -151,21 +153,21 @@ permalink: /docs/java/ch1
 
 ### Java is now used
 
-- to develop large-scale enterprise applications
+- To develop large-scale enterprise applications
 
-- to enhance the functionality of web servers
+- To enhance the functionality of web servers
 
-- to provide applications for consumer devices
+- To provide applications for consumer devices
 
-- to develop robotics software
+- To develop robotics software
 
-- to develop Android smartphone and tablet apps
+- To develop Android smartphone and tablet apps
 
-### Java Class Libraries
+### Java class libraries
 
-- rich collections of existing classes and methods
+- Rich collections of existing classes and methods
 
-- known as the Java APIs(Application Programming Interfaces)
+- Known as the Java APIs(Application Programming Interfaces)
 
 <center markdown="block">
 ![components-of-oracle-java-se-8-products](/assets/java-programming/images/1-components-of-oracle-java-se-8-products.png)
@@ -181,47 +183,49 @@ The components of Oracle's Java SE 8 products
 
 ### Normally there are five phases
 
-1. edit
+1. Edit
 
-2. compile
+2. Compile
 
-3. load
+3. Load
 
-4. verify
+4. Verify
 
-5. execute
+5. Execute
 
-### Phase 1. Creating a Program
+### Phase 1. Creating a program
 
 - Linux : vi
 
-<div class='mermaid'>
+<center markdown="block">
+<div class=mermaid>
 graph LR;
 	editor[Editor] --> secondaryStorage[Secondary Strorage];
 	secondaryStorage --> editor;
 </div>
 
-- Editing phase: Program is created in an editor and stored in a file with a name ending in `.java`
+Editing phase: Program is created in an editor and stored in a file with a name ending in `.java`
+</center>
 
-### Phase 2. Compiling a Java Program into Bytecodes
+### Phase 2. Compiling a java program into bytecodes
 
 - Use the command `javac` to compile a program
 
 ##### Java Virtual Machine (JVM)
 
-- is a part of the JDK and the foundation of the Java platform
+- Is a part of the JDK and the foundation of the Java platform
 
-- executes bytecodes
+- Executes bytecodes
 
 - The JVM is invoked by the `java` command
 
 ##### Virtual Machine (VM)
 
-- is a software application that simulates a computer
+- Is a software application that simulates a computer
 
-- hides the underlying OS and HW from the programs that interact with it
+- Hides the underlying OS and HW from the programs that interact with it
 
-- ex) JVM or MS's .NET
+- Ex) JVM or MS's .NET
 
 ##### Bytecode
 
@@ -231,26 +235,29 @@ graph LR;
 
 	- The same bytecode instructions can execute on any platform containing a JVM that understands the version of Java in which the bytecode instructions were compiles
 
+<center markdown="block">
 <div class='mermaid'>
 graph LR;
 	compiler[Compiler] --> secondaryStorage[Secondary Strorage];
 	secondaryStorage --> compiler;
 </div>
 
-- Compilation phase: Compiler creates bytecodes and stores them in a file with a name ending  in `.class`
+Compilation phase: Compiler creates bytecodes and stores them in a file with a name ending  in `.class`
+</center>
 
-### Phase 3. Loading a Program into Memory
+### Phase 3. Loading a program into memory
 
-- the JVM places the program in memory to execute it - this is known as loading
+- The JVM places the program in memory to execute it - this is known as loading
 
 - Class loader loads
 
-	- the `.class` files containing the program's bytecodes
+	- The `.class` files containing the program's bytecodes
 
-	- any of the `.class` files provided by Java that your program uses
+	- Any of the `.class` files provided by Java that your program uses
 
 - The `class` files can be loaded from a disk on your system or over a network
 
+<center markdown="block">
 <div class='mermaid'>
 graph LR;
 	compiler[Compiler] --> primaryMemory[Primary Memory];
@@ -259,21 +266,24 @@ graph LR;
 	secondaryStorage --> compiler;
 </div>
 
-- Loading phase: Class loader reads bytecodes from `.class` files and puts those bytecodes in memory
+Loading phase: Class loader reads bytecodes from `.class` files and puts those bytecodes in memory
+</center>
 
-### Phase 4. Bytecode Verification
+### Phase 4. Bytecode verification
 
 - As the classes are loaded, the bytecode verifier examines their bytecodes
 
 - Ensures that they're valid and do not violate Java's secutiry restrictions
 
+<center markdown="block">
 <div class='mermaid'>
 graph LR;
 	compiler[Compiler] --> primaryMemory[Primary Memory];
 	primaryMemory --> compiler;
 </div>
 
-- Verification phase: Bytecode verifier comfirms that all bytecodes are valid and do not violate Java's secutiry restrictions
+Verification phase: Bytecode verifier comfirms that all bytecodes are valid and do not violate Java's secutiry restrictions
+</center>
 
 ### Phase 5. Execution
 
@@ -289,14 +299,16 @@ graph LR;
 
 - Thus java programs go through two compilation phases
 
-	- one in which source code is translated into bytecodes (for portability across JVMs on different computer platforms) and
+	- One in which source code is translated into bytecodes (for portability across JVMs on different computer platforms)
 
-	- a second in which, during execution, the bytecodes are translated into machine language for the computer on shich the program executes
+	- A second in which, during execution, the bytecodes are translated into machine language for the computer on which the program executes
 
+<center markdown="block">
 <div class='mermaid'>
 graph LR;
 	JVM["Java Virtual Machine (JVM)"] --> primaryMemory[Primary Memory];
 	primaryMemory --> JVM;
 </div>
 
-- Execution phase: To excute the program, the JVM reads bytecodes and just-in-time(JIT) compiles (i.e., translates) them into a language that the computer can understand. As the program executes, it may store data values in primary memory
+Execution phase: To excute the program, the JVM reads bytecodes and just-in-time(JIT) compiles (i.e., translates) them into a language that the computer can understand. As the program executes, it may store data values in primary memory
+</center>
