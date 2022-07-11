@@ -55,6 +55,53 @@ permalink: /docs/java/ch7
 
 - Elements can be either primitive or reference types
 
+<!--
+@startuml 7-object-diagram-array-primitive-element
+object c
+
+map "array object" as array {
+ 0 => -45
+ 1 => 6
+ ... => ...
+ 11 => 78
+}
+
+c -right-> array::0
+@enduml
+-->
+
+<!--
+@startuml 7-object-diagram-array-reference-element
+object c
+object "object" as o0
+object "object" as o1
+object "object" as o11
+
+map "array object" as array {
+ 0 =>
+ 1 =>
+ ... =>
+ 11 =>
+}
+
+array::0 -u-> o0
+array::1 -r-> o1
+array::11 -d-> o11
+
+c -right-> array::0
+@enduml
+-->
+
+<center markdown="block">
+![object-diagram-array-primitive-element](/assets/java-programming/images/7-object-diagram-array-primitive-element.svg)
+
+Object diagram primitive type array
+
+![object-diagram-array-reference-element](/assets/java-programming/images/7-object-diagram-array-reference-element.svg)
+
+Object diagram reference type array
+</center>
+
 > Common Programming Error 7.1
 >
 > An index must be an `int` value or a value of a type that can be promoted to `int` - namely, `byte`, `short` or `char` but not `long`: otherwise, a compilation error occurs
@@ -63,36 +110,36 @@ permalink: /docs/java/ch7
 
 ## 7.3 Declaring and Creating Arrays
 
-- Declaration and creation for an array of 12 `int` elements
+### Declaration and creation
 
-	`int[] c = new int[12];`
+##### For an array of 12 `int` elements
 
-	```java
-	int[] c;
-	c =  new int[12];
-	```
+`int[] c = new int[12];`
 
-	- Array variable stores the array reference
+```java
+int[] c;
+c =  new int[12];
+```
 
-	- Array-creation expression returns a reference
+- Array variable stores the array reference
+
+- Array-creation expression returns a reference
+
+##### multiple array variables in a single declaration
+
+`int[] a, b, c;`
+
+- Cf) `int a[], b, c;  // ?`
+
+### Default value
 
 - When an array is created, each element of the array receives a default value
 
-	- Zero for the numeric primitive-type elements
+- Zero for the numeric primitive-type elements
 
-	- `false` for `boolean` elements
+- `false` for `boolean` elements
 
-	- `null` for references
-
-- Declaring multiple array variables in a single declaration
-
-	`int[] a, b, c;`
-
-	- cf) `int a[], b, c;  // ?`
-
-- Every element of an `in` array is an `int` value
-
-- Every element of a `String` array is a reference to a `String` object
+- `null` for references
 
 ---
 
@@ -103,16 +150,16 @@ permalink: /docs/java/ch7
 // Initializing the elements of an array to default values of zero
 
 public class InitArray {
-	public static void main(String[] argc) {
-		// declare variable array and initialize it with an array object
-		int[] array = new int[10];  // create the array object
+    public static void main(String[] argc) {
+        // declare variable array and initialize it with an array object
+        int[] array = new int[10];  // create the array object
 
-		System.out.printf("%s%8s%n", "Index", "Value");  // column headings
+        System.out.printf("%s%8s%n", "Index", "Value");  // column headings
 
-		// output each array element's value
-		for (int counter = 0; counter < array.length; counter++)
-			System.out.printf("%5d%8d%n", counter, array[counter]);
-	}
+        // output each array element's value
+        for (int counter = 0; counter < array.length; counter++)
+            System.out.printf("%5d%8d%n", counter, array[counter]);
+    }
 }
 ```
 
@@ -136,25 +183,25 @@ Index   Value
 
 ### Compiler
 
-- counts the number of initializers in the list to determine the size of the array
+- Counts the number of initializers in the list to determine the size of the array
 
-- sets up the appropriate `new` operation "behind the scenes"
+- Sets up the appropriate `new` operation "behind the scenes"
 
 ```java
 // Fig. 7.3: InitArray.java
 // Initializing the elements of an array with an array initializer
 
 public class InitArray {
-	public static void main(String[] args) {
-		// initializer list specifies the initializer value for each element
-		int[] array = {32, 27, 64, 18, 95, 14, 90, 70, 60, 37};
+    public static void main(String[] args) {
+        // initializer list specifies the initializer value for each element
+        int[] array = {32, 27, 64, 18, 95, 14, 90, 70, 60, 37};
 
-		System.out.printf("%s%8s%n", "Index", "Value";);  // column headings
+        System.out.printf("%s%8s%n", "Index", "Value";);  // column headings
 
-		// output each array element's value
-		for (int counter = 0; counter < array.length; counter++)
-			System.out.printf("%5d%8d%n", counter, array[counter]);
-	}
+        // output each array element's value
+        for (int counter = 0; counter < array.length; counter++)
+            System.out.printf("%5d%8d%n", counter, array[counter]);
+    }
 }
 ```
 
@@ -177,21 +224,21 @@ Index   Value
 // Calculating the values to be placed into the elementof an array
 
 public class InitArray {
-	public static void main(String[] args) {
-		final int ARRAY_LENGTH = 10;  // declare constant
-		int[] array = new int[ARRAY_LENGTH];  // create array
+    public static void main(String[] args) {
+        final int ARRAY_LENGTH = 10;  // declare constant
+        int[] array = new int[ARRAY_LENGTH];  // create array
 
-		// calculate value for each array element
-		for (int counter = 0; counter < array.length; counter++)
-			array[counter] = 2 + 2 * counter;
+        // calculate value for each array element
+        for (int counter = 0; counter < array.length; counter++)
+            array[counter] = 2 + 2 * counter;
 
-		System.out.printf("%s%8s%n", "Index", "Value"); // column headings
+        System.out.printf("%s%8s%n", "Index", "Value");  // column headings
 
-		// output each array element's value
-		// output each array element's value
-		for (int counter = 0; counter < array.length; counter++)
-			System.out.printf("%5d%8d%n", counter, array[counter]);
-	}
+        // output each array element's value
+        // output each array element's value
+        for (int counter = 0; counter < array.length; counter++)
+            System.out.printf("%5d%8d%n", counter, array[counter]);
+    }
 }
 ```
 
@@ -211,25 +258,42 @@ Index   Value
 
 - `final` variables must be initialized before they are used and cannot be modified thereafter
 
+	`final int ARRAY_LENGTH = 10;`
+
+	```java
+	final int ARRAY_LENGTH;
+	ARRAY_LENGTH = 10;
+	```
+
 - An attempt to modify ad `final` variable after it's initialized causes a compilation error
 
+	```java
+	final int ARRAY_LENGTH = 10;
+	ARRAY_LENGTH = 15;  // error
+	```
+
 - An attempt to access the value of a `final` variable before it's initialized cause a compilation error
+
+	```java
+	final int ARRAY_LENGTH;
+	int[] array = new int[ARRAY_LENGTH];  // error
+	```
 
 ```java
 // Fig. 7.5: SumArray.java
 // Computing the sum of the elements of an array
 
 public class SumArray {
-	public static void main(String[] args) {
-		int[] array = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
-		int total = 0;
+    public static void main(String[] args) {
+        int[] array = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
+        int total = 0;
 
-		// add each element's value to total
-		for (int counter =0; counter < array.length; counter++)
-			total += array[counter];
+        // add each element's value to total
+        for (int counter =0; counter < array.length; counter++)
+            total += array[counter];
 
-		System.out.printf("Total of array elements: %d%n", total);
-	}
+        System.out.printf("Total of array elements: %d%n", total);
+    }
 }
 ```
 
@@ -244,20 +308,20 @@ Total of array elements: 849
 import java.security.SecureRandom;
 
 public class RollDie {
-	public static void main(String[] args) {
-		SecureRandom randomNumbers = new SecureRandom();
-		int[] frequency = new int[7];  // array of frequency counters
+    public static void main(String[] args) {
+        SecureRandom randomNumbers = new SecureRandom();
+        int[] frequency = new int[7];  // array of frequency counters
 
-		// roll die 60,000,000 times: use die value as frequency index
-		for (int roll = 1; roll <= 60000000; roll++)
-			++frequency[1 + randomNumbers.nextInt(6)];  // Ignore frequency[0]
+        // roll die 60,000,000 times: use die value as frequency index
+        for (int roll = 1; roll <= 60000000; roll++)
+            ++frequency[1 + randomNumbers.nextInt(6)];  // 1~6, Ignore frequency[0]
 
-		System.out.printf("%s%10s%n", "Face", "Frequency");
+        System.out.printf("%s%10s%n", "Face", "Frequency");
 
-		// output each array element's value
-		for (int face = 1; face < frequency.length; face++)
-			System.out.printf("%4d%10d%n", face, frequency[face]);
-	}
+        // output each array element's value
+        for (int face = 1; face < frequency.length; face++)
+            System.out.printf("%4d%10d%n", face, frequency[face]);
+    }
 }
 ```
 
@@ -272,32 +336,33 @@ Face Frequency
 ```
 
 - Figure 7.8 uses arrays to summarize data collected in a survey
-	- 20 students were asked to rate on a scale of 1 to 5 the quality of the food in the student cafeteria, with 1 being "awful" and 5 being "excellent. Place the 20 responses in an integer array and determine the frequency of each rating
+    - 20 students were asked to rate on a scale of 1 to 5 the quality of the food in the student cafeteria, with 1 being "awful" and 5 being "excellent. Place the 20 responses in an integer array and determine the frequency of each rating
 
 ```java
 // Fig. 7.8: StudentPoll.java
 // Poll analysis program
+
  public class StudentPoll {
-	public static void main(String[] args) {
-		// student response array (more typically, input at runtime)
-		int[] responses = {1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 14};  // 14: incorrect value
-		int[] frequency = new int[6]; // array of frequency couners. Each element is initialized to zero by defualt
+    public static void main(String[] args) {
+        // student response array (more typically, input at runtime)
+        int[] responses = {1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 14};  // 14: incorrect value
+        int[] frequency = new int[6];  // array of frequency couners. Each element is initialized to zero by default
 
-		// for each answer, select responses element and use that value as frequency index to determine element to increment
-		for (int answer = 0; answer < responses.length; answer++) {
-			try {
-				++frequency[responses[answer]];  // Ignore frequency[0]. responses[answer] correct values: 1~5
-			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println(e);  // a invokes toString method
-				System.out.printf("    responses[%d] = %d%n%n", answer, responses[answer]);
-			}
-		}
+        // for each answer, select responses element and use that value as frequency index to determine element to increment
+        for (int answer = 0; answer < responses.length; answer++) {
+            try {  // Ignore frequency[0]
+                ++frequency[responses[answer]];  // Ignore frequency[0]. responses[answer] correct values: 1~5
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println(e);  // a invokes toString method
+                System.out.printf("    responses[%d] = %d%n%n", answer, responses[answer]);
+            }
+        }
 
-		System.out.printf("%s%10s%n", "Rating", "Frequency");
+        System.out.printf("%s%10s%n", "Rating", "Frequency");
 
-		for (int rating = 1; rating < frequency.length; rating++)
-			System.out.printf("%6d%10d%n", rating, frequency[rating]);
-	}
+        for (int rating = 1; rating < frequency.length; rating++)
+            System.out.printf("%6d%10d%n", rating, frequency[rating]);
+    }
 }
 ```
 
@@ -319,15 +384,15 @@ Rating Frequency
 
 - `++frequency[14]`
 
-	- 14 is an invalid index for the array `frequency`
+    - 14 is an invalid index for the array `frequency`
 
 - JVM checks array indices at execution time
 
-	- bound checking
+    - bound checking
 
 - If a program uses an invalid index, JVM generate(`throws`) an exception object
 
-	- `ArrayIndexOutOfBoundsException`
+    - `ArrayIndexOutOfBoundsException`
 
 ### Exception
 
@@ -353,10 +418,10 @@ Rating Frequency
 
 ```java
 try {
-	++frequency[responses[answer]];  // Ignore frequency[0]. responses[answer] correct values: 1~5
+    ++frequency[responses[answer]];  // Ignore frequency[0]. responses[answer] correct values: 1~5
 } catch (ArrayIndexOutOfBoundsException e) {
-	System.out.println(e);  //a invokes toString method
-	System.out.printf("    responses[%d] = %d%n%n", answer, responses[answer]);
+    System.out.println(e);  //a invokes toString method
+    System.out.printf("    responses[%d] = %d%n%n", answer, responses[answer]);
 }
 ```
 
@@ -368,36 +433,36 @@ try {
 
 - Using an array of reference-type elements
 
-### Class Card
+### Class `Card`
 
 - Method `toString`
 
-	- can invoke explicitly to obtain a string representation of a `Card`
+    - Can invoke explicitly to obtain a string representation of a `Card`
 
-	- called implicitly when the `Card` object is used where a `String` is expected
+    - Called implicitly when the `Card` object is used where a `String` is expected
 
-		```java
-		printf("%s", cardObject)
-		```
+        ```java
+        printf("%s", cardObject)
+        ```
 
 ```java
 // Fig. 7.9: Card.java
 // Card class represents a playing card
 
 public class Card {
-	private final String face;  // face of card ("Ace", "Duece", ...)
-	private final String suit;  // suit of card ("Hearts", "Diamonds", ...)
+    private final String face;  // face of card ("Ace", "Duece", ...)
+    private final String suit;  // suit of card ("Hearts", "Diamonds", ...)
 
-	// two-argument constructor initializes card's face and suit
-	public Card(String cardFace, String cardSuit) {
-		this.face = cardFace;  // initialize face of card
-		this.suit = cardSuit;  // initialize suit of card
-	}
+    // two-argument constructor initializes card's face and suit
+    public Card(String cardFace, String cardSuit) {
+        this.face = cardFace;  // initialize face of card
+        this.suit = cardSuit;  // initialize suit of card
+    }
 
-	// return String representation of Card
-	public String toString() {
-		return face + " of " + suit;
-	}
+    // return String representation of Card
+    public String toString() {
+        return face + " of " + suit;
+    }
 }
 ```
 
@@ -408,48 +473,48 @@ public class Card {
 import java.security.SecureRandom;
 
 public class DeckOfCards {
-	// random number generator
-	private static final SecureRandom randomNumbers = new SecureRandom();
-	private static final int NUMBER_OF_CARDS = 52;  // constant # of Cards
+    // random number generator
+    private static final SecureRandom randomNumbers = new SecureRandom();
+    private static final int NUMBER_OF_CARDS = 52;  // constant # of Cards
 
-	private Card[] deck = new Card[NUMBER_OF_CARDS];  // Card references
-	private int currentCard = 0;  // index fo next Card to be dealt (0-51)
+    private Card[] deck = new Card[NUMBER_OF_CARDS];  // Card references
+    private int currentCard = 0;  // index fo next Card to be dealt (0-51)
 
-	// constructor fills deck of Cards
-	public DeckOfCards() {
-		String[] faces = {"Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
-		String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+    // constructor fills deck of Cards
+    public DeckOfCards() {
+        String[] faces = {"Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
 
-		// populate deck with Card objects
-		for (int count=0; count<deck.length; count++) {
-			deck[count] = new Card(faces[count%13], suits[count/13]);
-		}
-	}
+        // populate deck with Card objects
+        for (int count=0; count<deck.length; count++) {
+            deck[count] = new Card(faces[count%13], suits[count/13]);
+        }
+    }
 
-	// shuffle deck of Cards with one-pass algorithm
-	public void shuffle() {
-		// next call to method dealCard should start at deck[0] again
-		currentCard = 0;
+    // shuffle deck of Cards with one-pass algorithm
+    public void shuffle() {
+        // next call to method dealCard should start at deck[0] again
+        currentCard = 0;
 
-		// for each Card, pick another random Card (0-51) and swap tamp
-		for (int first=0; first<deck.length; first++) {
-			// select a random number between 0 and 51
-			int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
+        // for each Card, pick another random Card (0-51) and swap tamp
+        for (int first=0; first<deck.length; first++) {
+            // select a random number between 0 and 51
+            int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
 
-			// swap current Card with randomly selected Card
-			Card temp = deck[first];
-			deck[first] = deck[second];
-			deck[second] = temp;
-		}
-	}
+            // swap current Card with randomly selected Card
+            Card temp = deck[first];
+            deck[first] = deck[second];
+            deck[second] = temp;
+        }
+    }
 
-	public Card dealCard() {
-		// determine whether Cards remain to be dealt
-		if (currentCard < deck.length)
-			return deck[currentCard++];  // return current Card in array
-		else
-			return null;  // return null to indicate that all Cards were dealt
-	}
+    public Card dealCard() {
+        // determine whether Cards remain to be dealt
+        if (currentCard < deck.length)
+            return deck[currentCard++];  // return current Card in array
+        else
+            return null;  // return null to indicate that all Cards were dealt
+    }
 }
 ```
 
@@ -458,20 +523,20 @@ public class DeckOfCards {
 // Card shuffling and dealing
 
 public class DeckOfCardsTest {
-	// execute application
-	public static void main(String[] args) {
-		DeckOfCards myDeckOfCards = new DeckOfCards();
-		myDeckOfCards.shuffle();  // place Cards in random order
+    // execute application
+    public static void main(String[] args) {
+        DeckOfCards myDeckOfCards = new DeckOfCards();
+        myDeckOfCards.shuffle();  // place Cards in random order
 
-		// print all 52 Cards in the order in which they are dealt
-		for (int i=1; i<=52; i++) {
-			// deal and display a Card
-			System.out.printf("%-19s", myDeckOfCards.dealCard());  // Card's toString()
+        // print all 52 Cards in the order in which they are dealt
+        for (int i=1; i<=52; i++) {
+            // deal and display a Card
+            System.out.printf("%-19s", myDeckOfCards.dealCard());  // Card's toString()
 
-			if (i%4 == 0)  // output a newline after every fourth card
-				System.out.println();
-		}
-	}
+            if (i%4 == 0)  // output a newline after every fourth card
+                System.out.println();
+        }
+    }
 }
 ```
 
@@ -497,21 +562,21 @@ Queen of Clubs     Nine of Hearts     Six of Diamonds    Jack of Hearts
 
 ```java
 for (parameter:arrayName)
-	statement;
+    statement;
 ```
 
 - ex)
 
-	```java
-	for (int number:array)
-		total += number;
-	```
+    ```java
+    for (int number:array)
+        total += number;
+    ```
 
 - `parameter` has a `type` and an `identifier`
 
-	- the `type` must be consistent with the array's element type
+    - the `type` must be consistent with the array's element type
 
-	- the `identifier` represents successive values in the array
+    - the `identifier` represents successive values in the array
 
 - `arrayName` is the array through which to iterate
 
@@ -520,17 +585,17 @@ for (parameter:arrayName)
 // Using the enhanced for statement to total integers in an array.
 
 public class EnhancedForTest {
-	public static void main(String[] args) {
-		int[] array = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
-		int total = 0;
+    public static void main(String[] args) {
+        int[] array = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
+        int total = 0;
 
-		// add each element's value to total
-		for (int number:array) {
-			total += number;
-		}
+        // add each element's value to total
+        for (int number:array) {
+            total += number;
+        }
 
-		System.out.printf("Total of array elements: %d%n", total);
-	}
+        System.out.printf("Total of array elements: %d%n", total);
+    }
 }
 ```
 
@@ -540,9 +605,9 @@ Total of array elements: 849
 
 - The enhanced `for` statement can be used only to obtain array elements
 
-	- it cannot be used to modify elements
+    - it cannot be used to modify elements
 
-	- To modify elements, use the traditional counter-controlled `for` statement
+    - To modify elements, use the traditional counter-controlled `for` statement
 
 ## 7.8 Passing Arrays to Methods
 
@@ -557,8 +622,8 @@ modifyArray(array);
 
 ```java
 public static void modifyArray(int[] array) {
-	for (int counter=0; counter<array.length; counter++)
-		array[counter] *= 2;
+    for (int counter=0; counter<array.length; counter++)
+        array[counter] *= 2;
 }
 ```
 
@@ -567,39 +632,39 @@ public static void modifyArray(int[] array) {
 // Passing arrays and individual array elements to methods
 
 public class PassArray {
-	// main creates array and calls modifyArray and modifyElement
-	public static void main(String[] args) {
-		int[] array = {1, 2, 3, 4, 5};
+    // main creates array and calls modifyArray and modifyElement
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
 
-		System.out.printf("Effects of passing reference to entire array:%n" + "The values of the original array are %n");
+        System.out.printf("Effects of passing reference to entire array:%n" + "The values of the original array are %n");
 
-		// output original array elements
-		for (int value : array)
-			System.out.printf("    %d", value);
-		modifyArray(array);  // pass array reference
-		System.out.printf("%n%nThe values of the modifies array are:%n");
+        // output original array elements
+        for (int value : array)
+            System.out.printf("    %d", value);
+        modifyArray(array);  // pass array reference
+        System.out.printf("%n%nThe values of the modified array are:%n");
 
-		// output modified array elements
-		for (int value : array)
-			System.out.printf("    %d", value);
+        // output modified array elements
+        for (int value : array)
+            System.out.printf("    %d", value);
 
-		System.out.printf("%n%nEffects of passing array elements value:%n" + "array[3] before modifyElement: %d%n", array[3]);
+        System.out.printf("%n%nEffects of passing array elements value:%n" + "array[3] before modifyElement: %d%n", array[3]);
 
-		modifyElement(array[3]);  // attempt to modify array[3]
-		System.out.printf("array[3] after modifyElement: %d%n", array[3]);
-	}
+        modifyElement(array[3]);  // attempt to modify array[3]
+        System.out.printf("array[3] after modifyElement: %d%n", array[3]);
+    }
 
-	// multiply each element of an array by 2
-	public static void modifyArray(int[] array2) {
-		for (int counter = 0; counter < array2.length; counter++)
-			array2[counter] *= 2;
-	}
+    // multiply each element of an array by 2
+    public static void modifyArray(int[] array2) {
+        for (int counter = 0; counter < array2.length; counter++)
+            array2[counter] *= 2;
+    }
 
-	// multiply argument by 2
-	public static void modifyElement(int element) {
-		element *= 2;
-		System.out.printf("Value of element in modifyElement: %d%n", element);
-	}
+    // multiply argument by 2
+    public static void modifyElement(int element) {
+        element *= 2;
+        System.out.printf("Value of element in modifyElement: %d%n", element);
+    }
 }
 ```
 
@@ -617,25 +682,72 @@ Value of element in modifyElement: 16
 array[3] after modifyElement: 8
 ```
 
+<!--
+@startuml 7-object-diagram-array-passing
+object array
+object array2
+
+map "array object" as ao {
+ 0=>1
+ 1=>2
+ 2=>3
+ 3=>4
+ 4=>5
+}
+
+array -r-> ao::0
+array2 -u-> ao::0
+array -d-> array2 : copy
+@enduml
+-->
+
+<!--
+@startuml 7-object-diagram-array-element-passing
+object array
+object element
+
+map "array object" as ao {
+ 0=>2
+ 1=>4
+ 2=>6
+ 3=>8
+ 4=>10
+}
+
+array -right-> ao::0
+ao::3 -right-> element : copy
+@enduml
+-->
+
+<center markdown="block">
+![object-diagram-array-passing](/assets/java-programming/images/7-object-diagram-array-passing.svg)
+
+Object diagram array passing
+
+![object-diagram-array-element-passing](/assets/java-programming/images/7-object-diagram-array-element-passing.svg)
+
+Object diagram array element passing
+</center>
+
 - In Java, all arguments are passed by value
 
 - A method call can pass two types of values to a method
 
-	- Copies of primitive values
+    - Copies of primitive values
 
-	- Copiies of references to objects
+    - Copies of references to objects
 
 - Objects cannot be passed to methods
 
-## 7.10 Case Study: Class `GradeBook ` Using an Array to Store Greades
+## 7.10 Case Study: Class `GradeBook` Using an Array to Store Greades
 
 ```java
 // Fig. 7.14: GradeBook.java
 // GradeBook class using an array to store test grades.
 
 public class GradeBook {
-   private String courseName; // name of course this GradeBook represents
-   private int[] grades; // array of student grades
+   private String courseName;  // name of course this GradeBook represents
+   private int[] grades;  // array of student grades
 
    // constructor
    public GradeBook(String courseName, int[] grades) {
@@ -671,13 +783,13 @@ public class GradeBook {
 
    // find minimum grade
    public int getMinimum() {
-      int lowGrade = grades[0]; // assume grades[0] is smallest
+      int lowGrade = grades[0];  // assume grades[0] is smallest
 
       // loop through grades array
       for (int grade : grades) {
          // if grade lower than lowGrade, assign it to lowGrade
          if (grade < lowGrade) {
-            lowGrade = grade; // new lowest grade
+            lowGrade = grade;  // new lowest grade
          }
       }
 
@@ -686,13 +798,13 @@ public class GradeBook {
 
    // find maximum grade
    public int getMaximum() {
-      int highGrade = grades[0]; // assume grades[0] is largest
+      int highGrade = grades[0];  // assume grades[0] is largest
 
       // loop through grades array
       for (int grade : grades) {
          // if grade greater than highGrade, assign it to highGrade
          if (grade > highGrade) {
-            highGrade = grade; // new highest grade
+            highGrade = grade;  // new highest grade
          }
       }
 
@@ -824,13 +936,13 @@ Two-dimensional array
 Two-dimensional array structure
 </center>
 
-### two-dimensional array with initializer
+### Two-dimensional array with initializer
 
-- `int[][] a = \{\{1, 2\}, \{3, 4\}\};`
+- `int[][] a = { {1, 2}, {3, 4} };`
 
-- `int[][] b = \{\{1, 2\}, \{3, 4, 5\}\};`
+- `int[][] b = { {1, 2}, {3, 4, 5} };`
 
-### two-dimensional array with an array-creation expression
+### Two-dimensional array with an array-creation expression
 
 - `int[][] c = new int[3][4];`
 
@@ -845,28 +957,28 @@ d[1] = new int[3];  // create 3 columns for row 1
 // Initializing two-dimensional arrays
 
 public class InitArray {
-	// create and output two-dimensional arrays
-	public static void main(String[] args) {
-		int[][] array1 = \{\{1, 2, 3\}, \{4, 5, 6\}\};
-		int[][] array2 = \{\{1, 2\}, \{3\}, \{4, 5, 6\}\};
+    // create and output two-dimensional arrays
+    public static void main(String[] args) {
+        int[][] array1 = { {1, 2, 3}, {4, 5, 6} };
+        int[][] array2 = { {1, 2}, {3}, {4, 5, 6} };
 
-		System.out.println("Values in array1 by row are");
-		outputArray(array1);  // displays array1 by row
+        System.out.println("Values in array1 by row are");
+        outputArray(array1);  // displays array1 by row
 
-		System.out.printf("%nValues in array2 by row are%n");
-		outputArray(array2);  // displays array2 by row
-	}
+        System.out.printf("%nValues in array2 by row are%n");
+        outputArray(array2);  // displays array2 by row
+    }
 
-	// output rows and columns of a two-dimensional array
-	public static void outputArray(int[][] array) {
-		// loop through array's rows
-		for (int row=0; row<array.length; row++) {
-			// loop through columns of current row
-			for (int column=0; column<array[row].length; column++)
-				System.out.printf("%d  ", array[row][column]);
-			System.out.println();
-		}
-	}
+    // output rows and columns of a two-dimensional array
+    public static void outputArray(int[][] array) {
+        // loop through array's rows
+        for (int row=0; row<array.length; row++) {
+            // loop through columns of current row
+            for (int column=0; column<array[row].length; column++)
+                System.out.printf("%d  ", array[row][column]);
+            System.out.println();
+        }
+    }
 }
 ```
 
@@ -888,8 +1000,8 @@ Values in array2 by row are
 // GradeBook class using a two-dimensional array to store grades.
 
 public class GradeBook {
-   private String courseName; // name of course this grade book represents
-   private int[][] grades; // two-dimensional array of student grades
+   private String courseName;  // name of course this grade book represents
+   private int[][] grades;  // two-dimensional array of student grades
 
    // two-argument constructor initializes courseName and grades array
    public GradeBook(String courseName, int[][] grades) {
@@ -1009,14 +1121,14 @@ public class GradeBook {
    // output the contents of the grades array
    public void outputGrades() {
       System.out.printf("The grades are:%n%n");
-      System.out.print("            "); // align column heads
+      System.out.print("            ");  // align column heads
 
       // create a column heading for each of the tests
       for (int test = 0; test < grades[0].length; test++) {
          System.out.printf("Test %d  ", test + 1);
       }
 
-      System.out.println("Average"); // student average column heading
+      System.out.println("Average");  // student average column heading
 
       // create rows/columns of text representing array grades
       for (int student = 0; student < grades.length; student++) {
@@ -1039,20 +1151,21 @@ public class GradeBook {
 // Fig. 7.19: GradeBookTest.java
 // GradeBookTest creates GradeBook object using a two-dimensional array
 // of grades, then invokes method processGrades to analyze them.
+
 public class GradeBookTest {
    // main method begins program execution
    public static void main(String[] args) {
       // two-dimensional array of student grades
-      int[][] gradesArray = \{\{87, 96, 70\},
-                             \{68, 87, 90\},
-                             \{94, 100, 90\},
-                             \{100, 81, 82\},
-                             \{83, 65, 85\},
-                             \{78, 87, 65\},
-                             \{85, 75, 83\},
-                             \{91, 94, 100\},
-                             \{76, 72, 84\},
-                             \{87, 93, 73\}\};
+      int[][] gradesArray = { {87, 96, 70},
+                              {68, 87, 90},
+                              {94, 100, 90},
+                              {100, 81, 82},
+                              {83, 65, 85},
+                              {78, 87, 65},
+                              {85, 75, 83},
+                              {91, 94, 100},
+                              {76, 72, 84},
+                              {87, 93, 73} };
 
       GradeBook myGradeBook = new GradeBook(
          "CS101 Introduction to Java Programming", gradesArray);
@@ -1111,42 +1224,42 @@ public static double average(int num, double... number) {
 
 - `average(3, d1, d2, d3, d4);  // variable-length argument lists`
 
-- The ellipsis can occur only onece at the end of a parameter list
+- The ellipsis can occur only once at the end of a parameter list
 
 ```java
 // Fig. 7.20: VarargsTest.java
 // Using variable-length argument lists.
 
 public class VarargsTest {
-   // calculate average
-   public static double average(double... numbers) {
-      double total = 0.0;
+    // calculate average
+    public static double average(double... numbers) {
+        double total = 0.0;
 
-      // calculate total using the enhanced for statement
-	  // Variable arguments are automatically placed in an array referenced by the parameter
-      for (double d : numbers) {
-         total += d;
-      }
+        // calculate total using the enhanced for statement
+        // Variable arguments are automatically placed in an array referenced by the parameter
+        for (double d : numbers) {
+            total += d;
+        }
 
-      return total / numbers.length;
-   }
+        return total / numbers.length;
+    }
 
-   public static void main(String[] args) {
-      double d1 = 10.0;
-      double d2 = 20.0;
-      double d3 = 30.0;
-      double d4 = 40.0;
+    public static void main(String[] args) {
+        double d1 = 10.0;
+        double d2 = 20.0;
+        double d3 = 30.0;
+        double d4 = 40.0;
 
-      System.out.printf("d1 = %.1f%nd2 = %.1f%nd3 = %.1f%nd4 = %.1f%n%n",
-         d1, d2, d3, d4);
+        System.out.printf("d1 = %.1f%nd2 = %.1f%nd3 = %.1f%nd4 = %.1f%n%n",
+            d1, d2, d3, d4);
 
-      System.out.printf("Average of d1 and d2 is %.1f%n",
-         average(d1, d2));
-      System.out.printf("Average of d1, d2 and d3 is %.1f%n",
-         average(d1, d2, d3));
-      System.out.printf("Average of d1, d2, d3 and d4 is %.1f%n",
-         average(d1, d2, d3, d4));
-   }
+        System.out.printf("Average of d1 and d2 is %.1f%n",
+            average(d1, d2));
+        System.out.printf("Average of d1, d2 and d3 is %.1f%n",
+            average(d1, d2, d3));
+        System.out.printf("Average of d1, d2, d3 and d4 is %.1f%n",
+            average(d1, d2, d3, d4));
+    }
 }
 ```
 
@@ -1168,35 +1281,35 @@ Average of d1, d2, d3 and d4 is 25.0
 // Initializing an array using command-line arguments.
 
 public class InitArray {
-   public static void main(String[] args) {
-      // check number of command-line arguments
-      if (args.length != 3) {
-         System.out.printf(
-            "Error: Please re-enter the entire command, including%n" +
-            "an array size, initial value and increment.%n");
-      }
-      else {
-         // get array size from first command-line argument
-         int arrayLength = Integer.parseInt(args[0]);
-         int[] array = new int[arrayLength];
+    public static void main(String[] args) {
+        // check number of command-line arguments
+        if (args.length != 3) {
+            System.out.printf(
+                "Error: Please re-enter the entire command, including%n" +
+                "an array size, initial value and increment.%n");
+        }
+        else {
+            // get array size from first command-line argument
+            int arrayLength = Integer.parseInt(args[0]);
+            int[] array = new int[arrayLength];
 
-         // get initial value and increment from command-line arguments
-         int initialValue = Integer.parseInt(args[1]);
-         int increment = Integer.parseInt(args[2]);
+            // get initial value and increment from command-line arguments
+            int initialValue = Integer.parseInt(args[1]);
+            int increment = Integer.parseInt(args[2]);
 
-         // calculate value for each array element
-         for (int counter = 0; counter < array.length; counter++) {
-            array[counter] = initialValue + increment * counter;
-         }
+            // calculate value for each array element
+            for (int counter = 0; counter < array.length; counter++) {
+                array[counter] = initialValue + increment * counter;
+            }
 
-         System.out.printf("%s%8s%n", "Index", "Value");
+            System.out.printf("%s%8s%n", "Index", "Value");
 
-         // display array index and value
-         for (int counter = 0; counter < array.length; counter++) {
-            System.out.printf("%5d%8d%n", counter, array[counter]);
-         }
-      }
-   }
+            // display array index and value
+            for (int counter = 0; counter < array.length; counter++) {
+                System.out.printf("%5d%8d%n", counter, array[counter]);
+            }
+        }
+    }
 }
 ```
 
@@ -1221,27 +1334,41 @@ Index   Value
 
 ### `Arrays` class
 
-- provides `static` methods for common array manipulations
+- Provides `static` methods for common array manipulations
 
-##### Methods include
+<table>
+	<caption><span markdown=1>Some methods of `Arrays`</span></caption>
+	<thead>
+		<tr>
+			<th>Method</th>
+			<th>Discription</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><span markdown=1>`sort`</span></td>
+			<td>sorting an array (ascending order by deault)</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`binarySearch`</span></td>
+			<td>searching a sorted array</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`equals`</span></td>
+			<td>comparing arrays</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`fill`</span></td>
+			<td>placing values into an array</td>
+		</tr>
+	</tbody>
+</table>
 
-- `sort` for sorting an array (ascending order by deault
+- Methods are overloaded for primitive-type arrays and for arrays of objects
 
-- `binarySearch` for searching a sorted array
+##### `System` class
 
-- `equals` for comparing arrays
-
-- `fill` for placing values into an array
-
-##### Methods are overloaded
-
-- for primitive-type arrays and for arrays of objects
-
-### `System` class
-
-- `static` `arraycopy` method
-
-	- Copies contents of one array into another
+- `static arraycopy` method copies contents of one array into another
 
 ```java
 // Fig. 7.22: ArrayManipulations.java
@@ -1249,69 +1376,69 @@ Index   Value
 import java.util.Arrays;
 
 public class ArrayManipulations {
-   public static void main(String[] args) {
-      // sort doubleArray into ascending order
-      double[] doubleArray = {8.4, 9.3, 0.2, 7.9, 3.4};
-      Arrays.sort(doubleArray);
-      System.out.printf("%ndoubleArray: ");
+    public static void main(String[] args) {
+        // sort doubleArray into ascending order
+        double[] doubleArray = {8.4, 9.3, 0.2, 7.9, 3.4};
+        Arrays.sort(doubleArray);
+        System.out.printf("%ndoubleArray: ");
 
-      for (double value : doubleArray) {
-         System.out.printf("%.1f ", value);
-      }
+        for (double value : doubleArray) {
+            System.out.printf("%.1f ", value);
+        }
 
-      // fill 10-element array with 7s
-      int[] filledIntArray = new int[10];
-      Arrays.fill(filledIntArray, 7);
-      displayArray(filledIntArray, "filledIntArray");
+        // fill 10-element array with 7s
+        int[] filledIntArray = new int[10];
+        Arrays.fill(filledIntArray, 7);
+        displayArray(filledIntArray, "filledIntArray");
 
-      // copy array intArray into array intArrayCopy
-      int[] intArray = {1, 2, 3, 4, 5, 6};
-      int[] intArrayCopy = new int[intArray.length];
-      System.arraycopy(intArray, 0, intArrayCopy, 0, intArray.length);
-      displayArray(intArray, "intArray");
-      displayArray(intArrayCopy, "intArrayCopy");
+        // copy array intArray into array intArrayCopy
+        int[] intArray = {1, 2, 3, 4, 5, 6};
+        int[] intArrayCopy = new int[intArray.length];
+        System.arraycopy(intArray, 0, intArrayCopy, 0, intArray.length);
+        displayArray(intArray, "intArray");
+        displayArray(intArrayCopy, "intArrayCopy");
 
-      // compare intArray and intArrayCopy for equality
-      boolean b = Arrays.equals(intArray, intArrayCopy);
-      System.out.printf("%n%nintArray %s intArrayCopy%n",
-         (b ? "==" : "!="));
+        // compare intArray and intArrayCopy for equality
+        boolean b = Arrays.equals(intArray, intArrayCopy);
+        System.out.printf("%n%nintArray %s intArrayCopy%n",
+            (b ? "==" : "!="));
 
-      // compare intArray and filledIntArray for equality
-      b = Arrays.equals(intArray, filledIntArray);
-      System.out.printf("intArray %s filledIntArray%n",
-         (b ? "==" : "!="));
+        // compare intArray and filledIntArray for equality
+        b = Arrays.equals(intArray, filledIntArray);
+        System.out.printf("intArray %s filledIntArray%n",
+            (b ? "==" : "!="));
 
-      // search intArray for the value 5
-      int location = Arrays.binarySearch(intArray, 5);
+        // search intArray for the value 5
+        int location = Arrays.binarySearch(intArray, 5);
 
-      if (location >= 0) {
-         System.out.printf(
-            "Found 5 at element %d in intArray%n", location);
-      }
-      else {
-         System.out.println("5 not found in intArray");
-      }
+        if (location >= 0) {
+            System.out.printf(
+                "Found 5 at element %d in intArray%n", location);
+        }
+        else {
+            System.out.println("5 not found in intArray");
+        }
 
-      // search intArray for the value 8763
-      location = Arrays.binarySearch(intArray, 8763);
+        // search intArray for the value 8763
+        location = Arrays.binarySearch(intArray, 8763);
 
-      if (location >= 0) {
-         System.out.printf(
-            "Found 8763 at element %d in intArray%n", location);
-      }
-      else {
-         System.out.println("8763 not found in intArray");
-      }
-   }
+        if (location >= 0) {
+            System.out.printf(
+                "Found 8763 at element %d in intArray%n", location);
+        }
+        else {
+            System.out.println("8763 not found in intArray");
+        }
+    }
 
-   // output values in each array
-   public static void displayArray(int[] array, String description) {
-      System.out.printf("%n%s: ", description);
+    // output values in each array
+    public static void displayArray(int[] array, String description) {
+        System.out.printf("%n%s: ", description);
 
-      for (int value : array) {
-         System.out.printf("%d ", value);
-      }
-   }
+        for (int value : array) {
+            System.out.printf("%d ", value);
+        }
+    }
 }
 ```
 
@@ -1327,6 +1454,10 @@ Found 5 at element 4 in intArray
 8763 not found in intArray
 ```
 
+> Common Programming Error 7.6
+>
+> Passing an unsorted array to `binarySearch` is a logic error - the value returned is undefined
+
 ## 7.16 Introduction to Collections and Class `ArrayList`
 
 ### Collections
@@ -1337,70 +1468,72 @@ Found 5 at element 4 in intArray
 
 ### `ArrayList<T>` (package `java.util`)
 
-- can dynamically change its size to accommodate more elements
+- Can dynamically change its size to accommodate more elements
 
 - `T` is a placeholder for the type of element stored in the collection
 
-	- This kind of classes are generic classes
+    - This kind of classes are generic classes
 
-- only non-primitive types can be used with these collections classes
+- Only non-primitive types can be used with these collections classes
+
+<table>
+    <caption><span markdown=1>Some methods of class `ArrayList<E>`</span></caption>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Decription</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span markdown=1>`add`</span></td>
+            <td><span markdown=1>Overloaded to add an element to the end of the `ArrayList` or at a specific index in the `ArrayList`</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`clear`</span></td>
+            <td><span markdown=1>Removes all the elements from the `ArrayList`</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`contains`</span></td>
+            <td><span markdown=1>Returns `true` if the `ArrayList` contains the specified element; otherwise return `false`</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`get`</span></td>
+            <td><span markdown=1>Returns the element at the specified index</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`indexOf`</span></td>
+            <td><span markdown=1>Returns the index of the first occurrence of the specified element in the `ArrayList`</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`remove`</span></td>
+            <td><span markdown=1>Overloaded. Removes the first occurrence of the specified value or the element at the specified index</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`size`</span></td>
+            <td><span markdown=1>Returns the number of element stored in the `ArrayList`</span></td>
+        </tr>
+        <tr>
+            <td><span markdown=1>`trimToSize`</span></td>
+            <td><span markdown=1>Trims the capacity of the `ArrayList` to the current number of elements</span></td>
+        </tr>
+    </tbody>
+</table>
 
 - A new empty `ArrayList` of `String`
 
-	- with a default initial capacity of 10 elements
+    - With a default initial capacity of 10 elements
 
-	`ArrayList<String> items = new ArrayList<String>();`
-
-	or
-
-	```java
-	ArrayList<String> items = new ArrayList<>();
-	// diamond(<>) notation in Java SE7 and higher
+    ```java
+	ArrayList<String> items = new ArrayList<String>();
 	```
 
-<table>
-	<caption><span markdown=1>Some methods of class `ArrayList<E>`</span></caption>
-	<thead>
-		<tr>
-			<th>Method</th>
-			<th>Decription</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><span markdown=1>`add`</span></td>
-			<td><span markdown=1>Overloaded to add an element to the end of the `ArrayList` or at a specific index in the `ArrayList`</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`clear`</span></td>
-			<td><span markdown=1>Removes all the elements from the `ArrayList`</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`contains`</span></td>
-			<td><span markdown=1>Returns `true` if the `ArrayList` contains the specified element; otherwise return `false`</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`get`</span></td>
-			<td><span markdown=1>Returns the element at the specified index</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`indexOf`</span></td>
-			<td><span markdown=1>Returns the index of the first occurrence of the specified element in the `ArrayList`</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`remove`</span></td>
-			<td><span markdown=1>Overloaded. Removes the first occurrence of the specified value or the element at the specified index</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`size`</span></td>
-			<td><span markdown=1>Returns the number of element stored in the `ArrayList`</span></td>
-		</tr>
-		<tr>
-			<td><span markdown=1>`trimToSize`</span></td>
-			<td><span markdown=1>Trims the capacity of the `ArrayList` to the current number of elements</span></td>
-		</tr>
-	</tbody>
-</table>
+    or
+
+    ```java
+    ArrayList<String> items = new ArrayList<>();
+    // diamond(<>) notation in Java SE7 and higher
+    ```
 
 ```java
 // Fig. 7.24: ArrayListCollection.java
@@ -1408,56 +1541,56 @@ Found 5 at element 4 in intArray
 import java.util.ArrayList;
 
 public class ArrayListCollection {
-   public static void main(String[] args) {
-      // create a new ArrayList of Strings with an initial capacity of 10
-      ArrayList<String> items = new ArrayList<String>();
+    public static void main(String[] args) {
+        // create a new ArrayList of Strings with an initial capacity of 10
+        ArrayList<String> items = new ArrayList<String>();
 
-      items.add("red"); // append an item to the list
-      items.add(0, "yellow"); // insert "yellow" at index 0
+        items.add("red");  // append an item to the list
+        items.add(0, "yellow");  // insert "yellow" at index 0
 
-      // header
-      System.out.print(
-         "Display list contents with counter-controlled loop:");
+        // header
+        System.out.print(
+            "Display list contents with counter-controlled loop:");
 
-      // display the colors in the list
-      for (int i = 0; i < items.size(); i++) {
-         System.out.printf(" %s", items.get(i));
-      }
+        // display the colors in the list
+        for (int i = 0; i < items.size(); i++) {
+            System.out.printf(" %s", items.get(i));
+        }
 
-      // display colors using enhanced for in the display method
-      display(items,
-         "%nDisplay list contents with enhanced for statement:");
+        // display colors using enhanced for in the display method
+        display(items,
+            "%nDisplay list contents with enhanced for statement:");
 
-      items.add("green"); // add "green" to the end of the list
-      items.add("yellow"); // add "yellow" to the end of the list
-      display(items, "List with two new elements:");
+        items.add("green");  // add "green" to the end of the list
+        items.add("yellow");  // add "yellow" to the end of the list
+        display(items, "List with two new elements:");
 
-      items.remove("yellow"); // remove the first "yellow"
-      display(items, "Remove first instance of yellow:");
+        items.remove("yellow");  // remove the first "yellow"
+        display(items, "Remove first instance of yellow:");
 
-      items.remove(1); // remove item at index 1
-      display(items, "Remove second list element (green):");
+        items.remove(1);  // remove item at index 1
+        display(items, "Remove second list element (green):");
 
-      // check if a value is in the List
-      System.out.printf("\"red\" is %sin the list%n",
-         items.contains("red") ? "": "not ");
+        // check if a value is in the List
+        System.out.printf("\"red\" is %sin the list%n",
+            items.contains("red") ? "": "not ");
 
-      // display number of elements in the List
-      System.out.printf("Size: %s%n", items.size());
-   }
+        // display number of elements in the List
+        System.out.printf("Size: %s%n", items.size());
+    }
 
-   // display the ArrayList's elements on the console
-   public static void display(ArrayList<String> items, String header) {
-      System.out.printf(header); // display header
+    // display the ArrayList's elements on the console
+    public static void display(ArrayList<String> items, String header) {
+        System.out.printf(header);  // display header
 
-      // display each element in items
-	  // Can use the enhanced for statement with collections
-      for (String item : items) {
-         System.out.printf(" %s", item);
-      }
+        // display each element in items
+        // Can use the enhanced for statement with collections
+        for (String item : items) {
+            System.out.printf(" %s", item);
+        }
 
-      System.out.println();
-   }
+        System.out.println();
+    }
 }
 ```
 

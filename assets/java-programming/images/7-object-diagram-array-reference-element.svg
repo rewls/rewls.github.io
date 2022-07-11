@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="334px" preserveAspectRatio="none" style="width:270px;height:334px;background:#FFFFFF;" version="1.1" viewBox="0 0 270 334" width="270px" zoomAndPan="magnify"><defs/><g><g id="elem_c"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="21" x="7" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="7" x="14" y="164.9659">c</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="27" y1="171.0679" y2="171.0679"/></g><g id="elem_o0"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="55" x="91" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="98" y="23.9659">object</text><line style="stroke:#181818;stroke-width:0.5;" x1="92" x2="145" y1="30.0679" y2="30.0679"/></g><g id="elem_o1"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="55" x="209" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="216" y="164.9659">object</text><line style="stroke:#181818;stroke-width:0.5;" x1="210" x2="263" y1="171.0679" y2="171.0679"/></g><g id="elem_o11"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="55" x="91" y="289"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="98" y="305.9659">object</text><line style="stroke:#181818;stroke-width:0.5;" x1="92" x2="145" y1="312.0679" y2="312.0679"/></g><g id="elem_array"><rect fill="#F1F1F1" height="115.3396" style="stroke:#181818;stroke-width:0.5;" width="94" x="71.5" y="110"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="78.5" y="126.9659">array object</text><line style="stroke:#181818;stroke-width:1.0;" x1="71.5" x2="165.5" y1="133.0679" y2="133.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="80.5" y="150.0339">0</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="102.5" y="150.0339"> </text><line style="stroke:#181818;stroke-width:1.0;" x1="97.5" x2="97.5" y1="133.0679" y2="156.1358"/><line style="stroke:#181818;stroke-width:1.0;" x1="71.5" x2="165.5" y1="156.1358" y2="156.1358"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="80.5" y="173.1018">1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="102.5" y="173.1018"> </text><line style="stroke:#181818;stroke-width:1.0;" x1="97.5" x2="97.5" y1="156.1358" y2="179.2038"/><line style="stroke:#181818;stroke-width:1.0;" x1="71.5" x2="165.5" y1="179.2038" y2="179.2038"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="78.5" y="196.1697">...</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="102.5" y="196.1697"> </text><line style="stroke:#181818;stroke-width:1.0;" x1="97.5" x2="97.5" y1="179.2038" y2="202.2717"/><line style="stroke:#181818;stroke-width:1.0;" x1="71.5" x2="165.5" y1="202.2717" y2="202.2717"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="76.5" y="219.2376">11</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="102.5" y="219.2376"> </text><line style="stroke:#181818;stroke-width:1.0;" x1="97.5" x2="97.5" y1="202.2717" y2="225.3396"/></g><!--MD5=[b15df28960cea1cbad25f5d2bd353333]
+reverse link o0 to array--><g id="link_o0_array"><path codeLine="86" d="M137.33,50.05 C164.42,84.04 206.9,144.5 166.5,144.5 " fill="none" id="o0-backto-array" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="134.11,46.04,136.6215,55.5632,137.2387,49.9402,142.8618,50.5573,134.11,46.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6341b2a5a4658d709b3f8a8ead7d29b7]
+link array to o1--><g id="link_array_o1"><path codeLine="87" d="M166.5,168.5 C177.01,174.33 188.43,178.04 198.89,179.72 " fill="none" id="array-to-o1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="208.96,180.72,200.4041,175.8419,203.985,180.2211,199.6058,183.802,208.96,180.72" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[94226889b7a3409deed1e61d7574fc8a]
+link array to o11--><g id="link_array_o11"><path codeLine="88" d="M118.5,226.5 C118.5,245.7 118.5,267.47 118.5,283.6 " fill="none" id="array-to-o11" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="118.5,288.84,122.5,279.84,118.5,283.84,114.5,279.84,118.5,288.84" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[eb8eb5c68aefe78f75de1168f15869d9]
+link c to array--><g id="link_c_array"><path codeLine="90" d="M28.29,160.22 C36.22,154.91 48.08,148.19 60.49,145.59 " fill="none" id="c-to-array" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="70.5,144.5,61.119,141.5006,65.5295,145.0428,61.9874,149.4533,70.5,144.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c596aaa5b530297adf05ce9677a10b86]
+@startuml 7-object-diagram-array-reference-element
+object c
+object "object" as o0
+object "object" as o1
+object "object" as o11
+
+map "array object" as array {
+ 0 =>
+ 1 =>
+ ... =>
+ 11 =>
+}
+
+array::0 -u-> o0
+array::1 -r-> o1
+array::11 -d-> o11
+
+c -right-> array::0
+@enduml
+
+PlantUML version 1.2022.6(Wed Jun 22 02:34:49 KST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
