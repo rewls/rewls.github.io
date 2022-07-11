@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="476px" preserveAspectRatio="none" style="width:617px;height:476px;background:#FFFFFF;" version="1.1" viewBox="0 0 617 476" width="617px" zoomAndPan="magnify"><defs/><g><!--MD5=[06f5f91432fc6eeeff022c01cc1dd901]
+cluster q--><g id="cluster_q"><path d="M414.5,6.602 L424.5,6.602 A3.75,3.75 0 0 1 427,9.102 L434,31.6699 L607.5,31.6699 A2.5,2.5 0 0 1 610,34.1699 L610,467.102 A2.5,2.5 0 0 1 607.5,469.602 L414.5,469.602 A2.5,2.5 0 0 1 412,467.102 L412,9.102 A2.5,2.5 0 0 1 414.5,6.602 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="412" x2="434" y1="31.6699" y2="31.6699"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="416" y="23.5679">q</text></g><!--MD5=[22b2c9f3a262b015613f9858f220a5ed]
+cluster p--><g id="cluster_p"><path d="M8.5,16.102 L18.5,16.102 A3.75,3.75 0 0 1 21,18.602 L28,41.1699 L385.5,41.1699 A2.5,2.5 0 0 1 388,43.6699 L388,457.102 A2.5,2.5 0 0 1 385.5,459.602 L8.5,459.602 A2.5,2.5 0 0 1 6,457.102 L6,18.602 A2.5,2.5 0 0 1 8.5,16.102 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="28" y1="41.1699" y2="41.1699"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="9" x="10" y="33.0679">p</text></g><g id="elem_A"><rect fill="#F1F1F1" height="183.6113" style="stroke:#181818;stroke-width:0.5;" width="167" x="427.5" y="44.602"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9" x="506.5" y="61.5679">A</text><line style="stroke:#181818;stroke-width:0.5;" x1="428.5" x2="593.5" y1="67.6699" y2="67.6699"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="433.5" y="86.6358">import p.B;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="433.5" y="105.7038">class A {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="465.5" y="124.7717">void f() {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="497.5" y="143.8396">B b = new B();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="497.5" y="162.9075">b.n = 3;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="497.5" y="181.9754">b.g();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="465.5" y="201.0433">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="433.5" y="220.1113">}</text></g><g id="elem_D"><rect fill="#F1F1F1" height="164.5433" style="stroke:#181818;stroke-width:0.5;" width="138" x="435" y="288.602"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="499" y="305.5679">D</text><line style="stroke:#181818;stroke-width:0.5;" x1="436" x2="572" y1="311.6699" y2="311.6699"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="441" y="330.6358">import p.B;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="441" y="349.7038">class D extends B {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="473" y="368.7717">void f() {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="505" y="387.8396">n = 3;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="505" y="406.9075">g();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="473" y="425.9754">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="441" y="445.0433">}</text></g><g id="elem_B"><rect fill="#F1F1F1" height="145.4754" style="stroke:#181818;stroke-width:0.5;" width="148" x="22" y="64.102"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9" x="91.5" y="81.0679">B</text><line style="stroke:#181818;stroke-width:0.5;" x1="23" x2="169" y1="87.1699" y2="87.1699"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="28" y="106.1358">public class B {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="60" y="125.2038">public int n;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="60" y="144.2717">public void g() {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="60" y="163.3396">n = 5;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="60" y="182.4075">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="28" y="201.4754">}</text></g><g id="elem_C"><rect fill="#F1F1F1" height="164.5433" style="stroke:#181818;stroke-width:0.5;" width="167" x="205.5" y="54.102"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9" x="284.5" y="71.0679">C</text><line style="stroke:#181818;stroke-width:0.5;" x1="206.5" x2="371.5" y1="77.1699" y2="77.1699"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="211.5" y="96.1358">class C {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="243.5" y="115.2038">public void k() {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="275.5" y="134.2717">B b = new B();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="275.5" y="153.3396">b.n = 7;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="275.5" y="172.4075">b.g();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="243.5" y="191.4754">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="211.5" y="210.5433">}</text></g><g id="elem_E"><rect fill="#F1F1F1" height="145.4754" style="stroke:#181818;stroke-width:0.5;" width="136" x="28" y="298.602"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="92" y="315.5679">E</text><line style="stroke:#181818;stroke-width:0.5;" x1="29" x2="163" y1="321.6699" y2="321.6699"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="34" y="340.6358">class E extends B {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="66" y="359.7038">void f() {</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="98" y="378.7717">n = 3;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="98" y="397.8396">g();</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="66" y="416.9075">}</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="5" x="34" y="435.9754">}</text></g><!--MD5=[0cc414c05168401e44af7a1c991d2042]
+link A to D--><!--MD5=[cd25d8247324207f828a4db9f58ed69d]
+link B to C--><!--MD5=[9708f0b9f122c98731c8e69738a53bc0]
+reverse link B to E--><g id="link_B_E"><path codeLine="555" d="M96,229.372 C96,252.272 96,276.502 96,298.282 " fill="none" id="B-backto-E" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="89,229.252,96,209.252,103,229.252,89,229.252" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7ab6ecae7f500dbabd05e8a84c7483c7]
+reverse link B to D--><g id="link_B_D"><path codeLine="556" d="M177.26,221.672 C180.79,224.132 184.38,226.452 188,228.602 C267.8,275.972 304.52,248.072 388,288.602 C403.83,296.292 419.87,306.042 434.76,316.102 " fill="none" id="B-backto-D" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="172.75,227.032,161.15,209.302,181.27,215.922,172.75,227.032" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c39e3181e687a7fb62d476e9896ea32d]
+@startuml 9-access-modifier-5
+package q {
+ object A {
+   import p.B;
+   class A {
+     \tvoid f() {
+       \t\tB b = new B();
+       \t\tb.n = 3;
+       \t\tb.g();
+     \t}
+ }
+ A : }
+ object D {
+   import p.B;
+   class D extends B {
+     \tvoid f() {
+       \t\tn = 3;
+       \t\tg();
+     \t}
+ }
+ D : }
+}
+
+package p {
+ object B {
+ public class B {
+   \tpublic int n;
+   \tpublic void g() {
+     \tn = 5;
+   \t}
+ }
+ B : }
+ object C {
+   class C {
+     \tpublic void k() {
+       \t\tB b = new B();
+       \t\tb.n = 7;
+       \t\tb.g();
+     \t}
+ }
+ C : }
+ object E {
+   class E extends B {
+     \tvoid f() {
+       \t\tn = 3;
+       \t\tg();
+     \t}
+ }
+ E : }
+}
+
+A -[hidden]-> D
+B -[hidden]> C
+E -u-|> B
+D -u-|> B
+@enduml
+
+PlantUML version 1.2022.6(Wed Jun 22 02:34:49 KST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
