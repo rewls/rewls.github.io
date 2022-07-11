@@ -37,17 +37,19 @@ permalink: /docs/java/ch5
 
 - Use the logical operators to form complex conditional expressions in control statements
 
-## 5.2 Essentials of counter-Controlled Iteration
+---
+
+## 5.2 Essentials of Counter-Controlled Iteration
 
 ```java
 // Fig. 5.1: WhileCounter.java
-// Counter-controlled iteration with the while iterations statement
+// Counter-controlled iteration with the while iteration statement.
 
 public class WhileCounter {
     public static void main(String[] args) {
         int counter = 1;  // declare and initialize control variable
 
-        while (counter <= 10) {  // loop-continuation condition
+        while (counter <= 10) { // loop-continuation condition
             System.out.printf("%d  ", counter);
             ++counter;  // increment control variable
         }
@@ -69,17 +71,21 @@ public class WhileCounter {
 >
 > Use integers to control counting loops
 
+---
+
 ## 5.3 `for` Iteration Statement
 
 ```java
 // Fig. 5.2: ForCounter.java
-// Counter-controlled iteration with the for iteration statement
+// Counter-controlled iteration with the for iteration statement.
 
 public class ForCounter {
     public static void main(String[] args) {
-        // for statement header includes initialization, loop-continuation condition and increment
-        for (int counter=1; counter<=10; counter++)
+        // for statement header includes initialization,
+        // loop-continuation condition and increment
+        for (int counter = 1; counter <= 10; counter++) {
             System.out.printf("%d  ", counter);
+        }
 
         System.out.println();
     }
@@ -90,18 +96,32 @@ public class ForCounter {
 1  2  3  4  5  6  7  8  9  10
 ```
 
+### `for` statement header structure
+
+```java
+for  (int counter =1; counter <= 10; counter++)
+```
+
+- `counter`: Control variable
+
+- `1`: Initial value of control variable
+
+- `counter <= 10`: loop-continuation condition
+
+- `counter++`: Incrementing of control variable
+
 - If the initialization expression in the `for` header declares the control variable, the control variable can be used only in that `for` statement
 
 ### Two equivalent counter-controlled statements
 
 ```java
-for (initialization; loopcontinuationCondition; increment)
+for (initialization; loopContinuationCondition; increment)
     statement;
 ```
 
 ```java
 initialization;
-while (loopcontinuationCondition) {
+while (loopContinuationCondition) {
     statement;
     increment;
 }
@@ -109,19 +129,22 @@ while (loopcontinuationCondition) {
 
 - Typically, `for` statements are used for counter-controlled repetition and `while` statements for sentinel-controlled repetition
 
+---
+
 ## 5.4 Example Using the `for` Statement
 
 ```java
 // Fig. 5.5: Sum.java
-// Summing integers with the for statement
+// Summing integers with the for statement.
 
 public class Sum {
     public static void main(String[] args) {
         int total = 0;
 
         // total even integers from 2 through 20
-        for (int number=2; number<=20; number+=2)
+        for (int number = 2; number <= 20; number += 2) {
             total += number;
+        }
 
         System.out.printf("Sum is %d%n", total);
     }
@@ -140,7 +163,7 @@ $$
 a = p(1+r)^n
 $$
 
-- where
+- Where
 
     - $p$ is the original amount invested (i.e. the principal)
 
@@ -152,7 +175,7 @@ $$
 
 ```java
 // Fig. 5.6: Interest.java
-// compound-interest calculations with for
+// Compound-interest calculations with for.
 
 public class Interest {
     public static void main(String[] args) {
@@ -163,9 +186,9 @@ public class Interest {
         System.out.printf("%s%20s%n", "Year", "Amount on deposit");
 
         // calculate amount on deposit for each of ten years
-        for (int year=1; year<=10; ++year) {
+        for (int year = 1; year <= 10; ++year) {
             // calculate new amount on deposit for specified year
-            double amount = principal * Math.pow(1.0+rate, year);
+            double amount = principal * Math.pow(1.0 + rate, year);
 
             // display the year and the amount
             System.out.printf("%4d%,20.2f%n", year, amount);
@@ -190,17 +213,17 @@ Year   Amount on deposit
 
 ##### Format specifier `%20s`
 
-- a field width of 20
+- A field width of 20
 
-- right justified in the field by default
+- Right justified in the field by default
 
-- more characters than the field width
+- More characters than the field width
 
-    - the field width would be extended to the right to accommodate the entire value
+    - The field width would be extended to the right to accommodate the entire value
 
 ##### Format specifier `%-20s`
 
-- left justified by minus sign formatting flag
+- Left justified by minus sign formatting flag
 
 ##### Calling a `static` method
 
@@ -208,29 +231,29 @@ Year   Amount on deposit
 
 - `Math.pow(x, y)`
 
-    - calculates the value of `x` raised to the `y`th power
+    - Calculates the value of `x` raised to the `y`th power
 
-    - receives two `double` arguments and returns a `double` value
+    - Receives two `double` arguments and returns a `double` value
 
-##### Format specifier `%,20.2f`
+##### Format
 
-- comma(`,`) formatting flag
+- formatting flag
 
-    - output with a grouping separator
+	- `-`: left justified. default is right justified
 
-- `20`
+	- `,`: output with a grouping separator
 
-    - right justified in a field width of 20 characters
+- `m`: field width of 20 characters
 
-- `.2`
+- `.n`: the formatted number's precision
 
-    - the formatted number's precision
+---
 
 ## 5.5 `do...while` Iteration Statement
 
 ```java
 // Fig. 5.7: DoWhileTest.java
-// do...while iteration statement
+// do...while iteration statement.
 
 public class DoWhileTest {
     public static void main(String[] args) {
@@ -249,6 +272,8 @@ public class DoWhileTest {
 ```
 1  2  3  4  5  6  7  8  9  10
 ```
+
+---
 
 ## 5.6 `switch` Multiple-Selection Statement
 
@@ -269,19 +294,19 @@ switch (controlling expression) {
 
 ### Controlling expression
 
-- an integral value of type `byte`, `char`, `short` or `int`
+- An integral value of type `byte`, `char`, `short` or `int`
 
-- a `String`
+- A `String`
 
-- enumeration value
+- Enumeration value
 
 ### Label
 
-- constant integral expression of type `byte`, `char`, `short` or `int`
+- Constant integral expression of type `byte`, `char`, `short` or `int`
 
-- a `String`
+- A `String`
 
-- enumeration constant
+- Enumeration constant
 
 ```java
 switch (controlling expression) {
@@ -298,36 +323,28 @@ switch (controlling expression) {
 ```
 
 ```java
-import java.util.Scanner;
+int num;
+String number = input.next();
 
-public class Switch {
-    public static void main(String[] argc) {
-        Scanner input = new Scanner(System.in);
-        int num;
-        String number = input.next();
-
-        switch (number) {
-            case "one":
-                num = 1;
-                break;
-            case "two":
-                num = 2;
-                break;
-            case "three":
-                num = 3;
-                break;
-            default:
-                num = 0;
-                break;
-        }
-    }
+switch (number) {
+	case "one":
+		num = 1;
+		break;
+	case "two":
+		num = 2;
+		break;
+	case "three":
+		num = 3;
+		break;
+	default:
+		num = 0;
+		break;
 }
 ```
 
 ```java
 // Fig. 5.9: LetterGrades.java
-// LetterGrades class uses the switch statements to count letter grades
-
+// LetterGrades class uses the switch statement to count letter grades.
 import java.util.Scanner;
 
 public class LetterGrades {
@@ -342,7 +359,7 @@ public class LetterGrades {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.printf("%s%n%s%n   %s%n   %s%n",
+        System.out.printf("%s%n%s%n    %s%n    %s%n",
             "Enter the integer grades in the range 0-100.",
             "Type the end-of-file indicator to terminate input:",
             "On UNIX/Linux/macOS type <Ctrl> d then press Enter",
@@ -351,24 +368,24 @@ public class LetterGrades {
         // loop until user enters the end-of-file indicator
         while (input.hasNext()) {
             int grade = input.nextInt();  // read grade
-            total += grade; // add grade to total
+            total += grade;  // add grade to total
             ++gradeCounter;  // increment number of grades
 
-            // increment appropriate letter-grade counter
-            switch (grade/10) {
+            //  increment appropriate letter-grade counter
+            switch (grade / 10) {
                 case 9:  // grade was between 90
                 case 10: // and 100, inclusive
                     ++aCount;
                     break;  // exits switch
-                case 8:  // grade was between 80 and 89
+                case 8: // grade was between 80 and 89
                     ++bCount;
                     break;  // exits switch
-                case 7: // grade was beween 70 and 79
+                case 7: // grade was between 70 and 79
                     ++cCount;
                     break;  // exits switch
-                case 6: // grade was beween 60 and 69
-                    ++dCount;;
-                    break;
+                case 6: // grade was between 60 and 69
+                    ++dCount;
+                    break;  // exits switch
                 default: // grade was less than 60
                     ++fCount;
                     break;  // optional; exits switch anyway
@@ -378,23 +395,26 @@ public class LetterGrades {
         // display grade report
         System.out.printf("%nGrade Report:%n");
 
-        // if user entered at least one grade
-        if (gradeCounter > 0) {
+        // if user entered at least one grade...
+        if (gradeCounter != 0) {
             // calculate average of all grades entered
-            double average = (double)total / gradeCounter;
+            double average = (double) total / gradeCounter;
 
             // output summary of results
-            System.out.printf("Total of the Td grades entered is %d%n", gradeCounter, total);
+            System.out.printf("Total of the %d grades entered is %d%n",
+                gradeCounter, total);
             System.out.printf("Class average is %.2f%n", average);
             System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n",
                 "Number of students who received each grade:",
-                "A: ", aCount,  // display nGrade of A grades
-                "B: ", bCount,  // display nGrade of B grades
-                "C: ", cCount,  // display nGrade of C grades
-                "D: ", dCount,  // display nGrade of D grades
-                "F: ", fCount);  // display nGrade of F grades
-        } else  // no grades were entered, so output appropriate message
+                "A: ", aCount,  // display number of A grades
+                "B: ", bCount,  // display number of B grades
+                "C: ", cCount,  // display number of C grades
+                "D: ", dCount,  // display number of D grades
+                "F: ", fCount);  // display number of F grades
+        }
+        else { // no grades were entered, so output appropriate message
             System.out.println("No grades were entered");
+        }
     }
 }
 ```
@@ -429,11 +449,11 @@ F: 2
 
 ### `Scanner` method `hasNext`
 
-- determine whether there is more data to input
+- Determine whether there is more data to input
 
-- it returns `true` if there is more data
+- It returns `true` if there is more data
 
-- it return `false` if the end-of-file indicator has been typed
+- It return `false` if the end-of-file indicator has been typed
 
 - 입력 대기 상태로 기다리며 프로그램이 진행 되지 않음
 
@@ -441,14 +461,11 @@ F: 2
 
 - 버퍼에 ctrl+d가 있으면 버퍼를 비우고 `false` 반환
 
+---
+
 ## 5.8 `break` and `continue` Statements
 
 - `break` in a `while`, `for`, `do...while` or `switch`
-
-<div class=mermaid>
-graph LR;
-    break-->next;
-</div>
 
 ```java
 for (; ; ) {
@@ -479,8 +496,7 @@ next;
 
 <div class=mermaid>
 graph LR;
-    break2[break in for]-->next1;
-    break1[break out of for]-->next2;
+    break-->next;
 </div>
 
 ```java
@@ -497,18 +513,27 @@ while (...) {
 next2;
 ```
 
+<div class=mermaid>
+graph LR;
+    break2[break in for]-->next1;
+    break1[break out of for]-->next2;
+</div>
+
 ```java
 // Fig. 5.13: BreakTest.java
-// break statement exiting a for statement
-
+// break statement exiting a for statement.
 public class BreakTest {
     public static void main(String[] args) {
-        int count; // control variable also used after loop terminates
-        for (count=1; count<=10; count++) {  // loop 10 times
-            if (count == 5)
+        int count;  // control variable also used after loop terminates
+
+        for (count = 1; count <= 10; count++) { // loop 10 times
+            if (count == 5) {
                 break;  // terminates loop if count is 5
+            }
+
             System.out.printf("%d ", count);
         }
+
         System.out.printf("%nBroke out of loop at count = %d%n", count);
     }
 }
@@ -522,15 +547,6 @@ Broke out of loop at count = 5
 
 - `continue` in `while`, `for` or `do...while`
 
-<div class=mermaid>
-graph LR;
-    continue-->inc;
-    subgraph noExecute[No execute];
-        stmt1;
-        stmt2;
-    end;
-</div>
-
 ```java
 for (init; cond; inc) {
     ...
@@ -540,6 +556,15 @@ for (init; cond; inc) {
     stm2;
 }
 ```
+
+<div class=mermaid>
+graph LR;
+    continue-->inc;
+    subgraph noExecute[No execute];
+        stmt1;
+        stmt2;
+    end;
+</div>
 
 ```java
 while (cond) {
@@ -563,8 +588,7 @@ do {
 
 <div class=mermaid>
 graph LR;
-    continue1[continue out of for]-->cond1;
-    continue2[continue in for]-->inc;
+    continue-->cond;
     subgraph noExecute[No execute];
         stmt1;
         stmt2;
@@ -586,17 +610,29 @@ while (cond1) {
 }
 ```
 
+<div class=mermaid>
+graph LR;
+    continue1[continue out of for]-->cond1;
+    continue2[continue in for]-->inc;
+    subgraph noExecute[No execute];
+        stmt1;
+        stmt2;
+    end;
+</div>
+
 ```java
 // Fig. 5.14: ContinueTest.java
-// continue statement terminating an iteration of a for statement
-
+// continue statement terminating an iteration of a for statement.
 public class ContinueTest {
     public static void main(String[] args) {
-        for (int count=1; count<=10; count++) {  // loop 10 times
-            if (count == 5)
-                continue;  // skip remaining code loop body if count is 5
+        for (int count = 1; count <= 10; count++) { // loop 10 times
+            if (count == 5) {
+                continue;  // skip remaining code in loop body if count is 5
+            }
+
             System.out.printf("%d ", count);
         }
+
         System.out.printf("%nUsed continue to skip printing 5%n");
     }
 }
@@ -607,25 +643,50 @@ public class ContinueTest {
 Used continue to skip printing 5
 ```
 
+---
+
 ## 5.9 Logical Operators
 
 ### Logical operators
 
-- short-circuit evaluation
-
-    - `&&` (conditional AND)
-
-    - `||` (conditional OR)
-
-- always evaluate both of its operands
-
-    - `&` (boolean logical AND)
-
-    - `|` (boolean logical inclusive OR)
-
-    - `^` (boolean logical exclusive OR)
-
-- `!` (logical NOT, logical negation or logical complement
+<table>
+	<thead>
+		<tr>
+			<th>Evaluation method</th>
+			<th>Operator</th>
+			<th>Discription</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan=2>Short-circuit evaluation</td>
+			<td><span markdown=1>`&&`</span></td>
+			<td>Conditional AND</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`||`</span></td>
+			<td>Conditional OR</td>
+		</tr>
+		<tr>
+			<td rowspan=3>Always evaluate both of its operands evaluation</td>
+			<td><span markdown=1>`&`</span></td>
+			<td>Boolean logical AND</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`|`</span></td>
+			<td>Boolean logical inclusive OR</td>
+		</tr>
+		<tr>
+			<td><span markdown=1>`^`</span></td>
+			<td>Boolean logical exclusive OR</td>
+		</tr>
+		<tr>
+			<td>Unary operator</td>
+			<td><span markdown=1>`!`</span></td>
+			<td>Logical NOT, logical negation or logical complement</td>
+		</tr>
+	</tbody>
+</table>
 
 > NOTE
 >
@@ -752,7 +813,7 @@ Used continue to skip printing 5
 
 ```java
 // Fig. 5.19: LogicalOperators.java
-// Logical operators
+// Logical operators.
 
 public class LogicalOperators {
     public static void main(String[] args) {
@@ -779,24 +840,66 @@ public class LogicalOperators {
 
         // create truth table for | (boolean logical inclusive OR) operator
         System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
-            "Boolean logical inclusive OR (|)", "false | false", (false | false),
+            "Boolean logical inclusive OR (|)",
+            "false | false", (false | false),
             "false | true", (false | true),
             "true | false", (true | false),
             "true | true", (true | true));
 
         // create truth table for ^ (boolean logical exclusive OR) operator
         System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
-            "Boolean logical exclusive OR (^)", "false ^ false", (false ^ false),
+            "Boolean logical exclusive OR (^)",
+            "false ^ false", (false ^ false),
             "false ^ true", (false ^ true),
             "true ^ false", (true ^ false),
             "true ^ true", (true ^ true));
 
-        // create truth table for ! (boolean negation) operator
+        // create truth table for ! (logical negation) operator
         System.out.printf("%s%n%s: %b%n%s: %b%n", "Logical NOT (!)",
             "!false", (!false), "!true", (!true));
     }
 }
 ```
+
+```
+Conditional AND (&&)
+false && false: false
+false && true: false
+true && false: false
+true && true: true
+
+Conditional OR (||)
+false || false: false
+false || true: true
+true || false: true
+true || true: true
+
+Boolean logical AND (&)
+false & false: false
+false & true: false
+true & false: false
+true & true: true
+
+Boolean logical inclusive OR (|)
+false | false: false
+false | true: true
+true | false: true
+true | true: true
+
+Boolean logical exclusive OR (^)
+false ^ false: false
+false ^ true: true
+true ^ false: true
+true ^ true: false
+
+Logical NOT (!)
+!false: true
+!true: false
+```
+
+### The `%b` format specifier
+
+- Displays the word "true" or "false" based on a `boolean` expression's value
 
 <table>
     <caption>Precedence and associativity of operators discussed</caption>
