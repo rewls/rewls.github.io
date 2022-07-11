@@ -25,46 +25,51 @@ permalink: /docs/java/ch4
 
 ## Objectives
 
-- Learn basic problem-solvin techniques
+- Learn basic problem-solving techniques
 
 - Develop algorithms through the process of top-down, stepwise refinement
 
 - Use the `if` and `if ... else` selection statements to choose between alternative actions
 
-- Use the `while` iteration statement to execute statements ni a program repeatedly
+- Use the `while` iteration statement to execute statements in a program repeatedly
 
 - Use counter-controlled iteration and sentinel-controlled iteration
 
 - Learn about the portability of primitive data types
 
+---
+
 ## 4.4 Control Structures
 
 ### Bohm and Jacopini
 
+##### Three control structures
+
 - All programs can be written in terms of only three control structures without any `goto` statements
 
-    - sequence structure
+1. Sequence structure
 
-    - selection structure
+2. Selection structure
 
-    - repeatition structure
+3. Repeatition structure
 
 ### Implementations of three control structures in Java
 
-##### three control statements
+##### Three control statements
 
-- sequence statement
+1. Sequence statement
 
-- selection statement (3 types: `if`, `if else`, `switch`)
+2. Selection statement (3 types: `if`, `if else`, `switch`)
 
-- repeatition statement (3 types: `for`, `while`, `do while`)
+3. Repeatition statement (3 types: `for`, `while`, `do while`)
+
+---
 
 ## 4.7 `Student` Class: Nested `if ... else` Statements
 
 ```java
 // Fig. 4.4: Student.java
-// Student class that stores a student name and average
-
+// Student class that stores a student name and average.
 public class Student {
     private String name;
     private double average;
@@ -73,10 +78,13 @@ public class Student {
     public Student(String name, double average) {
         this.name = name;
 
-        // validate that average is > 0.0 and <= 100.0; otherwise, keep instance variable average's default value (0.0)
-        if (average > 0.0)
-            if (average <= 100.0)
+        // validate that average is > 0.0 and <= 100.0; otherwise,
+        // keep instance variable average's default value (0.0)
+        if (average > 0.0) {
+            if (average <= 100.0) {
                 this.average = average;  // assign to instance variable
+            }
+        }
     }
 
     // sets the Student's name
@@ -84,17 +92,20 @@ public class Student {
         this.name = name;
     }
 
-    //retrieves the Student's name
+    // retrieves the Student's name
     public String getName() {
         return name;
     }
 
     // sets the Student's average
     public void setAverage(double average) {
-        // validate that average is > 0.0 and <= 100.0; otherwise, kepp instance variable average's current value
-        if (average > 0.0)
-            if (average <= 100.0)
+        // validate that average is > 0.0 and <= 100.0; otherwise,
+        // keep instance variable average's current value
+        if (average > 0.0) {
+            if (average <= 100.0) {
                 this.average = average;  // assign to instance variable
+            }
+        }
     }
 
     // retrieves the Student's average
@@ -104,20 +115,23 @@ public class Student {
 
     // determines and returns the Student's letter grade
     public String getLetterGrade() {
-        String letterGrade = "";  // initialized to emty String
+        String letterGrade = "";  // initialized to empty String
 
-        if (average >= 90.0)
+        if (average >= 90.0) {
             letterGrade = "A";
-        else if (average >= 80.0)
+        }
+        else if (average >= 80.0) {
             letterGrade = "B";
-        else if (average >= 70.0)
+        }
+        else if (average >= 70.0) {
             letterGrade = "C";
-        else if (average >= 60.0)
+        }
+        else if (average >= 60.0) {
             letterGrade = "D";
-        else if (average >= 60.0)
-            letterGrade = "D";
-        else
-            letterGrade = "f";
+        }
+        else {
+            letterGrade = "F";
+        }
 
         return letterGrade;
     }
@@ -126,16 +140,16 @@ public class Student {
 
 ```java
 // Fig. 4.5: StudentTest.java
-// Create and test StudentTest objects
+// Create and test Student objects
 
 public class StudentTest {
-    public static void main(String[] args) {
-        Student account1 = new Student("Jane Green", 93.5);
-        Student account2 = new Student("John Blue", 72.75);
+     public static void main(String[] args) {
+          Student account1 = new Student("Jane Green", 93.5);
+          Student account2 = new Student("John Blue", 72.75);
 
-        System.out.printf("%s's letter grade is: %s%n", account1.getName(), account1.getLetterGrade());
-        System.out.printf("%s's letter grade is: %s%n", account2.getName(), account2.getLetterGrade());
-    }
+          System.out.printf("%s's letter grade is: %s%n", account1.getName(), account1.getLetterGrade());
+          System.out.printf("%s's letter grade is: %s%n", account2.getName(), account2.getLetterGrade());
+     }
 }
 ```
 
@@ -143,6 +157,46 @@ public class StudentTest {
 Jane Green's letter grade is: A
 John Blue's letter grade is: C
 ```
+
+<!--
+@startuml 4-object-diagram-fig_4-5-1
+object account1
+object String
+
+String : Jane Green
+
+map Student {
+  name *-> String
+  average => 93.5
+}
+
+account1 -right-> Student
+@enduml
+-->
+
+<!--
+@startuml 4-object-diagram-fig_4-5-2
+object account2
+object String
+
+String : John Blue
+
+map Student {
+  name *-> String
+  average => 72.75
+}
+
+account2 -right-> Student
+@enduml
+-->
+
+<center markdown="block">
+![object-diagram-fig_4-5-1](/assets/java-programming/images/4-object-diagram-fig_4-5-1.svg)
+
+![object-diagram-fig_4-5-2](/assets/java-programming/images/4-object-diagram-fig_4-5-2.svg)
+
+Object diagram Fig. 4.5
+</center>
 
 ## 4.9 Formulating Algorithms: Counter-Controlled Iteration
 
@@ -154,12 +208,11 @@ John Blue's letter grade is: C
 
 ### Problem statement
 
-- A class of ten students took a quiz. The grades(integers in the range0 to 100) for this quiz are available to you. Determine the classaverage on the quiz
+- A class of ten students took a quiz. The grades(integers in the range 0 to 100) for this quiz are available to you. Determine the class average on the quiz
 
 ```java
 // Fig. 4.8: ClassAverage.java
-// Solving the class-average problem using counter-controlled iteration
-
+// Solving the class-average problem using counter-controlled iteration.
 import java.util.Scanner;  // program uses class Scanner
 
 public class ClassAverage {
@@ -168,19 +221,19 @@ public class ClassAverage {
         Scanner input = new Scanner(System.in);
 
         // initialization phase
-        int total = 0;  // initialize sum of grades entered by the use
+        int total = 0;  // initialize sum of grades entered by the user
         int gradeCounter = 1;  // initialize # of grade to be entered next
 
         // processing phase uses counter-controlled iteration
-        while (gradeCounter <= 10) {  // loop 10 times
+        while (gradeCounter <= 10) { // loop 10 times
             System.out.print("Enter grade: ");  // prompt
             int grade = input.nextInt();  // input next grade
-            total = total+grade;  // add grade to total
-            gradeCounter = gradeCounter+1;  // increment counter by 1
+            total = total + grade;  // add grade to total
+            gradeCounter = gradeCounter + 1;  // increment counter by 1
         }
 
         // termination phase
-        int average = total/10;  // integer division yields integer result
+        int average = total / 10;  // integer division yields integer result
 
         // display total and average of grades
         System.out.printf("%nTotal of all 10 grades is %d%n", total);
@@ -225,34 +278,33 @@ Class average is 84
 
 > Error-Prevention Tip 4.4
 >
-> When performing divisionor remainder calculations in which the right operand could be zero, test for this and handle it (e.g. display an error message) rather than allowing the error to occur
+> When performing division or remainder calculations in which the right operand could be zero, test for this and handle it (e.g. display an error message) rather than allowing the error to occur
 
 ```java
 // Fig. 4.10: ClassAverage.java
-// Solving the class-average processes using sentinel-controlled iteration.
-
+// Solving the class-average problem using sentinel-controlled iteration.
 import java.util.Scanner;  // program uses class Scanner
 
 public class ClassAverage {
     public static void main(String[] args) {
-        // cerate Scanner to obtain input from command window
+        // create Scanner to obtain input from command window
         Scanner input = new Scanner(System.in);
 
         // initialization phase
-        int total = 0;
-        int gradeCounter = 0; // initialize # of grades entered so far
+        int total = 0;  // initialize sum of grades
+        int gradeCounter = 0;  // initialize # of grades entered so far
 
         // processing phase
         // prompt for input and read grade from user
         System.out.print("Enter grade or -1 to quit: ");
         int grade = input.nextInt();
-        // Reads the first value before reaching the while
-        // This value determines whether the program's flow of control should enter the body of the while
+	  // Reads the first value before reaching the while
+	  // This value detremines whether the program's flow of control should enter the body of the while
 
         // loop until sentinel value read from user
         while (grade != -1) {
-            total = total+grade;  // add grade to total
-            gradeCounter = gradeCounter+1;
+            total = total + grade;  // add grade to total
+            gradeCounter = gradeCounter + 1;  // increment counter
 
             // prompt for input and read next grade from user
             System.out.print("Enter grade or -1 to quit: ");
@@ -261,15 +313,17 @@ public class ClassAverage {
 
         // termination phase
         // if user entered at least one grade...
-        if (gradeCounter > 0) {
+        if (gradeCounter != 0) {
             // use number with decimal point to calculate average of grades
-            double average = (double)total/gradeCounter;
+            double average = (double) total / gradeCounter;
 
             // display total and average (with two digits of precision)
-            System.out.printf("%nTotal of the %d grades entered is %d%n", gradeCounter, total);
+            System.out.printf("%nTotal of the %d grades entered is %d%n",
+                gradeCounter, total);
             System.out.printf("Class average is %.2f%n", average);
-        } else  // no grades were entered, so output appropriate message
+        } else { // no grades were entered, so output appropriate message
             System.out.println("No grades were entered");
+        }
     }
 }
 ```
@@ -312,6 +366,8 @@ graph LR;
 Type cast and promotion
 </center>
 
+---
+
 ## 4.11 Formulating Algorithms: Nested Control Statements
 
 ### Problem statement
@@ -320,13 +376,12 @@ Type cast and promotion
 
 ```java
 // Fig. 4.12: Analysis.java
-// Analysis of examination results using nested control statements
-
+// Analysis of examination results using nested control statements.
 import java.util.Scanner;  // class uses class Scanner
 
 public class Analysis {
     public static void main(String[] args) {
-        // create Scanner to obtain input from commnad window
+        // create Scanner to obtain input from command window
         Scanner input = new Scanner(System.in);
 
         // initializing variables in declarations
@@ -334,28 +389,31 @@ public class Analysis {
         int failures = 0;
         int studentCounter = 1;
 
-        // process 10 students usnig counter-controlled loop
+        // process 10 students using counter-controlled loop
         while (studentCounter <= 10) {
-            // prompt user for input and obtain value from use
+            // prompt user for input and obtain value from user
             System.out.print("Enter result (1 = pass, 2 = fail): ");
             int result = input.nextInt();
 
             // if...else is nested in the while statement
-            if (result == 1)
-                passes = passes+1;
-            else
-                failures = failures+1;
+            if (result == 1) {
+                passes = passes + 1;
+            }
+            else {
+                failures = failures + 1;
+            }
 
             // increment studentCounter so loop eventually terminates
-            studentCounter = studentCounter+1;
+            studentCounter = studentCounter + 1;
         }
 
         // termination phase; prepare and display results
         System.out.printf("Passed: %d%nFailed: %d%n", passes, failures);
 
         // determine whether more than 8 students passed
-        if (passes >8)
+        if (passes > 8) {
             System.out.println("Bonus to instructor!");
+        }
     }
 }
 ```
@@ -390,6 +448,8 @@ Enter result (1 = pass, 2 = fail): 1
 Passed: 6
 Failed: 4
 ```
+
+---
 
 ## 4.12 Compound Assignment Operators
 
@@ -431,6 +491,8 @@ Failed: 4
     </tbody>
 </table>
 
+---
+
 ## 4.13 Increment and Decrement Operators
 
 <table>
@@ -467,24 +529,24 @@ Failed: 4
 </table>
 
 ```java
-// Fig. 4.15; Increment.java
-// Prefix increment and postfix increment operators
+// Fig. 4.15: Increment.java
+// Prefix increment and postfix increment operators.
 
 public class Increment {
     public static void main(String[] args) {
         // demonstrate postfix increment operator
         int c = 5;
         System.out.printf("c before postincrement: %d%n", c);  // prints 5
-        System.out.printf("       postincrement c: %d%n", c++);  // printf 5
-        System.out.printf(" c after postincrement: %d%n", c);  // printf 6
+        System.out.printf("    postincrementing c: %d%n", c++);  // prints 5
+        System.out.printf(" c after postincrement: %d%n", c);  // prints 6
 
         System.out.println();  // skip a line
 
         // demonstrate prefix increment operator
         c = 5;
-        System.out.printf("c before postincrement: %d%n", c);  // prints 5
-        System.out.printf("       postincrement c: %d%n", ++c);  // printf 6
-        System.out.printf(" c after postincrement: %d%n", c);  // printf 6
+        System.out.printf(" c before preincrement: %d%n", c);  // prints 5
+        System.out.printf("     preincrementing c: %d%n", ++c);  // prints 6
+        System.out.printf("  c after preincrement: %d%n", c);  // prints 6
     }
 }
 ```
@@ -551,6 +613,8 @@ c before postincrement: 5
         </tr>
     </tbody>
 </table>
+
+---
 
 ## 4.14 Primitive Types
 
