@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="354px" preserveAspectRatio="none" style="width:110px;height:354px;background:#FFFFFF;" version="1.1" viewBox="0 0 110 354" width="110px" zoomAndPan="magnify"><defs/><g><!--MD5=[7fd4401f5c5cb0e3d029c879cad30c04]
+class Animal--><g id="elem_Animal"><rect codeLine="1736" fill="#F1F1F1" height="67.0679" id="Animal" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="7.5" y="7"/><ellipse cx="29.7" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M29.1688,29.9219 Q27.4188,29.9219 26.2781,29.1875 Q25.1531,28.4375 24.5906,27.0938 Q24.0438,25.7344 24.0438,23.9375 Q24.0438,21.9063 24.7,20.4531 Q25.3563,19 26.6375,18.2188 Q27.9188,17.4375 29.7938,17.4375 Q30.6844,17.4375 31.3563,17.625 Q32.0281,17.7969 32.7156,18.1406 L31.9031,20.1563 Q31.2781,19.8438 30.7313,19.7188 Q30.2,19.5938 29.7156,19.5938 Q28.5438,19.5938 27.8406,20.125 Q27.1375,20.6563 26.8406,21.6094 Q26.5438,22.5625 26.5438,23.8281 Q26.5438,25.8438 27.2625,26.8125 Q27.9813,27.7656 29.575,27.7656 Q30.1688,27.7656 30.7938,27.6094 Q31.4188,27.4531 32.2469,27.0781 L32.2469,29.2969 Q31.5125,29.6094 30.7156,29.7656 Q29.9344,29.9219 29.1688,29.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="45.3" y="28.432">Animal</text><line style="stroke:#181818;stroke-width:0.5;" x1="8.5" x2="101.5" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="8.5" x2="101.5" y1="47" y2="47"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="13.5" y="65.9659">+void show()</text></g><!--MD5=[0ba60c1c7eece7977c024cb94d0d3fa3]
+class Fish--><g id="elem_Fish"><rect codeLine="1746" fill="#F1F1F1" height="86.1358" id="Fish" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="96" x="7" y="134"/><ellipse cx="38.65" cy="150" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M38.1188,156.9219 Q36.3688,156.9219 35.2281,156.1875 Q34.1031,155.4375 33.5406,154.0938 Q32.9938,152.7344 32.9938,150.9375 Q32.9938,148.9063 33.65,147.4531 Q34.3063,146 35.5875,145.2188 Q36.8688,144.4375 38.7438,144.4375 Q39.6344,144.4375 40.3063,144.625 Q40.9781,144.7969 41.6656,145.1406 L40.8531,147.1563 Q40.2281,146.8438 39.6813,146.7188 Q39.15,146.5938 38.6656,146.5938 Q37.4938,146.5938 36.7906,147.125 Q36.0875,147.6563 35.7906,148.6094 Q35.4938,149.5625 35.4938,150.8281 Q35.4938,152.8438 36.2125,153.8125 Q36.9313,154.7656 38.525,154.7656 Q39.1188,154.7656 39.7438,154.6094 Q40.3688,154.4531 41.1969,154.0781 L41.1969,156.2969 Q40.4625,156.6094 39.6656,156.7656 Q38.8844,156.9219 38.1188,156.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="56.35" y="155.432">Fish</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="102" y1="166" y2="166"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="102" y1="174" y2="174"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="13" y="192.9659">+void draw()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="13" y="212.0339">+void move()</text></g><!--MD5=[6113e5c4515ad319fb6b60dc3703394e]
+class GoldFish--><g id="elem_GoldFish"><rect codeLine="1747" fill="#F1F1F1" height="67.0679" id="GoldFish" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="96" x="7" y="280"/><ellipse cx="24.7" cy="296" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.1688,302.9219 Q22.4188,302.9219 21.2781,302.1875 Q20.1531,301.4375 19.5906,300.0938 Q19.0438,298.7344 19.0438,296.9375 Q19.0438,294.9063 19.7,293.4531 Q20.3563,292 21.6375,291.2188 Q22.9188,290.4375 24.7938,290.4375 Q25.6844,290.4375 26.3563,290.625 Q27.0281,290.7969 27.7156,291.1406 L26.9031,293.1563 Q26.2781,292.8438 25.7313,292.7188 Q25.2,292.5938 24.7156,292.5938 Q23.5438,292.5938 22.8406,293.125 Q22.1375,293.6563 21.8406,294.6094 Q21.5438,295.5625 21.5438,296.8281 Q21.5438,298.8438 22.2625,299.8125 Q22.9813,300.7656 24.575,300.7656 Q25.1688,300.7656 25.7938,300.6094 Q26.4188,300.4531 27.2469,300.0781 L27.2469,302.2969 Q26.5125,302.6094 25.7156,302.7656 Q24.9344,302.9219 24.1688,302.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="39.3" y="301.432">GoldFish</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="102" y1="312" y2="312"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="102" y1="320" y2="320"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="13" y="338.9659">+void move()</text></g><!--MD5=[148c53dede49fe4472cc2dd7d4afcf03]
+reverse link Animal to Fish--><g id="link_Animal_Fish"><path d="M55,94.35 C55,107.44 55,121.31 55,133.82 " fill="none" id="Animal-backto-Fish" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="48,94.06,55,74.06,62,94.06,48,94.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5dde25c4ca70d7e3a68ccdf54d90888f]
+reverse link Fish to GoldFish--><g id="link_Fish_GoldFish"><path d="M55,240.39 C55,254.03 55,267.94 55,279.85 " fill="none" id="Fish-backto-GoldFish" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="48,240.19,55,220.19,62,240.19,48,240.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2223f5af1fec94e465eba2aaccd56901]
+@startuml 10-polymorphism7
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+	+ void move()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+
+PlantUML version 1.2022.6(Wed Jun 22 02:34:49 KST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

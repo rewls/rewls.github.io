@@ -83,7 +83,7 @@ class Animal {
 }
 class Fish {
 	+ void draw()
-	+ void move()  // overriden
+	+ void move()
 }
 
 Fish -u-|> Animal
@@ -227,7 +227,7 @@ class CommissionEmployee {
 	+ String toString()
 }
 class BasePlusCommissionEmployee {
-	+ String toString  // overriden
+	+ String toString
 }
 
 BasePlusCommissionEmployee -u-|> CommissionEmployee
@@ -1364,6 +1364,8 @@ payment due: $1,200.00
 	</tbody>
 </table>
 
+---
+
 ## 10.10 Java SE 8 Interfaces Enhancements
 
 - This section introduces interface features that were added in Java SE 8. We discuss these in more detail in later chapters
@@ -1377,3 +1379,647 @@ payment due: $1,200.00
 ## 10.11 Java SE 9 `private` Interfaces Methods
 
 ## 10.12 `private` Constructors
+
+---
+
+## Assignment
+
+### 1
+
+<div hidden>
+@startuml 10-polymorphism1
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+	+ void move()
+}
+class Fish {
+	+ void draw()
+}
+class Fish extends Animal
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism1](/assets/java-programming/images/10-polymorphism1.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+    public void move() {
+        System.out.println("Animal: move()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new Fish();
+        fish.move();  // Animal: move()
+    }
+}
+```
+
+### 2
+
+<div hidden>
+@startuml 10-polymorphism2
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+	+ void move()
+}
+class Fish {
+	+ void draw()
+	+ void move()
+}
+class Fish extends Animal
+</div>
+
+<center markdown="block">
+![polymorphism2](/assets/data-structure/images/10-polymorphism2.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+    public void move() {
+        System.out.println("Animal: move()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+    public void move() {
+        System.out.println("Fish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new Fish();
+        fish.move();  // Fish: move()
+    }
+}
+```
+
+### 3
+
+<div hidden>
+@startuml 10-polymorphism3
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism3](/assets/java-programming/images/10-polymorphism3.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new Fish();
+        fish.move();  // error
+                      // Fish와 Fish가 상속하는 Animal은
+                      // method move를 가지지 않는다.
+    }
+}
+```
+
+### 4
+
+<div hidden>
+@startuml 10-polymorphism4
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism4](/assets/java-programming/images/10-polymorphism4.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new Fish();
+        ((GoldFish)fish).move()  // downcasting
+                                 // ClassCastException
+                                 // GoldFish에서 Fish로
+                                 // upcasting한 후 GoldFish로
+                                 // downcasting해야 한다.
+    }
+}
+```
+
+### 5
+
+<div hidden>
+@startuml 10-polymorphism5
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism5](/assets/java-programming/images/10-polymorphism5.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new GoldFish();  // upcasting
+        fish.move();  // downcasting
+                      // GoldFish: move()
+    }
+}
+```
+
+### 6
+
+<div hidden>
+@startuml 10-polymorphism6
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism6](/assets/java-programming/images/10-polymorphism6.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new GoldFish();  // upcasting
+
+        if (fish instanceof GoldFish)
+            ((GoldFish)fish).move();  // downcasting
+                                      // GoldFish: move()
+    }
+}
+```
+
+### 7
+
+<div hidden>
+@startuml 10-polymorphism7
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+}
+class Fish {
+	+ void draw()
+	+ void move()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism7](/assets/java-programming/images/10-polymorphism7.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+    public void move() {
+        System.out.println("Fish: move()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new GoldFish();  // upcasting
+        fish.move();  // GoldFish: move()
+    }
+}
+```
+
+### 8
+
+<div hidden>
+@startuml 10-polymorphism8
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+	+ void move()
+}
+class Fish {
+	+ void draw()
+}
+class GoldFish {
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism8](/assets/java-programming/images/10-polymorphism8.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+    public void move() {
+        System.out.println("Animal: move()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        Fish fish = new GoldFish();  // upcasting
+        fish.move();  // GoldFish: move()
+    }
+}
+```
+
+### 9
+
+<div hidden>
+@startuml 10-polymorphism9
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void move()
+}
+class Fish {
+	+ void move()
+}
+class Frog {
+	+ void move()
+}
+class Bird {
+	+ void move()
+}
+
+class Fish extends Animal
+class Frog extends Animal
+class Bird extends Animal
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism9](/assets/java-programming/images/10-polymorphism9.svg)
+
+Class diagram
+</center>
+
+```java
+public class Animal {
+    public void move() {
+        System.out.println("Animal: move()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void move() {
+        System.out.println("Fish: move()");
+    }
+}
+```
+
+```java
+public class Frog {
+    public void move() {
+        System.out.println("Frog: move()");
+    }
+}
+```
+
+```java
+public class Bird {
+    public void move() {
+        System.out.println("Bird: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        // each array element is a reference to Animal
+        Animal[] animal = new Animal[3];
+        animal[0] = new Fish();  // upcasting from Fish to Animal
+        animal[1] = new Frog();  // upcasting from Frog to Animal
+
+        animal[2] = new Bird();  // upcasting from Bird to Animal
+
+        for (int i=0; i<animal.length; i++)
+            animal[i].move();  // polymorphic behavior
+                               // dynamic binding or late binding
+                               // Fish: move()
+                               // Frog: move()
+                               // Bird: move()
+   }
+}
+```
+
+### 10
+
+<div hidden>
+@startuml 10-polymorphism10
+skinparam classAttributeIconSize 0
+class Animal {
+	+ void show()
+	+ void move()
+}
+class Fish {
+	+ void show()
+	+ void draw()
+	+ void move()
+}
+class GoldFish {
+	+ void draw()
+	+ void move()
+}
+class Fish extends Animal
+class GoldFish extends Fish
+@enduml
+</div>
+
+<center markdown="block">
+![polymorphism10](/assets/java-programming/images/10-polymorphism10.svg)
+
+Class diagram
+</center>
+
+```java
+public class Ainmal {
+    public void show() {
+        System.out.println("Animal: show()");
+    }
+    public void move() {
+        System.out.println("Animal: move()");
+    }
+}
+```
+
+```java
+public class Fish {
+    public void show() {
+        System.out.println("Fish: show()");
+    }
+    public void draw() {
+        System.out.println("Fish: draw()");
+    }
+    public void move() {
+        System.out.println("Fish: move()");
+    }
+}
+```
+
+```java
+public class GoldFish {
+    public void draw() {
+        System.out.println("GoldFish: draw()");
+    }
+    public void move() {
+        System.out.println("GoldFish: move()");
+    }
+}
+```
+
+```java
+public class AnimalTest {
+    public static void main(String[] args) {
+        // case 1.
+        GoldFish goldFish = new GoldFish();
+        goldFish.show()  // GoldFish: show()
+
+        // case 2.
+        Animal animal = new Fish();
+        animal.draw();  // error
+                        // Animal은 draw method를 가지지 않는다
+
+        // case 3.
+        Animal animal2 = new Fish();
+        animal2.show();  // Fish: show()
+        animal2.move();  // Fish: move()
+
+        // case 4.
+        Animal animal3 = new GoldFish();
+        ((Fish)animal3).draw();  // GoldFish: draw()
+    }
+}
+```
