@@ -251,7 +251,7 @@ permalink: /docs/html/9
 
 - A typical WebVTT file
 
-```WEBVTT
+```
 1
 00:00:22.230 --> 00:00:24.606
 This is the first subtitle.

@@ -216,7 +216,7 @@ permalink: /docs/html/8
 
 - For example, to place a background image on every paragraph on a page
 
-```html
+```css
 p {
   background-image: url("images/dinosaur.jpg");
 }
